@@ -1,0 +1,1 @@
+print("QuanCA rat xau trai)")
