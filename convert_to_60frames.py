@@ -64,8 +64,8 @@ def process_video(input_path, output_path, target_frames=60):
     out.release()
 
 def main():
-    inp_dir  = 'Data_1/Video'  # path lấy video đã cắt
-    out_dir  = 'Data_1/Video_60frames'  # path lưu video đủ 60 frames
+    inp_dir  = 'data/Video'  # path lấy video đã cắt
+    out_dir  = 'data/Video_60frames'  # path lưu video đủ 60 frames
     os.makedirs(out_dir, exist_ok=True)
 
     for fn in os.listdir(inp_dir):
