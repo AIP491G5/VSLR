@@ -61,25 +61,26 @@ class MediaPipeProcessor:
             results: MediaPipe results
             
         Returns:
-            Keypoints array (126 features)
+            Keypoints array ()
         """
-        # Pose keypoints (33 points * 2 coordinates = 66 features)
+        # Pose keypoints (33 points, 2 coordinates)
         pose = np.array([
             [res.x, res.y] for res in results.pose_landmarks.landmark
-        ]).flatten() if results.pose_landmarks else np.zeros(33 * 2)
-        
-        # Hand keypoints (15 important points * 2 coordinates = 30 features each)
-        important_hand_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-        
+        ]) if results.pose_landmarks else np.zeros((33, 2))
+    
+        # Hand keypoints (21 points, 2 coordinates each, 2 hands)
+        # important_hand_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+        important_hand_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
         # Left hand
         if results.left_hand_landmarks:
             lh = np.array([
                 [results.left_hand_landmarks.landmark[idx].x,
                  results.left_hand_landmarks.landmark[idx].y]
                 for idx in important_hand_indices
-            ]).flatten()
+            ])
         else:
-            lh = np.zeros(30)
+            lh = np.zeros((len(important_hand_indices), 2))
         
         # Right hand
         if results.right_hand_landmarks:
@@ -87,10 +88,10 @@ class MediaPipeProcessor:
                 [results.right_hand_landmarks.landmark[idx].x,
                  results.right_hand_landmarks.landmark[idx].y]
                 for idx in important_hand_indices
-            ]).flatten()
+            ])
         else:
-            rh = np.zeros(30)
-        
+            rh = np.zeros((len(important_hand_indices), 2))
+        # print(f"Pose shape: {pose.shape}, Left hand shape: {lh.shape}, Right hand shape: {rh.shape}")
         return np.concatenate([pose, lh, rh])
     
     def draw_landmarks(self, image: np.ndarray, results: Any) -> np.ndarray:
