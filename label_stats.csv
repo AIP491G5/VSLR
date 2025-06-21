@@ -1,0 +1,3316 @@
+TEXT,NUM_VIDEOS,VIDEOS,FRAME_COUNTS
+0 (số không),1,D0529.mp4,81
+1,1,D0530.mp4,124
+1 000 000 (một triệu),3,D0551T.mp4; D0551N.mp4; D0551B.mp4,71; 59; 75
+1 000 000 000 (một tỉ),3,D0552N.mp4; D0552B.mp4; D0552T.mp4,74; 90; 89
+10,1,D0539.mp4,85
+10 000 (mười nghìn),3,D0550B.mp4; D0550T.mp4; D0550N.mp4,72; 81; 85
+100,1,D0547.mp4,81
+1000 (một nghìn),1,D0548N.mp4,151
+11,3,D0540B.mp4; D0540T.mp4; D0540N.mp4,121; 213; 213
+12,3,D0541B.mp4; D0541T.mp4; D0541N.mp4,99; 184; 184
+2,1,D0531.mp4,115
+2 < 5 (Toán học),1,D0299.mp4,158
+2 < 6 (Toán học),1,D0181.mp4,129
+23,3,D0542B.mp4; D0542N.mp4; D0542T.mp4,70; 140; 140
+3,1,D0532.mp4,108
+33,2,D0543T.mp4; D0543N.mp4,219; 216
+4,1,D0533.mp4,112
+40,1,D0544.mp4,76
+5,1,D0534.mp4,112
+5 > 3 (Toán học),1,D0180.mp4,136
+5000 (năm nghìn),2,D0549B.mp4; D0549T.mp4,66; 95
+6,3,D0535N.mp4; D0535T.mp4; D0535B.mp4,101; 101; 279
+7,1,D0536.mp4,105
+7up,1,D0408.mp4,112
+8,1,D0537.mp4,121
+80,1,D0545.mp4,129
+9,1,D0538.mp4,113
+90,1,D0546N.mp4,81
+Albania (nước Albania),1,D0012.mp4,145
+An Giang,1,W00006.mp4,123
+Anh (nước Anh),3,W00009N.mp4; W00009T.mp4; W00009B.mp4,117; 117; 106
+Ba chân bốn cẳng,1,W00065.mp4,149
+Bra-xin (nước Bra-xin),3,W00355B.mp4; W00355T.mp4; W00355N.mp4,125; 129; 129
+Bru-nây (nước Bru-nây),3,W00356B.mp4; W00356N.mp4; W00356T.mp4,129; 205; 205
+Bun-ga-ri (nước Bun-ga-ri),1,W00360.mp4,144
+Bà Nà,1,W00067.mp4,133
+Bà Rịa - Vũng Tàu,1,W00068.mp4,157
+Bãi biển Vũng Tàu,1,W00079.mp4,161
+Bình Dương,1,W00276.mp4,166
+Bình Phước,1,W00283.mp4,158
+Bình Thuận,1,W00285.mp4,148
+Bình Định,1,W00277.mp4,154
+Băng-la-đét (nước Băng-la-đét),1,W00193.mp4,167
+Bạc Liêu,1,W00070.mp4,161
+Bắc Giang,1,W00182.mp4,108
+Bắc Kạn,1,W00183.mp4,120
+Bắc Ninh,1,W00185.mp4,71
+Bắc bộ,1,W00181.mp4,131
+Bến Tre,1,W00244.mp4,166
+Cam-pu-chia (nước Cam-pu-chia),3,W00407B.mp4; W00407T.mp4; W00407N.mp4,117; 117; 154
+Cao Bằng,1,W00417.mp4,144
+Chi-lê (nước Chi-lê),1,W00573.mp4,109
+Châu Á Thái Bình Dương,1,W00542.mp4,92
+Châu Đại Dương,1,W00544.mp4,122
+Cocacola,1,D0407.mp4,119
+Cu ba (nước Cu ba),1,W00887.mp4,104
+Cà Mau,1,W00397.mp4,153
+Cô vy (covid),1,D0284.mp4,111
+Cô-lôm-bi-a (nước Cô-lôm-bi-a),1,W00829.mp4,98
+Cố đô Huế,1,D0285.mp4,138
+Cộng Hòa Séc (nước Cộng Hòa Séc),1,W00858.mp4,93
+Dinh Độc Lập,1,W01046.mp4,123
+Do Thái,1,D0007.mp4,150
+Gia Lai,1,W01415.mp4,105
+Hoàng tử,1,W01649.mp4,129
+Hoãn,1,D0350.mp4,110
+Hung-ga-ri (nước Hung-ga-ri),1,W01714.mp4,139
+Hà Giang,1,W01526.mp4,105
+Hà Lan (nước Hà Lan),1,W01527.mp4,91
+Hùng Vương,1,W01715.mp4,116
+Hưng Yên,1,W01723.mp4,116
+Hạ Long,1,W01530.mp4,220
+Hải Dương,1,W01533.mp4,89
+Hậu Giang,1,W01572.mp4,108
+Hồ Chí Minh,1,W01681.mp4,113
+I-rắc (nước I-rắc),1,W01726.mp4,113
+Italia (nước Italia),1,W01733.mp4,102
+Khánh Hòa,1,W01772.mp4,118
+Kim Đồng,1,D0479.mp4,121
+Kiên Giang,1,W01881.mp4,129
+Kon Tum,1,W01908.mp4,103
+Liên Bang Nga (nước Nga),3,W01996T.mp4; W01996N.mp4; W01996B.mp4,115; 87; 105
+Long An,1,W02027.mp4,121
+Long Vương,1,D0225.mp4,137
+Lào (nước Lào),3,W01945B.mp4; W01945T.mp4; W01945N.mp4,102; 102; 142
+Lâm Đồng,1,W01961.mp4,129
+Lượm,1,D0316.mp4,103
+Lạc Long Quân,1,W01914.mp4,107
+Lạng Sơn,1,W01940.mp4,182
+Ma Cao,1,D0006.mp4,115
+Mexico (nước Mexico),3,W02200N.mp4; W02200B.mp4; W02200T.mp4,94; 100; 94
+Miến Điện (nước Mi-an-ma),3,D0005B.mp4; D0005N.mp4; D0005T.mp4,184; 213; 213
+Mã Lai (nước Ma-lai-xi-a),3,D0223N.mp4; D0223B.mp4; D0223T.mp4,121; 135; 130
+Mặt trời lặn,1,W02222.mp4,126
+Mặt trời mọc,1,W02219.mp4,98
+Nam bán cầu,1,W02284.mp4,106
+Nam Định,1,W02285.mp4,97
+Nhật (nước Nhật),3,W02492B.mp4; W02492N.mp4; W02492T.mp4,128; 65; 128
+Ninh Bình,1,W02518.mp4,111
+Ninh Thuận,1,W02519.mp4,105
+Oa-sinh-tơn,1,W02556.mp4,150
+Pa-ki-xtan (nước Pa-ki-xtan),1,W02582.mp4,160
+Paris,1,W00852.mp4,113
+Phi-líp-pin (nước Phi-líp-pin),3,W02654B.mp4; W02654T.mp4; W02654N.mp4,85; 85; 89
+Phú Thọ,1,W02702.mp4,110
+Pê-ru (nước Pê-ru),1,W02583.mp4,154
+Quy Nhơn,1,D0016.mp4,118
+Quảng Bình,1,W02772.mp4,105
+Quảng Nam,1,W02781.mp4,127
+Quảng Ngãi,1,W02774.mp4,97
+Quảng Ninh,1,W02775.mp4,225
+Quảng Trị,1,W02782.mp4,105
+Quốc Tử Giám,1,W02807.mp4,88
+Sapa,1,W02925.mp4,110
+Socola,1,D0406.mp4,108
+Sóc Trăng,1,W02961.mp4,114
+Thanh Hóa,1,W03168.mp4,105
+Thái Nguyên,1,W03150.mp4,84
+Thánh Gióng,1,D0480.mp4,115
+Thăng Long,1,D0244.mp4,102
+Thủy Điện Hòa Bình,3,W03345N.mp4; W03345B.mp4; W03345T.mp4,127; 107; 127
+Thừa Thiên – Huế,3,W03361B.mp4; W03361T.mp4; W03361N.mp4,113; 117; 89
+Tiền Giang,1,W03398.mp4,227
+Trung Quốc (nước Trung Quốc),3,W03642B.mp4; W03642N.mp4; W03642T.mp4,109; 145; 109
+Trung Thu,3,W03645B.mp4; W03645T.mp4; W03645N.mp4,108; 288; 288
+Trà Vinh,1,W03513.mp4,117
+Trần Quốc Toản,1,W02806.mp4,108
+Tuy Hoà,1,D0015.mp4,139
+Tây Bắc,1,W03121.mp4,100
+Tây Nguyên,1,W03123.mp4,96
+Tây Ninh,1,W03124.mp4,86
+Tết Dương,2,W03132N.mp4; W03132T.mp4,81; 134
+Tết Thiếu nhi,1,W03133N.mp4,90
+Tết Trung thu,3,W03134T.mp4; W03134N.mp4; W03134B.mp4,86; 86; 108
+Tết hàn thực,3,D0040N.mp4; D0040B.mp4; D0040T.mp4,99; 120; 123
+Tết Âm,2,W03131T.mp4; W03131N.mp4,120; 82
+UNICEF,1,W03744.mp4,119
+Võ Nguyên Giáp,1,W03851.mp4,143
+Võ Thị Sáu,1,D0203.mp4,181
+Văn miếu Quốc Tử Giám,1,W03791.mp4,154
+Vĩnh Long,1,W03846.mp4,123
+Vĩnh Phúc,1,W03847.mp4,133
+Y-Éc-Xanh,1,W04031.mp4,128
+Yên Bái,1,W04043.mp4,119
+a,1,D0489.mp4,93
+ai,3,W00004B.mp4; W00004N.mp4; W00004T.mp4,111; 113; 128
+ai bảo,1,W04071.mp4,99
+ai cho,1,D0032.mp4,114
+an ninh,1,W00007.mp4,151
+anh chị,1,W00010B.mp4,165
+anh chị em,1,W00011.mp4,127
+anh dũng,3,W00012N.mp4; W00012T.mp4; W00012B.mp4,121; 121; 154
+anh em,3,W00013T.mp4; W00013N.mp4; W00013B.mp4,120; 120; 185
+"anh hai, anh cả",3,D0143B.mp4; D0143N.mp4; D0143T.mp4,72; 68; 72
+anh hùng,1,W00015.mp4,102
+anh họ,2,W00014T.mp4; W00014N.mp4,135; 135
+anh ruột,3,W00019N.mp4; W00019B.mp4; W00019T.mp4,125; 177; 125
+anh rể,3,W00018N.mp4; W00018B.mp4; W00018T.mp4,102; 75; 102
+anh vợ,1,W00020.mp4,135
+ao chuôm,1,W00026.mp4,139
+b,1,D0492.mp4,93
+ba là,1,D0148.mp4,93
+ban giám hiệu,1,W00087.mp4,147
+ban ngày,1,W00089.mp4,93
+ban đêm,3,W00086B.mp4; W00086N.mp4; W00086T.mp4,138; 149; 149
+bao giờ?,3,W00145B.mp4; W00145T.mp4; W00145N.mp4,117; 117; 148
+bao la,1,W00146.mp4,197
+bao nhiêu?,1,W00147.mp4,134
+bao tay (dùng cho trẻ sơ sinh),1,W00150.mp4,144
+bay,1,W00174.mp4,136
+bay liệng (bay lượn),1,W00176.mp4,151
+bay nhanh (máy bay),1,D0177.mp4,102
+biến đổi,1,W00262N.mp4,155
+biển hiệu,1,W00261.mp4,153
+biển đông,1,W00260.mp4,125
+biểu thị,1,W00270.mp4,141
+biểu thức,1,W00271.mp4,119
+biểu đồ,1,W00265.mp4,162
+biểu đồ cột,1,W00266.mp4,141
+biểu đồ hình quạt,1,W00267.mp4,141
+biện pháp,1,W00263.mp4,162
+bom nguyên tử,1,W00303.mp4,158
+bom đạn,1,W00302.mp4,152
+boong tàu,1,W00312.mp4,159
+buôn làng,1,W00371.mp4,150
+buông màn,3,W00374B.mp4; W00374N.mp4; W00374T.mp4,135; 132; 152
+buồn nôn,1,W00372.mp4,178
+buồn thảm,1,D0064.mp4,156
+buồng trứng,1,W00377.mp4,138
+buổi chiều,1,W00366.mp4,139
+buổi sáng,3,W00368B.mp4; W00368T.mp4; W00368N.mp4,130; 153; 153
+buổi trưa,3,W00370B.mp4; W00370N.mp4; W00370T.mp4,124; 151; 130
+buổi tối,3,W00369N.mp4; W00369B.mp4; W00369T.mp4,142; 121; 142
+buổi đêm,3,W00367B.mp4; W00367T.mp4; W00367N.mp4,116; 86; 86
+buộc dây,1,W00363.mp4,162
+buộc tóc,1,W00364.mp4,222
+bài báo,1,W00071.mp4,117
+bài thơ,3,W00075T.mp4; W00075B.mp4; W00075N.mp4,129; 177; 129
+bàn bạc,1,W00091.mp4,158
+bàn chân,1,W00093.mp4,176
+bàn chải đánh răng,1,W00092.mp4,124
+bàn ghế,1,W00094.mp4,190
+bàn là,1,W00095.mp4,155
+bàn phím (máy vi tính),1,W00096.mp4,167
+bàn tay,1,W00097.mp4,184
+bàn tán,1,W00098.mp4,246
+bán buôn,1,W00105.mp4,189
+bán hàng,3,W00107N.mp4; W00107B.mp4; W00107T.mp4,117; 117; 117
+bán kính (hình tròn),1,W00108.mp4,176
+bán đảo,1,W00106.mp4,193
+bánh Trung Thu,1,W00130.mp4,117
+bánh bột lọc,1,W00127.mp4,135
+bánh canh,1,D0393.mp4,118
+bánh cuốn,3,W00129N.mp4; W00129B.mp4; W00129T.mp4,143; 159; 143
+bánh cốm,1,W00128.mp4,141
+bánh gai,1,W00133.mp4,119
+bánh giò,1,W00135.mp4,143
+bánh giầy,1,W00134.mp4,162
+bánh gối,1,W00136.mp4,273
+bánh hamburger,1,D0391.mp4,127
+bánh mì,3,W00137N.mp4; W00137B.mp4; W00137T.mp4,149; 143; 149
+bánh pizza,1,W00140.mp4,154
+bánh pía,1,W00141.mp4,161
+bánh sandwich,1,D0392.mp4,92
+bánh tráng,1,D0110.mp4,159
+bánh xe,1,W00144.mp4,486
+bánh đa,1,W00131.mp4,205
+bánh đúc,1,W00132.mp4,144
+báo (con báo),3,W00160N.mp4; W00160B.mp4; W00160T.mp4,138; 118; 138
+báo cáo,1,W00161.mp4,117
+báo thù,1,W00166.mp4,122
+báo động,1,W00163.mp4,127
+bát,1,W00170.mp4,150
+bát hương,1,W00171.mp4,127
+bát ngát,1,W00172.mp4,150
+bãi cát,1,W00081.mp4,138
+bãi cỏ,1,W00082.mp4,148
+bãi tắm,1,W00084.mp4,130
+bãi đỗ xe (ô tô),1,W00083.mp4,182
+bé gái,1,W00217.mp4,153
+bé hơn,1,W00218.mp4,133
+bé loắt choắt,1,W00219.mp4,122
+bé trai,3,W00220B.mp4; W00220N.mp4; W00220T.mp4,135; 117; 135
+béo,1,W00225.mp4,142
+bê tông,1,W00228.mp4,162
+bên cạnh,2,W00236.mp4; W00236N.mp4,170; 162
+bên dưới,1,W00237.mp4,151
+bên phải,1,W00238.mp4,137
+bên trong,1,W00241.mp4,167
+bên trái,1,W00239.mp4,167
+bên trên,1,W00240.mp4,167
+bênh vực,1,W00246.mp4,139
+bìa sách,1,W00254.mp4,161
+bìa vở,3,W00255B.mp4; W00255N.mp4; W00255T.mp4,137; 149; 193
+bình an,3,W00274N.mp4; W00274B.mp4; W00274T.mp4,141; 156; 156
+bình minh,1,W00279.mp4,159
+bình phương,1,W00282.mp4,137
+bình sữa (em bé),1,D0461.mp4,152
+bình thường,3,W00286N.mp4; W00286B.mp4; W00286T.mp4,118; 106; 118
+bí ngô,1,W00252.mp4,131
+bím tóc đuôi sam,1,W00273.mp4,142
+bít tất,1,W00287.mp4,139
+bít tết (bò),3,D0077N.mp4; D0077T.mp4; D0077B.mp4,125; 125; 118
+bò,1,W00288.mp4,129
+bò sát,1,W00289.mp4,161
+bò tót,1,W00290.mp4,142
+bó hoa,1,W00298.mp4,145
+bó đũa,1,W00297.mp4,154
+bóc lột,1,W00299.mp4,138
+bóc vỏ,1,W00300.mp4,143
+bón phân,3,W00304N.mp4; W00304B.mp4; W00304T.mp4,144; 91; 144
+bóng bay,1,W00308.mp4,159
+bông hoa,3,W00336T.mp4; W00336B.mp4; W00336N.mp4,114; 152; 114
+bùn,1,W00361.mp4,160
+bùng binh,1,W03371.mp4,95
+bún chả,1,D0084.mp4,138
+bún mắm,1,D0083.mp4,149
+bún ngan,1,D0085.mp4,120
+bún đậu,1,D0087B.mp4,119
+bún ốc,1,D0086.mp4,134
+búp bê,1,W00378.mp4,98
+bút,1,W00380.mp4,143
+bút bi,1,W00381.mp4,288
+bút dạ,1,W00382.mp4,156
+bút màu,3,W00383N.mp4; W00383B.mp4; W00383T.mp4,144; 147; 162
+bút máy,1,W00384.mp4,154
+băng bó,1,W00188.mp4,138
+băng chuyền,1,W00189.mp4,173
+băng dính,1,W00190.mp4,142
+băng giá,1,W00191.mp4,152
+băng hình,1,W00192.mp4,130
+bơi,1,W00347.mp4,197
+bơi lội,1,W00348.mp4,185
+bơm (cái bơm),1,W00349.mp4,128
+bơm nước,1,W00350.mp4,119
+bơm xe,1,W00351.mp4,114
+bưu tá,1,W00393.mp4,154
+bước,1,W00388.mp4,146
+bước chân,1,W00389.mp4,147
+bướng bỉnh,2,W00390N.mp4; W00390T.mp4,154; 154
+bạn,3,W00110N.mp4; W00110T.mp4; W00110B.mp4,100; 100; 263
+bạn gái,3,W00111B.mp4; W00111T.mp4; W00111N.mp4,170; 175; 175
+bạn trai,3,W00112B.mp4; W00112N.mp4; W00112T.mp4,133; 153; 155
+bạn yêu bạn ấy,1,D0141.mp4,79
+bạn yêu tôi,1,D0138.mp4,112
+bạn ấy yêu bạn,1,D0142.mp4,77
+bạn ấy yêu tôi,1,D0140.mp4,142
+bản làng,1,W00100.mp4,180
+bản lề,1,W00101.mp4,152
+bản nhạc,1,W00102.mp4,209
+bản sao (chỉ người),1,W00103.mp4,119
+bản thân,1,W00104.mp4,175
+bản đồ Việt Nam,3,W00099B.mp4; W00099T.mp4; W00099N.mp4,156; 127; 127
+bảng chia,2,W00115N.mp4; W00115T.mp4,128; 128
+bảng chỉ dẫn,1,W00116.mp4,137
+bảng chữ cái ngón tay,1,W00118.mp4,137
+bảng cộng,3,W00119N.mp4; W00119B.mp4; W00119T.mp4,118; 172; 172
+bảng cửu chương,1,W00120.mp4,92
+bảng học sinh,1,W00113.mp4,92
+bảng màu,1,W00123B.mp4,167
+bảng nhân,3,W00124N.mp4; W00124B.mp4; W00124T.mp4,128; 157; 157
+bảng trừ,3,W00126T.mp4; W00126B.mp4; W00126N.mp4,136; 136; 125
+bảng đen,3,W00121B.mp4; W00121T.mp4; W00121N.mp4,155; 155; 147
+bảo hiểm,1,W00153.mp4,236
+bảo thủ,1,W00157.mp4,162
+bảo tàng,1,W00156.mp4,159
+bảo vệ môi trường,3,W00159N.mp4; W00159B.mp4; W00159T.mp4,165; 153; 165
+bảo đảm,1,W00152.mp4,148
+bất hiếu,1,W00207.mp4,123
+bất khuất,1,D0241.mp4,158
+bất động,1,W00206.mp4,129
+bầu trời,1,W00212.mp4,156
+bẫy chim,1,W00213.mp4,194
+bẫy chuột (dụng cụ),1,W00215.mp4,145
+bẫy chuột (hành động),3,W00214B.mp4; W00214N.mp4; W00214T.mp4,78; 130; 130
+bậc thang,1,W00203.mp4,261
+bập bênh,1,W00205.mp4,157
+bật lửa,1,W00210.mp4,167
+bật đèn,1,W00209.mp4,151
+bắc bán cầu,1,W00179.mp4,104
+bắc nam,2,W00184T.mp4; W00184N.mp4,167; 167
+bắn bi,3,W00186N.mp4; W00186T.mp4; W00186B.mp4,128; 128; 140
+bắn cung tên,1,D0218.mp4,235
+bắn súng,1,W00187.mp4,515
+bắp ngô,3,W00196B.mp4; W00196T.mp4; W00196N.mp4,103; 101; 101
+bắt,1,W00197.mp4,130
+bắt buộc,1,W01008.mp4,56
+bắt giữ,1,W00199.mp4,164
+bắt nạt,1,W00200.mp4,133
+bắt tay,1,W00202.mp4,252
+bắt đền,3,W00198.mp4; W00198N.mp4; W00198B.mp4,131; 112; 149
+bằng,1,W00194.mp4,142
+bằng phẳng,1,W00195.mp4,148
+bẻ ngô,3,W00216T.mp4; W00216B.mp4; W00216N.mp4,125; 132; 125
+bế em,1,W00232.mp4,149
+bến phà,1,W00242.mp4,170
+bến tàu,1,W00243.mp4,163
+bến xe,1,W00245.mp4,162
+bể bơi,1,W00230.mp4,132
+bể cá,1,W00231.mp4,279
+bệ hạ,2,W00234B.mp4; W00234T.mp4,149; 149
+bệ xí,1,W00235.mp4,166
+bệnh nhân,1,W00248.mp4,310
+bệnh phong/cùi,1,D0366.mp4,112
+bệnh thủy đậu,1,W00247.mp4,128
+bệnh tật,1,W00249.mp4,120
+bệnh Đao - Down,1,D03671.mp4,75
+bị động,1,W00253.mp4,122
+bịa đặt,1,W00256.mp4,160
+bọc sách,1,W00301.mp4,153
+bọt biển,1,W00313.mp4,115
+bọt xà phòng,1,W00314.mp4,152
+bỏ hoang,1,W00292.mp4,277
+bỏ phiếu,1,W00293.mp4,150
+bỏ qua,1,W00294.mp4,144
+bỏ rơi,1,W00295.mp4,178
+bỏng,1,W00305.mp4,125
+bỏng ngô,1,W00306.mp4,150
+bố,1,W00325.mp4,97
+bố dượng,3,W00326B.mp4; W00326T.mp4; W00326N.mp4,112; 71; 71
+bố mẹ,1,W00327.mp4,118
+bố trí,1,W00320.mp4,153
+bốc hơi,1,W00330.mp4,114
+bốc thăm,1,W00331.mp4,110
+bốc vác,1,W00322.mp4,125
+bối rối,1,D0069.mp4,117
+bốn là,1,D0149.mp4,80
+bốt cảnh sát,3,W00337B.mp4; W00337T.mp4; W00337N.mp4,148; 193; 193
+bốt điện,3,W00338B.mp4; W00338N.mp4; W00338T.mp4,133; 159; 159
+bồ kết,1,W00315.mp4,145
+bồi bàn,1,W00332.mp4,125
+bồi thường,1,W00333.mp4,125
+bồn hoa,1,W00334.mp4,141
+bồn rửa bát,1,W00335.mp4,130
+bổ ngữ,1,W00317.mp4,112
+bổ trợ,1,W00318.mp4,156
+bổ ích,1,W00316.mp4,156
+bộ sách,1,W00329.mp4,125
+bộ truyện,1,W00321.mp4,116
+bộ đội,3,W00328N.mp4; W00328T.mp4; W00328B.mp4,135; 115; 145
+bột giặt,1,W00340.mp4,132
+bột màu,3,W00341T.mp4; W00341N.mp4; W00341B.mp4,130; 130; 123
+bột ngọt,2,W00342N.mp4; W00342T.mp4,122; 122
+bớt,1,W00353.mp4,120
+bớt đi,1,W00354.mp4,101
+bờ biển,1,W00344.mp4,144
+bờ ruộng,1,W00346.mp4,160
+bờ rào,1,W00345.mp4,123
+bờm tóc,1,W00352.mp4,71
+bụi phấn,3,W00359N.mp4; W00359T.mp4; W00359B.mp4,121; 119; 119
+bụi tre,1,W01827.mp4,264
+bụi đời,1,W00358.mp4,156
+bụng,1,W00362.mp4,135
+bức tranh,3,W00386N.mp4; W00386T.mp4; W00386B.mp4,150; 178; 178
+bức tường,1,W00387.mp4,165
+bữa cơm,1,W00385.mp4,148
+bực mình,1,D0036.mp4,140
+c,1,D0493.mp4,82
+ca,1,W00395.mp4,138
+ca nô,1,W00396.mp4,136
+cao (người),1,W00415.mp4,148
+cao (nhà),1,W004152.mp4,155
+cao (núi),1,W004153.mp4,150
+cao (vật),1,W004151.mp4,131
+cao nguyên,1,W00419.mp4,147
+cao quý,1,W00420.mp4,148
+cao thấp,1,W00422.mp4,309
+cao tầng,1,W00421.mp4,159
+cao tốc,1,W00423.mp4,130
+cao độ,1,W00418.mp4,151
+cau có,1,W00425.mp4,118
+cha,1,W00481.mp4,112
+cha mẹ,1,W00482.mp4,115
+chai,1,W00485.mp4,79
+chai nước,1,W00486.mp4,100
+chanh muối,1,D0402.mp4,110
+chanh nóng,1,D0401.mp4,114
+chanh đá,1,D0400.mp4,112
+che chở,1,W00546.mp4,78
+che phủ,1,W00547.mp4,127
+chen lấn,1,W00551.mp4,113
+chi hội,1,W00561.mp4,95
+chi tiết,1,W00563.mp4,83
+chia,3,W00575B.mp4; W00575N.mp4; W00575T.mp4,82; 92; 92
+chia ba,3,D0250B.mp4; D0250N.mp4; D0250T.mp4,92; 104; 92
+chia cắt,1,W00577.mp4,93
+chia hết,1,W00579.mp4,110
+chia phần,1,W00580.mp4,101
+chia rẽ,1,D0335.mp4,251
+chia sẻ,1,W00581.mp4,103
+chia tay,1,W00582.mp4,134
+chia đôi,3,D0249N.mp4; D0249B.mp4; D0249T.mp4,100; 114; 114
+chia đều,1,W00578.mp4,122
+chim bồ câu,1,W00602.mp4,132
+chim chuyền cành,1,W00693.mp4,121
+chim chào mào,1,W00603.mp4,134
+chim chích chòe,1,W00604.mp4,107
+chim chóc,1,W00605.mp4,100
+chim gõ kiến,1,W00608.mp4,133
+chim phượng hoàng,1,W00609.mp4,126
+chim sâu,1,W00610.mp4,106
+chim sơn ca,1,W00612.mp4,89
+chim sẻ,1,W00611.mp4,93
+chim yến,1,W00614.mp4,137
+chim đại bàng,1,W00606.mp4,120
+chiên/rán (1)(2),1,D0373.mp4,242
+chiêng,1,W00593.mp4,144
+chiếc gối,3,W00584N.mp4; W00584B.mp4; W00584T.mp4,105; 115; 128
+chiếm đoạt,1,W00585.mp4,97
+chiến khu,1,W00588.mp4,97
+chiến thắng,1,W00591.mp4,97
+chiếu,3,W00598.mp4; W00598B.mp4; W00598T.mp4,91; 113; 113
+chiếu phim,1,W00599.mp4,97
+chiều cao,1,W00594.mp4,142
+chiều dài,1,W00595.mp4,104
+chiều rộng,1,W00596.mp4,113
+chiều tối,1,W00597.mp4,102
+chong chóng,1,W00630.mp4,107
+chu vi,1,W00641.mp4,124
+chui,1,W00669.mp4,89
+chum,1,W00672.mp4,79
+chung kết,1,W00678.mp4,89
+chung tay,1,D0411.mp4,89
+chuyên biệt,1,W00689.mp4,64
+chuyên cần,1,W00690.mp4,133
+chuyên gia,3,W00691B.mp4; W00691N.mp4; W00691T.mp4,107; 92; 92
+chuyền bóng,1,W00692.mp4,87
+chuyển giao,1,W00700.mp4,119
+chuyển hướng,1,W00701.mp4,107
+chuyển vế,1,W00702.mp4,91
+chuyển đồ,1,W00694.mp4,76
+chuyển đổi số đo,1,W00696.mp4,131
+chuyển động,1,W00697.mp4,73
+chuyển động quay,1,W00699.mp4,201
+chuyển động đều,1,W00698.mp4,107
+chuyện lớn,1,D0238.mp4,133
+chuyện nhỏ,1,D0237.mp4,94
+chuyện trò,1,W00703.mp4,83
+chuông,1,W00683.mp4,87
+chuông nhà,1,W00684.mp4,89
+chuẩn bị,3,W00662B.mp4; W00662T.mp4; W00662N.mp4,84; 76; 76
+chuồng,1,W00685.mp4,127
+chuỗi hạt,1,W00679.mp4,154
+chuột quang,1,W00686.mp4,92
+chàng trai,1,W00488.mp4,91
+chào,1,W00489.mp4,116
+chào cờ,1,W00490.mp4,92
+chào mừng,1,W00492.mp4,81
+chày,1,W00499.mp4,98
+cháo sườn,1,D0090.mp4,137
+chát,1,W00494.mp4,76
+cháu gái,3,W00495N.mp4; W00495B.mp4; W00495T.mp4,79; 105; 79
+cháu họ,3,D0154B.mp4; D0154N.mp4; D0154T.mp4,122; 124; 146
+cháu ngoại,3,W00496T.mp4; W00496B.mp4; W00496N.mp4,98; 189; 109
+cháu nội,3,W00497B.mp4; W00497T.mp4; W00497N.mp4,113; 102; 110
+cháu trai,2,W00498N.mp4; W00498B.mp4,83; 97
+cháy rừng,1,W00500.mp4,88
+châm chọc,1,W00515.mp4,130
+châm cứu,3,W00516B.mp4; W00516N.mp4; W00516T.mp4,111; 94; 145
+chân dung,1,W00522.mp4,67
+chân tay,1,W00525.mp4,116
+chân đất,1,W00523.mp4,109
+chè đỗ đỏ,1,W00548.mp4,95
+chèn ép,1,W00552.mp4,121
+chèo thuyền,1,W00554.mp4,154
+chém,1,W00550.mp4,106
+chén,1,W00553.mp4,127
+chép bài,1,W00555.mp4,90
+chìa khóa,1,W00583.mp4,108
+chín,1,W00616.mp4,117
+chính phủ,2,W00617T.mp4; W00617B.mp4,97; 89
+chính quyền,1,W00618.mp4,106
+chính tả,1,W00619.mp4,83
+chính xác,3,W00620B.mp4; W00620N.mp4; W00620T.mp4,85; 92; 92
+chó cắn,1,D0229.mp4,94
+chó sói,1,W00623.mp4,91
+chó xù,1,W00624.mp4,119
+chõ xôi,1,D0472.mp4,119
+chùa,3,W00655N.mp4; W00655B.mp4; W00655T.mp4,118; 90; 152
+chùa Hương,1,W00657.mp4,146
+chùa Một Cột,1,W00658.mp4,99
+chùa Yên Tử,1,D0471.mp4,149
+chùm hoa,1,W00673.mp4,79
+chùm khế,1,W00674.mp4,89
+chùm nho,1,W00676.mp4,95
+chùm vải,1,W00677.mp4,91
+chú ( người),1,W00506.mp4,80
+chú hề,1,W00650.mp4,94
+chú rể,1,W00651.mp4,99
+chú tễu,1,W00652.mp4,145
+chú ý,1,W00654.mp4,76
+chúc mừng,3,W00663B.mp4; W00663T.mp4; W00663N.mp4,77; 84; 84
+chúc thọ,3,W00665N.mp4; W00665T.mp4; W00665B.mp4,111; 111; 108
+chúc tết,3,W00664T.mp4; W00664B.mp4; W00664N.mp4,118; 96; 134
+chúi đầu,1,W00671.mp4,86
+chúng tôi (2 người) (đại từ),1,D0130.mp4,106
+chúng tôi (3 người) (đại từ),1,D0131.mp4,121
+chúng tôi (4 người) (đại từ),1,D0132.mp4,89
+chúng tôi (5 người) (đại từ),1,D0133.mp4,99
+chúng tôi (đại từ),1,D0134.mp4,128
+chăm học,1,W00507.mp4,102
+chăm sóc sức khỏe,3,W00508B.mp4; W00508N.mp4; W00508T.mp4,143; 131; 189
+chăn (cái chăn),3,W00509B.mp4; W00509N.mp4; W00509T.mp4,116; 117; 117
+chăn nuôi,3,W00510B.mp4; W00510T.mp4; W00510N.mp4,101; 118; 125
+chơi,2,W00639T.mp4; W00639B.mp4,76; 76
+chương trình,1,W00713.mp4,76
+chạy,1,W00501.mp4,81
+chạy (động vật),1,D0175.mp4,84
+chạy bàn,1,W00502.mp4,143
+chạy chậm,1,W00503.mp4,93
+chạy nhanh,1,W00504.mp4,60
+chả cá,3,W00484T.mp4; W00484B.mp4; W00484N.mp4,153; 153; 141
+chảo,3,W00493B.mp4; W00493N.mp4; W00493T.mp4,299; 255; 255
+chấm dứt,1,W00519.mp4,106
+chấm điểm,1,W00520.mp4,80
+chất dẻo,1,W00529.mp4,79
+chất hữu cơ,1,W00534.mp4,139
+chất lượng,1,W00537.mp4,81
+chất lỏng,1,W00536.mp4,114
+chất rắn,1,W00538.mp4,94
+chất thải,1,W00539.mp4,106
+chất đốt,1,W00530.mp4,105
+chất độc,1,W00531.mp4,78
+chất độc màu da cam,1,W00533.mp4,80
+chậm chạp,1,D0178.mp4,104
+chật chội,1,W00540.mp4,92
+chậu,1,W00545.mp4,91
+chặn,1,W00512.mp4,135
+chặt,3,W00513B.mp4; W00513N.mp4; W00513T.mp4,109; 92; 92
+chặt chẽ,1,W00514.mp4,94
+chỉ,1,W00564.mp4,95
+chỉ dẫn,1,W00565.mp4,102
+chỉ huy,1,W00567.mp4,118
+chỉ khâu,1,W00568.mp4,137
+chỉnh sửa,1,W00615.mp4,86
+chị,3,W00570N.mp4; W00570T.mp4; W00570B.mp4,100; 119; 119
+chị chồng,2,W00571N.mp4; W00571B.mp4,120; 134
+chị dâu,1,W00572.mp4,129
+"chị hai, chị cả",3,D0144N.mp4; D0144B.mp4; D0144T.mp4,98; 89; 89
+chị họ,3,D0152N.mp4; D0152B.mp4; D0152T.mp4,115; 137; 137
+chọi gà,1,W00625.mp4,100
+chọi trâu,1,W00626.mp4,107
+chọn lọc,1,W00628.mp4,123
+chọn lựa,1,W00629.mp4,96
+chống đối,3,W00633B.mp4; W00633T.mp4; W00633N.mp4,77; 77; 75
+chồi non,1,W00632.mp4,98
+chớp mắt,1,W00640.mp4,99
+chợ Bến Thành,1,W00634.mp4,97
+chợ nổi,1,W00635.mp4,115
+chợ nổi Cái Bè,1,W00636.mp4,134
+chợ nổi Cái Răng,1,W00637.mp4,148
+chục,1,W00666.mp4,86
+chục nghìn,1,W00667.mp4,85
+chục triệu,1,W00668.mp4,84
+chụp đèn,1,W00688.mp4,99
+chụp ảnh,1,W00687.mp4,78
+chủ nghĩa xã hội,1,W00645.mp4,104
+chủ ngữ,1,W00646.mp4,124
+chủ nhiệm,1,W00647.mp4,75
+chủ tịch,3,W00649B.mp4; W00649N.mp4; W00649T.mp4,92; 97; 97
+chủ đề,1,W00642.mp4,113
+chủ động,1,W00644.mp4,116
+chức năng,1,W00710.mp4,112
+chức vụ,1,W00717.mp4,256
+chứng cớ,1,W00718.mp4,110
+chứng kiến,1,W00712.mp4,109
+chứng minh,1,W00719.mp4,122
+chứng nhận,1,W00720.mp4,97
+chữ,1,W00714.mp4,92
+chữ cái,1,W00705.mp4,90
+chữ hoa,1,W00706.mp4,94
+chữ viết,1,W00707.mp4,104
+chữa bài,3,W00708B.mp4; W00708N.mp4; W00708T.mp4,103; 140; 103
+chữa bệnh,1,W00716.mp4,99
+chữa cháy,1,W00709.mp4,123
+co dãn,1,W00721.mp4,117
+co giật,1,W00722.mp4,98
+coi thường,1,W00731.mp4,80
+con ba ba,1,W00733.mp4,92
+con bê,3,W00734B.mp4; W00734N.mp4; W00734T.mp4,93; 69; 112
+con bò,3,W00735N.mp4; W00735B.mp4; W00735T.mp4,74; 73; 74
+con bướm,1,W00736.mp4,108
+con chim,1,W00738.mp4,182
+con chuồn chuồn,1,W00741.mp4,71
+con chuột,3,W00742B.mp4; W00742T.mp4; W00742N.mp4,74; 105; 105
+con chuột nhắt,1,W00743.mp4,89
+con chó,3,W00739N.mp4; W00739T.mp4; W00739B.mp4,71; 71; 72
+con chồn,1,W00740.mp4,86
+con cua,1,W00749.mp4,87
+con cá,3,W00737B.mp4; W00737T.mp4; W00737N.mp4,82; 82; 72
+con cá sấu,1,D0059.mp4,106
+con cò,1,W00745.mp4,197
+con cóc,1,W00746.mp4,94
+con công,1,W00748.mp4,98
+con cú mèo,1,W00750.mp4,107
+con cọp,3,W00747N.mp4; W00747B.mp4; W00747T.mp4,103; 99; 103
+con cừu,1,W00751.mp4,127
+con dâu,1,W00752.mp4,90
+con dê,1,W00753.mp4,83
+con dế,1,W00754.mp4,79
+con ghẹ,1,W00762.mp4,100
+con gián,1,W00763.mp4,77
+con gà,1,W00759.mp4,95
+con gái,1,W00760.mp4,87
+con gấu,1,W00761.mp4,84
+con hoẵng,1,W00764.mp4,95
+con hàu,1,D0387.mp4,128
+con hươu,1,W00766.mp4,92
+con khỉ,1,W00767.mp4,205
+con kiến,3,W00768T.mp4; W00768B.mp4; W00768N.mp4,88; 88; 102
+con lươn,1,W00771.mp4,79
+con lợn (con heo),3,W00770T.mp4; W00770B.mp4; W00770N.mp4,103; 68; 105
+con muỗi,3,W00773B.mp4; W00773T.mp4; W00773N.mp4,100; 100; 105
+con mèo,3,W00772B.mp4; W00772N.mp4; W00772T.mp4,100; 87; 87
+con mực,1,W00774.mp4,86
+con nai,1,W00775.mp4,152
+con người,3,W00777N.mp4; W00777B.mp4; W00777T.mp4,75; 97; 97
+con ngỗng,1,W00776.mp4,93
+con ngựa,3,W00778N.mp4; W00778B.mp4; W00778T.mp4,112; 86; 112
+con nhím,1,W00779.mp4,99
+con nuôi,3,W00780B.mp4; W00780T.mp4; W00780N.mp4,150; 129; 129
+con ong,2,W00781T.mp4; W00781N.mp4,93; 93
+con quạ,1,W00783.mp4,106
+con ruồi,1,W00786.mp4,83
+con rùa,1,W00787N.mp4,99
+con rắn,1,W00784.mp4,106
+con rối,1,W00785.mp4,86
+con sâu,1,W00788.mp4,94
+con sò,1,W00789.mp4,105
+con sóc,1,W00790.mp4,106
+con sói,1,W00791.mp4,75
+con sông,1,W00792.mp4,188
+con sư tử,2,W00794T.mp4; W00794N.mp4,115; 119
+con số,1,W00793.mp4,86
+con tem,1,W00795.mp4,90
+con thỏ,1,W00796.mp4,195
+con trai,1,W04068.mp4,79
+con trai (động vật),1,W00798.mp4,74
+con trăn,1,W00799.mp4,94
+con trỏ,1,W00800.mp4,103
+con tôm,3,W00797B.mp4; W00797N.mp4; W00797T.mp4,87; 83; 83
+con voi,3,W00803N.mp4; W00803T.mp4; W00803B.mp4,116; 105; 105
+con vượn,1,D0449.mp4,103
+con vẹt,1,W00801.mp4,104
+con vịt,1,W00802.mp4,92
+con đom đóm,1,W00756.mp4,131
+con đường,1,W00757.mp4,96
+con đẻ,1,W00755.mp4,103
+con ếch,3,W00758N.mp4; W00758T.mp4; W00758B.mp4,88; 111; 77
+con ốc,1,W00782.mp4,89
+cong,1,W00804.mp4,86
+cua đồng,1,D0386.mp4,119
+cung cấp,1,D0099.mp4,115
+cung tên,1,D0220.mp4,109
+cung điện,3,D0182N.mp4; D0182B.mp4; D0182T.mp4,102; 105; 105
+cuối năm,1,D0421.mp4,126
+cuối tháng,1,D0420.mp4,108
+cuối tuần,1,D0419.mp4,115
+cuốn,1,W00924.mp4,97
+cuống hoa,1,W00899.mp4,101
+cuống lá,1,W00926.mp4,96
+cuộc sống,1,W00923.mp4,111
+cuộc đời,1,W00922.mp4,90
+cuộn giấy vệ sinh,1,W00925.mp4,115
+cày,1,W00426.mp4,108
+cày ruộng,1,W00427.mp4,257
+cá kho,3,W00398N.mp4; W00398B.mp4; W00398T.mp4,112; 125; 132
+cá kiếm,1,D0074.mp4,166
+cá mập,1,W00601.mp4,80
+cá voi,1,D0073.mp4,132
+các bạn,1,W00400.mp4,154
+các bạn (2 người),1,D0135.mp4,108
+cách ly,1,D0286.mp4,161
+cái bè,1,W00402.mp4,159
+cái gùi,1,D0239.mp4,84
+cái gương,3,W00404B.mp4; W00404N.mp4; W00404T.mp4,145; 210; 210
+cái neo,1,D0468.mp4,132
+cái nhíp,1,W00405.mp4,201
+cái túi,1,W00406.mp4,137
+cái vợt cá,1,D0447.mp4,99
+cánh buồm,1,D0344.mp4,134
+cánh tay,1,W00410.mp4,153
+cáp treo,1,W00453.mp4,136
+cát,1,W00424.mp4,128
+câu chuyện,1,W00439.mp4,90
+câu cá,1,W00438.mp4,143
+câu ghép,1,W00443.mp4,141
+câu thơ,3,W00444N.mp4; W00444B.mp4; W00444T.mp4,92; 125; 92
+câu văn,1,W00445.mp4,89
+câu đơn,1,W00442.mp4,127
+câu đố,1,W00440.mp4,103
+câu đối,1,W00441.mp4,75
+cây bàng,2,W00457B.mp4; W00457T.mp4,104; 160
+cây cọ,1,D0473.mp4,154
+cây cối,1,W00460.mp4,143
+cây cổ thụ,3,W00459T.mp4; W00459N.mp4; W00459B.mp4,91; 91; 121
+cây gỗ,1,W00464.mp4,134
+cây khế,1,W00465.mp4,119
+cây ngô,3,W00469N.mp4; W00469T.mp4; W00469B.mp4,125; 125; 113
+cây nến,1,D0435.mp4,116
+cây phượng,3,W00470N.mp4; W00470T.mp4; W00470B.mp4,120; 120; 126
+cây sả,1,W00471.mp4,121
+cây số,1,W00473.mp4,212
+cây thân gỗ,3,W00474N.mp4; W00474T.mp4; W00474B.mp4,92; 92; 123
+cây thông,1,W02096.mp4,116
+cây tre,1,W00476.mp4,179
+cây trồng,1,W00477.mp4,143
+cây xanh,1,W00478.mp4,80
+cây xanh tươi,3,W03945N.mp4; W03945B.mp4; W03945T.mp4,141; 147; 141
+cây ăn quả,3,W00456B.mp4; W00456T.mp4; W00456N.mp4,103; 101; 101
+cây đa,1,W00462.mp4,106
+cãi nhau,1,W00401.mp4,167
+còi,1,W00729.mp4,78
+còi xương,1,W00730.mp4,92
+còn bạn?,1,D0121.mp4,154
+còng,1,W00806.mp4,94
+còng (cái còng),1,W00805.mp4,93
+có ích,1,W00726.mp4,88
+có … không?,1,D0098.mp4,130
+cô dâu,1,W00809.mp4,129
+cô giáo,3,W00812T.mp4; W00812B.mp4; W00812N.mp4,103; 103; 92
+cô đơn,1,W00811.mp4,106
+côn trùng,1,W00837.mp4,80
+công bằng,1,W00838.mp4,89
+công chúa,1,W00839.mp4,99
+công cộng,1,W00840.mp4,85
+công cụ,1,W00841.mp4,76
+công nghiệp,3,D0307N.mp4; D0307B.mp4; D0307T.mp4,104; 93; 104
+công nhận,1,W00843.mp4,105
+công sức,1,W00844.mp4,90
+công thức,1,W00846.mp4,89
+công trường,1,W00848B.mp4,107
+công tắc,1,W00845.mp4,97
+công viên,3,W00850B.mp4; W00850T.mp4; W00850N.mp4,99; 88; 88
+công việc,1,W00851.mp4,121
+công văn,1,W04061.mp4,262
+công ước,1,W00849.mp4,90
+cõng,1,W00807.mp4,173
+cù,1,W00900.mp4,71
+cùi chỏ,1,W00915.mp4,109
+cùng / với (giới từ),1,D0166.mp4,88
+cúc áo,1,W00894.mp4,92
+cúi,1,W00895.mp4,101
+căm thù,1,D0127.mp4,114
+cũng vậy/cũng thế,1,D0118.mp4,315
+cơ bắp,1,W00867.mp4,129
+cơ hội,3,W00868B.mp4; W00868T.mp4; W00868N.mp4,84; 86; 86
+cơ quan,1,W00870.mp4,99
+cơ sở,1,W00871.mp4,89
+cơ thể,1,W00872.mp4,104
+cơm,1,W00884.mp4,93
+cơm bình dân,3,W00885T.mp4; W00885B.mp4; W00885N.mp4,102; 98; 124
+cơm hộp,1,W00877.mp4,107
+cơm rang,1,D0091.mp4,136
+cưa,1,W00932.mp4,104
+cưa (cái cưa),1,W00931.mp4,90
+cướp,3,W00943N.mp4; W00943B.mp4; W00943T.mp4,99; 90; 99
+cướp biển,1,W00944.mp4,105
+cướp cờ,1,W00945.mp4,99
+cướp giật,1,W00946.mp4,88
+cười nhếch mép,1,D0022.mp4,93
+cười vỡ bụng,1,D0023.mp4,117
+cưỡi ngựa,1,W00941.mp4,147
+cạnh,1,W00411.mp4,136
+cạnh bên (toán),1,W00412.mp4,148
+cạnh tranh,1,D0466.mp4,120
+cạnh đáy,1,W00413.mp4,149
+cạnh đối diện,1,W00414.mp4,152
+cả ngày,1,D0372.mp4,111
+cảng Hải Phòng,1,D0319.mp4,85
+cảng Sài Gòn,1,D0320.mp4,125
+cảnh giác,1,D0254.mp4,167
+cảnh vật,1,W00409.mp4,155
+cấp cứu,1,W00432.mp4,117
+cấp dưỡng,1,W00433.mp4,133
+cất giấu,1,W00434.mp4,133
+cất giữ,1,W00435.mp4,110
+cất tiếng khóc,1,W00436.mp4,105
+cất tiếng nói,1,W00437.mp4,158
+cấy,1,W00479.mp4,105
+cấy lúa,1,W00480.mp4,123
+cần không?,3,D0122B.mp4; D0122N.mp4; D0122T.mp4,90; 78; 78
+cần khởi động,1,W00431.mp4,125
+cầu (cây cầu),1,W00446.mp4,262
+cầu Long Biên,1,W01831.mp4,91
+cầu Thê Húc (Hồ Gươm),1,D0345.mp4,130
+cầu cứu,1,W00447.mp4,132
+cầu giao,1,W00448.mp4,130
+cầu kì,1,W00449.mp4,142
+cầu nguyện,1,W00450.mp4,311
+cầu thang,1,W03165.mp4,109
+cầu thủ,1,W00451.mp4,159
+cầu tre,1,W00452.mp4,315
+cầu trượt,1,W00454.mp4,252
+cầu vượt,1,W00455.mp4,102
+cắm trại,1,D0095.mp4,120
+cắt lông mũi,1,D0276.mp4,137
+cắt nhau,1,W00430.mp4,130
+cặp sách,1,W00428.mp4,156
+cặp tóc,1,W00429.mp4,141
+cỏ,3,W00357B.mp4; W00357N.mp4; W00357T.mp4,67; 85; 85
+cỏ may,1,W00724.mp4,215
+cố gắng,3,W00820B.mp4; W00820N.mp4; W00820T.mp4,95; 93; 93
+cố ý (như cố tình),1,W00831.mp4,75
+cố định,1,W00827.mp4,82
+cốc,1,W00832.mp4,109
+cối giã,1,W00833.mp4,101
+cối xay gió,1,W00834.mp4,79
+cối xay lúa,1,W00835.mp4,97
+cốm,1,W00836.mp4,126
+cống,1,W00856.mp4,132
+cốp xe,1,W00859.mp4,95
+cổ,1,W00814.mp4,94
+cổ chân,1,W00816.mp4,120
+cổ họng,1,W00818.mp4,107
+cổ kính,1,W00819.mp4,197
+cổ tay,1,W00822.mp4,112
+cổ truyền,1,W00823.mp4,132
+cổ tích,1,W00830.mp4,233
+cổ vũ,1,W00824.mp4,90
+cổ áo,1,W00815.mp4,94
+cổ đại,1,W00817.mp4,244
+cổng,1,W00854.mp4,78
+cổng trường,2,W00825N.mp4; W00825T.mp4,114; 114
+cỗ,1,W00826.mp4,105
+cộng (Toán học),3,W00857N.mp4; W00857B.mp4; W00857T.mp4,78; 81; 81
+cột,1,W00861.mp4,95
+cột nhà,1,W00865.mp4,102
+cột sống,1,W00866.mp4,103
+cột điện,3,W00863N.mp4; W00863T.mp4; W00863B.mp4,89; 89; 106
+cột đèn,1,W00862.mp4,114
+cờ,1,W00878.mp4,119
+cờ ca rô,1,W00880.mp4,62
+cờ tướng,1,W00881.mp4,107
+cờ vua,1,W00882.mp4,101
+cởi mở,1,W00883.mp4,123
+cởi áo,1,W00876.mp4,99
+cụ,1,W00910.mp4,90
+cụ già,1,W00912.mp4,104
+cụ thể,1,W00893.mp4,134
+cụ đồ,1,W00911.mp4,132
+cục tẩy,1,W00914.mp4,90
+cụm từ,1,W00918.mp4,94
+củ cà rốt,1,W00901.mp4,79
+củ cải trắng,1,W00902.mp4,86
+củ gừng,1,W00903.mp4,89
+củ hành tây,1,W00904.mp4,115
+củ khoai lang,1,W00890.mp4,110
+củ khoai tây,1,W00905.mp4,109
+củ nghệ,1,W00906.mp4,94
+củ su hào,1,W00907.mp4,106
+củ sả,1,W00909.mp4,115
+củ tỏi,1,W00908.mp4,99
+củ từ,1,W00892.mp4,80
+củ đậu,1,W00889.mp4,98
+củi,1,W00916.mp4,116
+cứu,1,W00947.mp4,79
+cứu hộ,1,W00948.mp4,92
+cứu sống,1,D0317.mp4,93
+cử chỉ điệu bộ,1,W00929.mp4,80
+cử động,1,W00930.mp4,78
+cửa hàng,3,W00935B.mp4; W00935N.mp4; W00935T.mp4,108; 108; 108
+cửa khẩu,1,W00936.mp4,79
+cửa kính,1,W00937.mp4,99
+cửa sổ,1,W00939.mp4,86
+cực khổ,1,D0101.mp4,141
+d,1,D0494.mp4,88
+da ngăm (nước da ngăm đen),3,D0347N.mp4; D0347T.mp4; D0347B.mp4,97; 97; 119
+da trắng,3,D0346B.mp4; D0346T.mp4; D0346N.mp4,103; 128; 128
+dai,1,W00951.mp4,86
+danh bạ,1,W00963.mp4,105
+danh dự,1,W00964.mp4,100
+danh hiệu,1,W00965.mp4,114
+danh lam thắng cảnh,1,W00966.mp4,136
+danh mục,1,W00967.mp4,88
+danh nhân,1,W00968.mp4,110
+danh sách,1,W00969.mp4,85
+danh từ,1,W00970.mp4,85
+danh từ riêng,1,W00971.mp4,105
+dao,1,W00973.mp4,86
+di chuyển,1,W01029.mp4,59
+di truyền,3,W01032B.mp4; W01032N.mp4; W01032T.mp4,74; 83; 103
+diêm,1,W01034.mp4,96
+diều,1,W01044.mp4,137
+diễn thuyết,1,W01038.mp4,102
+diện tích,1,W01039.mp4,108
+diện tích toàn phần,1,W01040.mp4,94
+diện tích xung quanh,1,W01041.mp4,105
+diệt chủng,1,W01042.mp4,163
+doanh nghiệp,1,W01051.mp4,89
+doanh trại,1,W01053.mp4,95
+du học,1,W01062.mp4,96
+du thuyền,1,W01064.mp4,85
+dung tích,1,W01310.mp4,87
+duy nhất,1,D0465.mp4,141
+duyên dáng,1,W01070.mp4,91
+duyệt binh,1,W01071.mp4,93
+dài,1,W00952.mp4,90
+dài hơn,1,W00954.mp4,97
+dài hạn,1,W00953.mp4,105
+dài nhất,1,W00955.mp4,116
+dàn bài,1,W00959.mp4,107
+dàn nhạc,1,W00960.mp4,85
+dám làm,3,D0209B.mp4; D0209T.mp4; D0209N.mp4,80; 80; 96
+dán,1,W00972.mp4,91
+dân ca,1,W00982.mp4,84
+dân chài,1,W00983.mp4,98
+dân chủ,1,D0114.mp4,80
+dân số,1,W00987.mp4,82
+dân tộc,3,W00988N.mp4; W00988B.mp4; W00988T.mp4,71; 96; 71
+dân tộc Chăm,1,D0308.mp4,107
+dân tộc Khơ me,1,D0310.mp4,131
+dân tộc Mông,1,D0312.mp4,117
+dân tộc Mường,1,D0309.mp4,126
+dân tộc Thái,1,D0311.mp4,107
+dân tộc thiểu số,3,W00989N.mp4; W00989B.mp4; W00989T.mp4,100; 105; 100
+dây buộc tóc,1,W01014.mp4,130
+dây chun,1,W01015.mp4,101
+dây thần kinh,1,W01017.mp4,67
+dây thừng,1,W01018.mp4,111
+dây xích,1,W01019.mp4,95
+dây điện,3,W01016N.mp4; W01016B.mp4; W01016T.mp4,113; 100; 113
+dãy nhà,1,W00975.mp4,94
+dãy núi,1,W00976.mp4,106
+dãy núi Hoàng Liên Sơn,1,D0245.mp4,122
+dãy số,1,W00977.mp4,92
+dãy số liệu,1,W00978.mp4,126
+dép quai hậu,3,W01022T.mp4; W01022B.mp4; W01022N.mp4,98; 98; 101
+dê con,1,W01024.mp4,120
+dê mẹ,1,W01025.mp4,121
+dòng chữ,1,W01055.mp4,84
+dòng họ,1,W01056.mp4,132
+dòng sông,1,W01058.mp4,94
+dòng sông chảy,1,D0439.mp4,111
+dũng cảm,1,W01068.mp4,93
+dạy,1,W00979.mp4,82
+dải phân cách,1,W00958.mp4,212
+dấu bằng,1,W00998.mp4,78
+dấu chia,1,W01004.mp4,87
+dấu chấm,1,W01001.mp4,108
+dấu chấm hỏi,1,W01002.mp4,103
+dấu chấm than,1,W01003.mp4,79
+dấu gạch ngang,1,W01005.mp4,72
+dấu hai chấm,1,W01006.mp4,84
+dấu huyền,3,D0524T.mp4; D0524B.mp4; D0524N.mp4,101; 101; 185
+dấu hỏi,3,D0526N.mp4; D0526T.mp4; D0526B.mp4,106; 106; 128
+dấu ngoặc đơn,1,W01009.mp4,93
+dấu ngã,3,D0527T.mp4; D0527N.mp4; D0527B.mp4,111; 111; 112
+dấu nhân,1,W01010.mp4,84
+dấu nặng,1,D0528.mp4,101
+dấu phẩy,1,W01011.mp4,92
+dấu sắc,3,D0525B.mp4; D0525T.mp4; D0525N.mp4,99; 99; 183
+dầu gội đầu,1,W00994.mp4,98
+dầu hoả,1,W00995.mp4,85
+dầu khí,1,W00996.mp4,88
+dầu mỏ,1,W00997.mp4,103
+dầu ăn,1,W00993.mp4,64
+dẫn chương trình,1,W00990.mp4,89
+dẫn chứng,1,W00991.mp4,134
+dập,1,W00992.mp4,64
+dắt,1,W00981.mp4,93
+dặn dò,1,W00980.mp4,71
+dẻo,1,W01021.mp4,98
+dễ chịu,1,W01026.mp4,93
+dễ thương,1,W01027.mp4,105
+dệt,1,W01028.mp4,100
+dịch vụ,3,W01033N.mp4; W01033T.mp4; W01033B.mp4,111; 101; 93
+dịu dàng,1,D0436.mp4,131
+dọc,1,W01054.mp4,82
+dốc,1,W01060.mp4,219
+dốt,1,W01061.mp4,240
+dỗi,3,D0271B.mp4; D0271N.mp4; D0271T.mp4,117; 146; 146
+dụng cụ,1,W01069.mp4,98
+dừng lại,1,D0183.mp4,128
+dự trữ,1,W02097.mp4,115
+dự án,1,D0259.mp4,114
+dựng phim,1,W01076.mp4,95
+e,1,D0496.mp4,80
+e thẹn,3,W01348B.mp4; W01348T.mp4; W01348N.mp4,85; 93; 96
+em dâu,1,W01349.mp4,110
+em gái,1,W01350.mp4,120
+em họ,3,D0153N.mp4; D0153B.mp4; D0153T.mp4,96; 117; 153
+em rể,3,W01351T.mp4; W01351B.mp4; W01351N.mp4,74; 111; 120
+em trai,3,W01352B.mp4; W01352N.mp4; W01352T.mp4,81; 116; 116
+em út,1,W01353.mp4,104
+email,1,W01354.mp4,128
+f,1,D0521.mp4,86
+g,2,D0498N.mp4; D0498B.mp4,90; 158
+ga tàu,3,W01364N.mp4; W01364T.mp4; W01364B.mp4,105; 105; 83
+gai,1,W01375.mp4,120
+gan,1,W01377.mp4,142
+gan dạ,1,W01378N.mp4,124
+gan lì,1,W01379.mp4,119
+gang tay,1,W01381.mp4,119
+ghen tị,3,D0019N.mp4; D0019B.mp4; D0019T.mp4,127; 107; 127
+ghi chép,1,W01410.mp4,112
+ghi chú,1,W01411.mp4,113
+ghi hình,1,W01412.mp4,113
+ghi nhớ,1,W01413.mp4,90
+ghé thăm,1,W01406.mp4,110
+ghép hình,1,W01407.mp4,129
+giai đoạn,1,W01423.mp4,126
+gian dối,1,D0337.mp4,147
+gian khổ,1,W01443.mp4,91
+gian lận,1,W00985.mp4,82
+giao hoán,1,W01450.mp4,123
+giao hàng,1,W01429.mp4,104
+giao lưu,1,W01451.mp4,119
+giao thông,2,W01430B.mp4; W01430N.mp4,86; 130
+giao thừa,1,W01452.mp4,116
+giao tiếp,3,W01453B.mp4; W01453N.mp4; W01453T.mp4,73; 156; 156
+gieo xúc xắc,1,W01477.mp4,133
+giàn khoan,1,W01444.mp4,123
+giàn mướp,1,W01427.mp4,141
+giàn nho,1,W01445.mp4,119
+giàu có,1,W01459.mp4,191
+giá sách,1,W01420.mp4,120
+giá trị,3,W01433N.mp4; W01433T.mp4; W01433B.mp4,266; 266; 96
+giá trị phần trăm,3,W01434B.mp4; W01434T.mp4; W01434N.mp4,120; 118; 118
+giá trị tuyệt đối,1,W01435.mp4,126
+giám khảo,1,W01442.mp4,116
+giám sát,2,D0255.mp4; W01426.mp4,117; 138
+giám đốc,1,W01441.mp4,80
+gián tiếp,3,W01447T.mp4; W01447N.mp4; W01447B.mp4,90; 90; 95
+giáo dục,1,W01456.mp4,99
+giáo sĩ,1,W01458.mp4,115
+giã,1,W01432.mp4,90
+giãn cách xã hội,1,D0287.mp4,124
+gió Lào,1,W01482.mp4,131
+giông bão,1,W01489.mp4,106
+giúp đỡ,3,W01497B.mp4; W01497T.mp4; W01497N.mp4,74; 106; 106
+giơ tay,1,W01491.mp4,105
+giường,1,W01498.mp4,106
+giả bộ (giống giả vờ),1,W01417T.mp4,205
+giả mạo,1,W01418.mp4,109
+giả sử,1,W01419.mp4,118
+giải lao,1,W01437.mp4,103
+giải quyết,1,W01438.mp4,102
+giải thích,1,W01424.mp4,449
+giải vô địch,1,W01440.mp4,124
+giảm,1,W01425.mp4,110
+giấc ngủ,1,W01462.mp4,147
+giấy,3,W01470T.mp4; W01470B.mp4; W01470N.mp4,121; 104; 121
+giấy màu,3,W01472B.mp4; W01472N.mp4; W01472T.mp4,98; 109; 109
+giấy nháp,3,W01473B.mp4; W01473N.mp4; W01473T.mp4,89; 129; 129
+giấy tờ,1,W01474.mp4,121
+giấy ăn,3,W01471T.mp4; W01471B.mp4; W01471N.mp4,117; 95; 117
+giầy ba ta,1,W01467.mp4,228
+giầy dép,1,W01468.mp4,208
+giầy thể thao,1,W01469.mp4,235
+giẫm,1,W01463.mp4,100
+giận dỗi,1,W01464.mp4,80
+giận dữ,1,W01465.mp4,104
+giật mình,1,W01466.mp4,102
+giẻ lau,1,W01476.mp4,128
+giếng nước,1,W01478.mp4,117
+giết,1,W01479.mp4,81
+giọng ca,1,W01486.mp4,144
+giọng nói,1,W01487.mp4,92
+giỏi,1,W01485.mp4,326
+giống nhau,1,W01490.mp4,106
+giỗ,1,D0041.mp4,97
+giới hạn,1,W01493.mp4,113
+giới thiệu,1,W01494.mp4,139
+giữ nguyên,1,W02626.mp4,88
+gà mái,1,W01365N.mp4,224
+gà nướng lu,1,D0390.mp4,135
+gà rừng,1,W01366.mp4,168
+gà trống,1,W01368.mp4,134
+gà tây,1,W01367.mp4,137
+gánh,1,W01382.mp4,128
+gáy,1,W01389.mp4,121
+gãi đầu gãi tai,1,W01376.mp4,179
+gãy chân,1,W01387.mp4,113
+gãy tay,1,W01388.mp4,132
+góc bẹt,1,W01501.mp4,113
+góc bếp,1,W01502.mp4,127
+góc học tập,1,W01503.mp4,111
+góc nhọn,1,W01505.mp4,114
+góc tù,1,W01506.mp4,226
+góc vuông,1,W01507.mp4,98
+góc vườn,1,W01508.mp4,138
+gói,1,W01510.mp4,79
+gói (đgt),1,W01509.mp4,98
+góp tiền,1,D0451.mp4,141
+góp ý,1,W01513.mp4,114
+gù lưng,1,W04070.mp4,117
+găng tay,1,W01393.mp4,144
+gương,1,W01523.mp4,100
+gương mẫu,1,W01525.mp4,124
+gương mặt,1,W01524.mp4,96
+gạo,3,W01384B.mp4; W01384N.mp4; W01384T.mp4,83; 122; 122
+gạo nếp,1,W01385.mp4,128
+gấp ba,1,D0248.mp4,111
+gấp giấy,1,W01398.mp4,133
+gấp quần áo,1,W01399.mp4,129
+gấp đôi,1,D0247.mp4,79
+gần gũi,1,W01397.mp4,106
+gầy (miền Nam: ốm),3,W01403N.mp4; W01403B.mp4; W01403T.mp4,129; 82; 215
+gật gù,1,W01401.mp4,103
+gật đầu,1,W01400.mp4,111
+gậy của người già,1,W01404.mp4,142
+gắn bó,1,W01392.mp4,124
+gắp thức ăn,1,W01394.mp4,136
+gặm cỏ,1,W01390.mp4,176
+gặm xương (con chó gặm xương),1,W01391.mp4,145
+gặp gỡ,1,W01395.mp4,133
+gặt lúa,1,W01396.mp4,126
+gọi,1,W01511.mp4,249
+gọn gàng,1,W01512.mp4,125
+gọt bút chì,1,W01515.mp4,98
+gọt bút chì (cái),1,W01514.mp4,127
+gỏi/nộm,1,D0378.mp4,105
+gốm sứ,1,W01517.mp4,132
+gỗ,3,W01516N.mp4; W01516T.mp4; W01516B.mp4,97; 120; 104
+gợi ý,1,W01518.mp4,96
+gửi,1,W01519.mp4,195
+gửi quà,1,W01520.mp4,116
+gửi thư,1,W01522.mp4,98
+h,3,D0500B.mp4; D0500N.mp4; D0500T.mp4,71; 65; 147
+hai là,1,D0147.mp4,147
+hai phân số bằng nhau,1,W02617.mp4,144
+ham chơi,3,D0342N.mp4; D0342T.mp4; D0342B.mp4,106; 108; 108
+hay là (hoặc là),3,D0243N.mp4; D0243T.mp4; D0243B.mp4,108; 108; 120
+hi sinh,3,W01583N.mp4; W01583T.mp4; W01583B.mp4,100; 85; 84
+hi vọng,3,W01584N.mp4; W01584T.mp4; W01584B.mp4,69; 75; 75
+hiếu thảo,1,W01593.mp4,138
+hiểu,3,W01591N.mp4; W01591T.mp4; W01591B.mp4,117; 117; 64
+hiện nay,1,W01588.mp4,80
+hiện đại,1,W01587.mp4,117
+hiệu (Toán học),1,W01595.mp4,108
+hiệu cầm đồ,1,W01596.mp4,109
+hiệu thuốc,1,W01594.mp4,220
+hoa,3,W01619B.mp4; W01619N.mp4; W01619T.mp4,94; 114; 94
+hoa cúc,1,W01620.mp4,140
+hoa dâm bụt,1,D0482.mp4,121
+hoa giấy,1,D0481.mp4,134
+hoa hậu,1,D0467.mp4,83
+hoa hồng,1,W01622.mp4,119
+hoa lay ơn,1,W01625.mp4,72
+hoa mai,1,D0488.mp4,137
+hoa sen,3,W01629B.mp4; W01629T.mp4; W01629N.mp4,98; 110; 125
+hoa đào,1,W01621.mp4,126
+hoan hô,1,W04063.mp4,231
+hoang mang,1,W01764.mp4,80
+hoàn thành,1,W01641.mp4,158
+hoàng hôn,1,W01646.mp4,151
+hoàng đế,1,W01645.mp4,97
+hoán vị,1,W01643.mp4,174
+hoạt hình,3,W01655B.mp4; W01655T.mp4; W01655N.mp4,97; 111; 111
+hoạt động,1,W01651B.mp4,81
+hoảng sợ,1,W01650.mp4,131
+hoặc,3,D0188T.mp4; D0188B.mp4; D0188N.mp4,76; 90; 76
+hung thủ,1,W01712.mp4,139
+hung ác,1,W01711.mp4,121
+huy hiệu,1,W01718.mp4,134
+huyện,3,W01721T.mp4; W01721B.mp4; W01721N.mp4,111; 107; 132
+huân chương,1,W01710.mp4,126
+huỷ,1,D0351.mp4,82
+huỷ diệt,1,W01719.mp4,98
+hài hước,1,W01532.mp4,110
+hài lòng,1,D0199.mp4,148
+hàm răng,1,W01536.mp4,108
+hàng chục,1,W01539.mp4,114
+hàng chục nghìn,1,W01540.mp4,99
+hàng chục triệu,1,W01541.mp4,94
+hàng dọc,1,W01542.mp4,111
+hàng ngang,1,W01545.mp4,103
+hàng nghìn,1,W01546.mp4,105
+hàng ngày,3,D0170T.mp4; D0170N.mp4; D0170B.mp4,98; 98; 111
+hàng triệu,1,W01550.mp4,100
+hàng trăm,1,W01547.mp4,91
+hàng trăm nghìn,1,W01548.mp4,94
+hàng xóm,1,W01552.mp4,97
+hàng đơn vị,1,W01543.mp4,86
+hành lang,1,W01556.mp4,90
+hành quân,3,W01557B.mp4; W01557N.mp4; W01557T.mp4,115; 221; 268
+hành tinh,1,W01558.mp4,145
+hành vi,1,W01559.mp4,101
+hành động,1,W01554.mp4,96
+háo hức,1,D0262.mp4,134
+hát ru,1,W01560.mp4,105
+hãng máy bay,1,W00122.mp4,100
+hãng tàu thuyền,1,W00142.mp4,93
+hãng xe máy,1,W00125.mp4,74
+hãng ô tô,1,W04072.mp4,71
+héc-ta (ha),1,W01575B.mp4,99
+héc-tô-gam (hg),3,W01576B.mp4; W01576T.mp4; W01576N.mp4,104; 110; 110
+héc-tô-mét (hm),3,W01577B.mp4; W01577T.mp4; W01577N.mp4,81; 102; 102
+héc-tô-mét vuông (hm2),3,W01578B.mp4; W01578N.mp4; W01578T.mp4,98; 97; 97
+héo,1,W01579.mp4,111
+hét (giống la),1,W01580.mp4,71
+hên/gặp may,1,D0266.mp4,110
+hình,1,W01599.mp4,95
+hình bình hành,1,W01600.mp4,102
+hình chiếu,1,W01602.mp4,89
+hình cầu,1,W01601.mp4,108
+hình dáng,1,W01603.mp4,82
+hình elip,1,W01604.mp4,94
+hình học,1,W01605.mp4,116
+hình hộp chữ nhật,1,W01606.mp4,117
+hình lập phương,1,W01608.mp4,113
+hình phạt,1,W01610.mp4,144
+hình thang,1,W01612.mp4,114
+hình trụ,1,W01616.mp4,151
+hình tứ giác,1,W01617.mp4,150
+hình vuông,1,W03908.mp4,120
+hình vẽ,1,W01618.mp4,127
+hòa bình,1,W01634.mp4,144
+hòa nhập,1,W01637.mp4,136
+hòn bi (giống viên bi),1,W01674B.mp4,97
+hòn đá,1,W01661.mp4,130
+hóa đơn,1,W00258.mp4,142
+hói đầu,1,D0021.mp4,120
+hót,1,W01678.mp4,126
+hót rác,1,W01662.mp4,125
+hót rác (cái hót rác),1,W01679.mp4,117
+hôi,1,D0173.mp4,167
+hôn,1,W01700.mp4,121
+hùng vĩ,1,D0240.mp4,198
+hú vía,1,D0070.mp4,113
+hút nước,1,W01716.mp4,106
+hút thuốc lá,1,W01717.mp4,121
+hăm dọa,1,W01050.mp4,257
+hăng hái,1,W01569.mp4,84
+hơi nước,1,W01706.mp4,167
+hướng dẫn,1,W01724.mp4,111
+hạn hán,1,W01537.mp4,101
+hạt,1,W01562.mp4,108
+hạt cườm,1,W01563.mp4,123
+hạt lúa,1,W01567.mp4,107
+hạt lạc,1,W01566.mp4,101
+hạt tiêu,1,W01568.mp4,106
+hải sản,1,D0388.mp4,127
+hải đảo,1,W01534.mp4,111
+hấp,1,D0380.mp4,114
+hấp dẫn,1,D0017.mp4,115
+hậu quả,1,W01573.mp4,136
+hắt hơi,1,W01571.mp4,116
+hằng đẳng thức,1,W01570.mp4,103
+hẹn,3,D0163B.mp4; D0163N.mp4; D0163T.mp4,132; 105; 105
+hệ bài tiết,1,W00076.mp4,151
+hệ thống,3,W01582N.mp4; W01582B.mp4; W01582T.mp4,107; 83; 107
+họ (2 người) (đại từ),1,D0136.mp4,128
+họ (đại từ),1,D0137.mp4,120
+họa sỹ,1,W01638.mp4,221
+học bổng,1,W01665.mp4,123
+học giỏi,1,W01656.mp4,130
+học kém,1,W01666.mp4,152
+học nhóm,1,W01668.mp4,112
+học phí,1,W01669.mp4,112
+học sinh Miền Nam,1,W01658.mp4,163
+học trung bình,1,W01659.mp4,125
+học trò,1,W01671.mp4,118
+học tập,1,W01670.mp4,120
+họng,1,W01676.mp4,134
+họp,3,W01677T.mp4; W01677B.mp4; W01677N.mp4,84; 84; 138
+họp nhóm,3,D0452B.mp4; D0452T.mp4; D0452N.mp4,125; 125; 102
+hỏi,3,W01672B.mp4; W01672N.mp4; W01672T.mp4,79; 130; 130
+hỏi han,1,W01660.mp4,124
+hỏi thăm,1,W01673B.mp4,101
+hỏng,3,W01675N.mp4; W01675T.mp4; W01675B.mp4,120; 87; 87
+hối hận,3,W01692N.mp4; W01692T.mp4; W01692B.mp4,133; 100; 89
+hối lộ,1,W01693.mp4,138
+hốt hoảng,1,D0236.mp4,114
+hồ Hoàn Kiếm,1,W01684.mp4,140
+hồ dán,1,W01682.mp4,123
+hồ nước,1,W01686.mp4,132
+hồi hộp,3,W01690N.mp4; W01690T.mp4; W01690B.mp4,91; 84; 84
+hỗn số,1,W01701.mp4,115
+hội chứng Đao - Down,1,D0367.mp4,109
+hội nghị,1,W01695B.mp4,100
+hội thoại,1,D0295.mp4,108
+hội thảo,2,W01696.mp4; W01696N.mp4,114; 118
+hội trường,1,W01698.mp4,122
+hộp,1,W01702.mp4,114
+hộp bút,1,W01703.mp4,108
+hộp sữa,1,W01704.mp4,128
+hợp lí,1,W01708.mp4,134
+hợp tác,1,W01709.mp4,98
+hợp đồng,2,W01707T.mp4; W01707B.mp4,95; 95
+hứa,3,D0165N.mp4; D0165T.mp4; D0165B.mp4,111; 111; 220
+hữu nghị,1,D0217.mp4,98
+i,1,D0501.mp4,60
+in (ấn),1,W01728B.mp4,112
+internet,1,D0484.mp4,127
+j,1,D0522.mp4,80
+k,1,D0502.mp4,65
+keo kiệt,1,W01739.mp4,101
+khai mạc,1,W01766.mp4,121
+khe cửa,1,W01787.mp4,110
+khe núi,1,W01788.mp4,123
+khen,1,W01789.mp4,108
+khen tặng,1,W01791.mp4,100
+khiêm tốn,1,W01796.mp4,129
+khiêng,1,W01800.mp4,133
+khoa học,1,W01804.mp4,122
+khoan,1,W01815.mp4,102
+khoan (cái khoan),1,W01808.mp4,102
+khoan (khoan đã),1,W02217.mp4,88
+khoang tàu,1,W01816.mp4,258
+khoanh tay,1,W01820.mp4,130
+khoe,1,W01822.mp4,101
+khoá (cái khóa),1,W01810.mp4,133
+khoác tay,1,W01814.mp4,135
+khoác vai,1,W01807.mp4,101
+khoác áo,1,W01813.mp4,136
+khoáng sản,1,D0305.mp4,111
+khoảng cách,1,W01809.mp4,108
+khoẻ mạnh,1,W01823.mp4,131
+khu rừng,1,W01849.mp4,131
+khu vườn,1,W01851.mp4,108
+khu vực cách ly,1,D0474.mp4,142
+khung cửa số,1,W01856.mp4,129
+khung thành,1,W01857.mp4,137
+khuy,1,W01859.mp4,120
+khuyên tai,1,W01860.mp4,102
+khuyến khích,1,D0030.mp4,134
+khuôn hình,1,W01858.mp4,110
+khác,1,W01757.mp4,109
+khách,1,W01758.mp4,88
+khách mời,1,W01759.mp4,112
+khách sạn,1,W01760.mp4,119
+khách vip,1,W01761.mp4,109
+khám bệnh,1,W01767.mp4,94
+khám phá,1,W01768.mp4,102
+kháng cự,1,W01770.mp4,89
+kháng sinh,1,W01771.mp4,94
+khát nước,1,W01774.mp4,98
+khát vọng,1,W01775.mp4,119
+kháu khỉnh,1,D0280.mp4,119
+khâm phục,1,W01783.mp4,121
+khâu vá,1,W01784.mp4,119
+khéo,1,W01792.mp4,96
+khép cửa,1,W01793.mp4,105
+khí cầu,1,W01794.mp4,132
+khó khăn,2,W01803B.mp4; W01803N.mp4,116; 116
+khó tiêu,1,W00562.mp4,99
+khóa cửa,1,W01811.mp4,205
+khóa quần,1,W01806.mp4,114
+khóc,1,W01821.mp4,136
+khói,1,W01825.mp4,130
+khóm dứa,1,W01826.mp4,165
+khô héo,1,W01828.mp4,132
+không bình đẳng,1,D0323.mp4,92
+không cho,3,D0033B.mp4; D0033T.mp4; D0033N.mp4,111; 125; 125
+không có,1,D0112.mp4,207
+không có chi,1,D0113.mp4,125
+không cần,1,D0034.mp4,104
+không dám,3,D0210N.mp4; D0210B.mp4; D0210T.mp4,86; 92; 101
+không gian,1,W01833.mp4,162
+không hiểu,3,W01840B.mp4; W01840N.mp4; W01840T.mp4,98; 136; 136
+không khí,1,W01841.mp4,114
+không muốn,3,D0190N.mp4; D0190B.mp4; D0190T.mp4,65; 95; 65
+không nghe lời,3,D0031N.mp4; D0031B.mp4; D0031T.mp4,97; 138; 97
+không ngon,1,D0198.mp4,70
+không nên,3,D0035N.mp4; D0035T.mp4; D0035B.mp4,95; 87; 83
+không quen,3,D0109N.mp4; D0109T.mp4; D0109B.mp4,68; 91; 91
+không thẳng hàng,1,W01834.mp4,277
+không đẹp,3,D0129T.mp4; D0129B.mp4; D0129N.mp4,86; 108; 86
+khúc khuỷu,1,W01854.mp4,143
+khăn mặt,1,W01777.mp4,110
+khăn quàng,1,W01779.mp4,98
+khăn quàng đỏ,1,W01780.mp4,105
+khả năng,1,D0096.mp4,131
+khẩu hiệu,1,W01785.mp4,99
+khẩu trang,1,W01786.mp4,115
+khắc phục,1,W01776.mp4,122
+khỏi bệnh,3,W01824B.mp4; W01824T.mp4; W01824N.mp4,82; 223; 141
+khố,1,W01836.mp4,224
+khối lượng,1,W01832.mp4,108
+khổ,2,W01842N.mp4; W01842.mp4,162; 148
+khổ công,1,D0208.mp4,129
+khổ thơ,1,W01829.mp4,182
+khổng lồ,1,W01835.mp4,110
+khớp xương,1,W01847.mp4,109
+khờ dại,1,D0100.mp4,137
+khởi nghiệp,1,D0325.mp4,102
+ki-lô-gam,1,W01864.mp4,113
+ki-lô-mét (km),1,W01869.mp4,110
+ki-lô-mét vuông (km2),1,W01865.mp4,99
+kia,1,D0124.mp4,96
+kim,1,W01890.mp4,126
+kim cương,1,D0321.mp4,106
+kinh nghiệm,3,W01898N.mp4; W01898T.mp4; W01898B.mp4,76; 76; 98
+kinh ngạc,1,W01897.mp4,116
+kiên quyết,1,W01882.mp4,141
+kiên trì (giống: kiên nhẫn),1,W01883.mp4,102
+"kiêu (kiêu căng, kiêu xa)",1,W01888.mp4,112
+kiếm (cái kiếm),1,W01879.mp4,117
+kiến thức,1,W01885.mp4,107
+kiến trúc,1,W01886.mp4,111
+kiến trúc sư,1,W01887.mp4,114
+kiểm tra,3,W01878N.mp4; W01878B.mp4; W01878T.mp4,96; 89; 96
+kèn,1,W01735.mp4,119
+kém,3,W01738T.mp4; W01738B.mp4; W01738N.mp4,65; 65; 130
+kéo,1,W01740.mp4,93
+kéo co,1,D0294.mp4,99
+kêu,1,W01755.mp4,94
+kêu gọi,1,W01756.mp4,202
+kì diệu,1,W01861.mp4,113
+kì lạ,1,W01862.mp4,105
+kí duyệt,1,W01863.mp4,105
+kí hiệu,1,W01867.mp4,134
+kí tên,3,W01872N.mp4; W01872T.mp4; W01872B.mp4,105; 105; 110
+kính,1,W01900.mp4,113
+kính hiển vi,1,W01902.mp4,140
+kính lão,1,W01903.mp4,118
+kính lúp,1,W01904.mp4,147
+kính trọng,1,W01906.mp4,142
+kẹo,3,W01743N.mp4; W01743T.mp4; W01743B.mp4,61; 61; 102
+kẹp,1,W01744.mp4,97
+kẹt xe/tắc đường,1,D0185.mp4,101
+kẻ cắp,1,W01734.mp4,106
+kẻ thù,1,W01737.mp4,134
+kết bạn,1,W01750.mp4,99
+kết hợp,1,W01751.mp4,97
+kết luận,1,D0483.mp4,131
+kết quả,3,W01754N.mp4; W01754B.mp4; W01754T.mp4,142; 78; 142
+kể chuyện,1,W01746.mp4,107
+kỉ luật,1,W01871.mp4,116
+kỉ niệm,3,W01866T.mp4; W01866N.mp4; W01866B.mp4,127; 127; 92
+kịch,1,W01035.mp4,101
+kịch bản,1,W01876.mp4,128
+kịch câm,1,W01036.mp4,75
+kịp thời,1,D0068.mp4,116
+kỹ năng,1,D0097.mp4,116
+l,1,D0503.mp4,67
+la bàn,1,W01909.mp4,125
+la hét,1,W01910.mp4,130
+lang thang,1,W01930.mp4,113
+lao phổi,1,W01944.mp4,132
+lau chùi,1,W01948.mp4,112
+lau khô,1,W01949.mp4,133
+lau miệng,1,D0228.mp4,126
+lau nhà,1,W01950.mp4,120
+leo trèo,1,W01973.mp4,116
+linh hồn,1,W02010.mp4,125
+liên hoan,3,W01998B.mp4; W01998N.mp4; W01998T.mp4,102; 89; 102
+liên kết,1,W01999.mp4,152
+liên lạc,3,W02000B.mp4; W02000N.mp4; W02000T.mp4,101; 100; 126
+liên quan,3,W02001T.mp4; W02001B.mp4; W02001N.mp4,131; 98; 131
+liên tục,1,W02002.mp4,105
+liếc nhìn,3,D0272B.mp4; D0272T.mp4; D0272N.mp4,96; 96; 79
+liền sau,1,W02003.mp4,110
+liền trước,1,W02004.mp4,119
+liều lĩnh,1,W02006.mp4,114
+liều mình,1,W02008.mp4,132
+liệt (liệt tay chân),1,W02005.mp4,95
+lo sợ,1,W02016.mp4,108
+loa,1,W02021.mp4,98
+lon bia,1,W02026.mp4,100
+long lanh (mắt),1,D0269.mp4,130
+loài vật,3,W02024N.mp4; W02024T.mp4; W02024B.mp4,92; 92; 78
+loạn thị,1,W02025.mp4,98
+lung tung,3,D0020N.mp4; D0020B.mp4; D0020T.mp4,90; 131; 257
+luyện tập,1,W02074.mp4,126
+luyện từ và câu,1,W02075.mp4,119
+luân phiên,2,W00638.mp4; W00638N.mp4,69; 103
+luật chơi,3,W02064T.mp4; W02064N.mp4; W02064B.mp4,115; 112; 115
+luật lệ,1,W02065.mp4,111
+luộc,1,D0375.mp4,89
+luộc rau,1,D0455.mp4,156
+là gì?,3,W01911N.mp4; W01911B.mp4; W01911T.mp4,92; 97; 92
+làm bài tập,2,W01924N.mp4; W01924.mp4,89; 125
+làm quen,1,W01925B.mp4,80
+làm ruộng,1,W01926.mp4,98
+làm việc,1,W01928.mp4,97
+làm được,1,D0438.mp4,100
+làn sóng,1,W01932.mp4,113
+làng gốm Bát Tràng,1,W00173.mp4,131
+làng xóm,1,W01939.mp4,140
+lá cây,2,W01912N.mp4; W01912B.mp4,144; 92
+lá thư,1,W01913.mp4,130
+lái tàu hỏa,3,W01920B.mp4; W01920N.mp4; W01920T.mp4,98; 90; 90
+lâu,2,D0167.mp4; D0167B.mp4,125; 241
+lây bệnh,1,W01966.mp4,105
+lây nhiễm,1,W01967.mp4,101
+lãng phí,1,D0314.mp4,108
+lãnh đạo,1,W01942.mp4,144
+lão già,1,W01947.mp4,129
+lên ngôi,1,W01987.mp4,119
+lên xe,1,W01989.mp4,129
+lên đường,1,W01986.mp4,76
+lí do,1,W01992.mp4,110
+lò xo,1,W02018.mp4,130
+lông,1,W02039.mp4,116
+lông gà,1,W02040.mp4,120
+lùi bước,1,W02070.mp4,122
+lúa,1,W02060.mp4,114
+lúc nào,3,W02066N.mp4; W02066T.mp4; W02066B.mp4,107; 107; 105
+lúng túng,1,W02071.mp4,126
+lý do,1,D0296.mp4,89
+lăng Bác Hồ,1,W01953.mp4,127
+lĩnh hội,1,W02011.mp4,125
+lĩnh vực,3,W02012B.mp4; W02012N.mp4; W02012T.mp4,79; 120; 120
+lũ quét,1,W02059.mp4,124
+lũy tre,1,W02073.mp4,122
+lơ lửng,1,W02046.mp4,125
+lưu,1,W00155.mp4,72
+lưu ý,1,W02098.mp4,142
+lương thực,1,W02090.mp4,118
+lưới,1,W02083.mp4,121
+lướt ván,1,W02091.mp4,130
+lười,3,W02078T.mp4; W02078B.mp4; W02078N.mp4,122; 93; 122
+lười học,3,W02079N.mp4; W02079T.mp4; W02079B.mp4,140; 140; 105
+lưỡi,1,W02080.mp4,115
+lưỡi câu,1,W02081.mp4,286
+lược,1,W02077.mp4,91
+lượm,1,W02084.mp4,90
+lượt về (trong thể thao),1,D0328.mp4,119
+lượt đi,1,D0327.mp4,109
+lạc quan,1,W01915.mp4,138
+lạnh lùng,3,D0270N.mp4; D0270T.mp4; D0270B.mp4,107; 108; 108
+lấm lem,1,D0341.mp4,109
+lấy,1,W01970.mp4,106
+lầu (tầng),1,W01964.mp4,119
+lẩu,1,D0377.mp4,106
+lẫn lộn,1,W01962.mp4,106
+lắc đầu,1,W01951.mp4,102
+lắng nghe,1,W01955.mp4,102
+lắp ráp,1,W01960.mp4,125
+lặn,1,W01956.mp4,143
+lặng lẽ,1,W01957.mp4,155
+lều trại,1,W01991.mp4,126
+lễ Halloween 31/10,3,D0048T.mp4; D0048B.mp4; D0048N.mp4,191; 191; 116
+lễ Nô-en,3,W01979T.mp4; W01979N.mp4; W01979B.mp4,133; 107; 130
+lễ bế giảng,2,W01977.mp4; W01977B.mp4,130; 177
+lễ hội,3,W01978N.mp4; W01978B.mp4; W01978T.mp4,85; 103; 103
+lễ hội hóa trang,3,W01982N.mp4; W01982T.mp4; W01982B.mp4,115; 142; 142
+lễ phép,1,W01983.mp4,108
+lễ vật,1,W01984.mp4,98
+lọ hoa,1,W02019.mp4,144
+lọ mực,1,W02020.mp4,85
+lọng,1,W02032.mp4,132
+lốc xoáy,1,D0431.mp4,121
+lối đi,1,W02037.mp4,111
+lồng bàn,1,W02041.mp4,116
+lồng chim,1,W02042.mp4,129
+lồng tiếng,1,W02043.mp4,223
+lỗi chính tả,1,W02035.mp4,126
+lỗi lầm,1,W02036.mp4,114
+lớn hơn 1 (Toán học),1,D0297.mp4,113
+lớn hơn 2 (Toán học),1,D0298.mp4,85
+lớp,1,W02052.mp4,115
+lớp phó,1,W02055.mp4,113
+lớp trưởng,1,W02057.mp4,107
+lời giải,1,W02047.mp4,102
+lời nói,1,W02048.mp4,115
+lợi ích,1,W02049.mp4,117
+lục giác,1,W02068.mp4,106
+lục địa,1,W02067.mp4,137
+lửa,1,W02076.mp4,83
+lựu,1,W02099.mp4,121
+lựu đạn,1,W02100.mp4,109
+m,1,D0504.mp4,95
+ma,1,W02104.mp4,101
+ma cà rồng,1,W02105.mp4,133
+ma quỷ,1,W02106.mp4,99
+ma sát,1,W02107.mp4,101
+ma túy,1,W02108.mp4,117
+may mắn,1,D0102.mp4,150
+mi-li-mét (mm),1,W02208.mp4,111
+minh hoạ,1,W02215.mp4,112
+miêu tả,1,W02214.mp4,110
+miến,1,D0394.mp4,119
+miền Bắc Việt Nam,1,W02211.mp4,112
+miền Nam Việt Nam,1,W02212.mp4,120
+mua bán,1,W02266.mp4,114
+mua vé,1,W02267.mp4,105
+mui xe,1,W02280.mp4,135
+muối,1,D0456.mp4,122
+muối i-ốt,1,W01725.mp4,62
+muốn,3,W02221N.mp4; W02221T.mp4; W02221B.mp4,112; 112; 128
+muốn không?,3,D0189T.mp4; D0189N.mp4; D0189B.mp4,80; 80; 108
+muộn,1,W02281.mp4,108
+màn,3,W02120N.mp4; W02120B.mp4; W02120T.mp4,109; 100; 133
+màu cam,1,W02132.mp4,94
+màu nhiệm,1,W02138.mp4,128
+màu nâu,3,W02137N.mp4; W02137T.mp4; W02137B.mp4,114; 114; 101
+màu trắng,3,W02140N.mp4; W02140B.mp4; W02140T.mp4,88; 82; 88
+màu xanh da trời,3,W02142N.mp4; W02142B.mp4; W02142T.mp4,85; 87; 112
+màu xanh lá cây,3,W02143B.mp4; W02143T.mp4; W02143N.mp4,98; 110; 115
+màu đen,1,W02133B.mp4,140
+màu đỏ,1,W02134.mp4,91
+má,1,W02144.mp4,114
+má (giống: mẹ),1,W02110.mp4,108
+má hồng,1,D0200.mp4,140
+mách,3,D0065B.mp4; D0065T.mp4; D0065N.mp4,126; 111; 111
+mái chèo,1,W02116.mp4,122
+mái hiên,1,W02117.mp4,141
+mái nhà,1,W02118.mp4,149
+mái tóc,1,W02119.mp4,125
+mái vòm,1,W03859.mp4,143
+máy bơm,1,W02146.mp4,130
+máy chiếu,1,W02147.mp4,109
+máy in,3,W02148B.mp4; W02148T.mp4; W02148N.mp4,118; 121; 121
+máy khâu,1,W02149.mp4,118
+máy quay,1,W02150.mp4,142
+máy tính (laptop),1,W02151.mp4,94
+máy tính bỏ túi,1,W02152.mp4,115
+máy vi tính,1,W00732.mp4,173
+máy xúc,1,D0318.mp4,99
+máy ảnh,1,W02145.mp4,122
+mâm cơm,1,W02177.mp4,155
+mâm ngũ quả,3,W02178T.mp4; W02178B.mp4; W02178N.mp4,112; 91; 112
+mây,1,W02195.mp4,121
+mã vạch,1,W02109.mp4,115
+mèo cào,1,D0230.mp4,94
+mét (m),1,W02197.mp4,93
+mét khối (m3),1,W02198.mp4,95
+mét vuông (m2),1,W02199.mp4,114
+mê say (như: say mê),1,W02202.mp4,131
+mê tín,1,W02203.mp4,140
+mênh mông,1,W02205.mp4,114
+mía,1,D0399.mp4,138
+mít tinh,1,D0204.mp4,229
+móc áo,1,W02218.mp4,118
+móng chân,1,W02223.mp4,110
+móng tay,1,W02225.mp4,121
+móng vuốt,1,W02226.mp4,138
+mô hình,1,W02227.mp4,130
+mô tả,1,D0426.mp4,125
+môi,1,W02235.mp4,120
+môi trường,1,W02236.mp4,116
+môn Giáo dục công dân,1,W02240N.mp4,94
+môn Giáo dục thể chất,1,W02241.mp4,120
+môn Khoa học,1,W02242.mp4,105
+môn Kĩ thuật,4,W02243B.mp4; W02243T.mp4; W02243.mp4; W02243N.mp4,116; 103; 103; 103
+môn Lịch sử,3,W02244T.mp4; W02244N.mp4; W02244B.mp4,85; 85; 142
+môn Mĩ thuật,1,W02245.mp4,130
+môn Ngoại ngữ,1,W02246.mp4,121
+môn Sinh học,1,W02247.mp4,134
+môn Tin học và Công nghệ,1,W02249.mp4,111
+môn Tiếng Việt,1,W02248.mp4,123
+môn Toán,1,W02250.mp4,117
+môn Tự nhiên và Xã hội,1,W02251.mp4,136
+môn Âm nhạc,1,W02238.mp4,137
+môn Đạo đức,3,W02239N.mp4; W02239T.mp4; W02239B.mp4,83; 113; 113
+môn Địa lý,3,W04066N.mp4; W04066B.mp4; W04066T.mp4,84; 128; 84
+mõm,1,W02220.mp4,114
+mù chữ,1,D0038.mp4,144
+mùa hè,3,W02270N.mp4; W02270T.mp4; W02270B.mp4,66; 113; 105
+mùa thu,1,W02271.mp4,127
+mùa xuân,3,W02272N.mp4; W02272T.mp4; W02272B.mp4,119; 119; 154
+mùa đông,1,W02269.mp4,114
+múa,1,W02276.mp4,132
+múa lân,1,W02277.mp4,99
+múa rối,1,W02273.mp4,112
+múa sạp,1,W02278.mp4,138
+măng,1,W02162.mp4,120
+mĩ thuật,1,W02209.mp4,103
+mũ,1,W02275.mp4,90
+mũ lưỡi trai,1,W02265.mp4,111
+mũi tên,1,D0219.mp4,129
+mũm mĩm,1,D0427.mp4,125
+mơ ngủ,1,W02255.mp4,100
+mơ ước,1,W02256.mp4,80
+mưa phùn,1,W02282.mp4,111
+mạch lạc,1,W02112.mp4,152
+mạch máu,1,W02113.mp4,146
+mạng lưới,1,W02125.mp4,157
+mạnh bạo (giống: mạnh dạn),1,W02129.mp4,126
+mạnh mẽ,1,W02131.mp4,113
+mất (chết) (chỉ người),1,D0252.mp4,112
+mất ngủ,1,W02182.mp4,102
+mất trí,1,W02183.mp4,119
+mấy giờ?,1,W02196.mp4,127
+mầm cây,1,W02180.mp4,100
+mầm non,1,W02181.mp4,111
+mẫu số,1,W02191.mp4,135
+mẫu số bé,1,W02192.mp4,68
+mẫu số chung,1,W02193.mp4,153
+mẫu số lớn,1,W02194.mp4,120
+mật khẩu,3,W02187N.mp4; W02187B.mp4; W02187T.mp4,86; 103; 164
+mật ong,1,W02189.mp4,115
+mắc áo,1,W02155.mp4,91
+mắm,1,W02161.mp4,110
+mắng,3,W02164B.mp4; W02164T.mp4; W02164N.mp4,113; 110; 67
+mặc,1,W02156.mp4,100
+mặc kệ,1,W02159.mp4,114
+mặc quần áo,1,W02160.mp4,109
+mặt,1,W02166.mp4,130
+mặt dài,1,W02175.mp4,106
+mặt nạ,1,W02173.mp4,107
+mặt vuông,1,W02172.mp4,95
+mặt đất,1,W02171.mp4,121
+mềm mại,1,W02204.mp4,129
+mệt không?,1,D0370.mp4,72
+mệt mỏi,1,D0369.mp4,183
+mọc ria mép,1,D0283.mp4,76
+mọc râu,1,D0282.mp4,101
+mọc tóc,1,D0281.mp4,79
+mồ côi,1,W02229.mp4,97
+mồ côi cha mẹ,1,W02230.mp4,97
+mồ hôi,1,W02231.mp4,130
+mồ hôi nhễ nhại,1,D0197.mp4,161
+mỗi,1,W02237.mp4,102
+mỗi ngày,3,D0169B.mp4; D0169N.mp4; D0169T.mp4,116; 116; 117
+mộc nhĩ,1,W02234.mp4,113
+một cặp,1,W02252.mp4,94
+một là,1,D0146.mp4,115
+một mình,1,W02254.mp4,99
+một tiếng,3,D0410N.mp4; D0410T.mp4; D0410B.mp4,84; 84; 128
+một tiết học,1,D0409.mp4,122
+một ít/ một chút,1,D0184.mp4,244
+một đôi,1,W02253.mp4,94
+mớ rau,1,W02262.mp4,129
+mới,3,W02264N.mp4; W02264T.mp4; W02264B.mp4,70; 71; 107
+mời,1,W02263.mp4,123
+mở,1,W02257.mp4,110
+mở cửa,1,W02258.mp4,122
+mở màn,1,W02260.mp4,131
+mở rộng,1,W02261.mp4,121
+mở đầu,1,W02259.mp4,108
+mục lục,1,W02279.mp4,102
+mục tiêu,1,D0422.mp4,135
+mục đích,1,W03355.mp4,92
+mứt,1,W02283.mp4,102
+mỳ tôm,3,D0080B.mp4; D0080T.mp4; D0080N.mp4,104; 94; 94
+mỳ vằn thắn,1,D0081B.mp4,118
+mỳ ý,3,D0082B.mp4; D0082N.mp4; D0082T.mp4,111; 96; 96
+n,1,D0505.mp4,76
+nghe,1,W02353.mp4,132
+nghi ngờ,3,W02359B.mp4; W02359N.mp4; W02359T.mp4,112; 110; 110
+nghiêm khắc,3,W02373B.mp4; W02373T.mp4; W02373N.mp4,90; 89; 89
+nghiêm túc,1,W02374.mp4,141
+nghiên cứu,1,W02367.mp4,123
+nghiến răng,1,W02375.mp4,153
+nghé,3,W02354N.mp4; W02354B.mp4; W02354T.mp4,76; 124; 76
+nghênh nghênh (đầu),1,D0459.mp4,129
+nghĩ,1,W02368.mp4,125
+nghĩa bóng,1,W02370.mp4,125
+nghĩa trang,1,W02371.mp4,107
+nghĩa đen,1,W02366.mp4,114
+nghẹn ngào,1,W02355.mp4,153
+nghệ sĩ,1,W02356.mp4,103
+nghệ thuật,3,W02357T.mp4; W02357B.mp4; W02357N.mp4,75; 110; 75
+nghỉ hè,3,W02360B.mp4; W02360N.mp4; W02360T.mp4,134; 85; 117
+nghỉ hưu,1,W02362.mp4,133
+nghỉ học,3,W02361B.mp4; W02361N.mp4; W02361T.mp4,100; 80; 100
+nghỉ mát,1,W02363.mp4,135
+nghỉ ngơi,1,W02364.mp4,136
+nghị lực,1,W02369.mp4,109
+ngoan ngoãn,1,W02381.mp4,148
+ngon giấc,1,W02388.mp4,158
+ngon miệng,1,W02390.mp4,110
+ngoại hình,1,W02378.mp4,119
+ngoắc tay,1,W02382.mp4,125
+ngoằn ngoèo,1,W02385.mp4,148
+ngoặc kép,1,W02384.mp4,137
+ngoặc đơn,1,W02383.mp4,129
+nguy hiểm,3,W02405T.mp4; W02405B.mp4; W02405N.mp4,115; 103; 115
+nguyên nhân,1,W02407B.mp4,101
+nguyện vọng,1,W02418.mp4,143
+nguệch ngoạc,1,W02403.mp4,105
+nguồn gốc,1,W02404.mp4,101
+nguội,1,D0383.mp4,142
+ngà voi,1,W02324.mp4,114
+ngành nghề,1,W02333.mp4,125
+ngày Giải phóng miền Nam 30/4,3,D0044T.mp4; D0044B.mp4; D0044N.mp4,131; 131; 154
+ngày Ngôn ngữ kí hiệu Quốc tế 23/9,3,D0052B.mp4; D0052N.mp4; D0052T.mp4,107; 140; 107
+ngày Người khuyết tật Thế giới 3/12,3,D0046N.mp4; D0046T.mp4; D0046B.mp4,124; 142; 187
+ngày Người khuyết tật Việt Nam 18/4,3,D0045B.mp4; D0045N.mp4; D0045T.mp4,119; 150; 149
+ngày Nhà giáo Việt nam,2,W02328N.mp4; W02328T.mp4,116; 190
+ngày Phụ nữ Việt Nam 20/10,3,D0049T.mp4; D0049N.mp4; D0049B.mp4,145; 170; 104
+ngày Quốc tế Lao động,3,W02337B.mp4; W02337N.mp4; W02337T.mp4,144; 179; 173
+ngày Quốc tế phụ nữ 8/3,3,D0042N.mp4; D0042B.mp4; D0042T.mp4,131; 139; 140
+ngày của Cha,3,D0055B.mp4; D0055T.mp4; D0055N.mp4,149; 149; 145
+ngày của Mẹ,3,D0054T.mp4; D0054B.mp4; D0054N.mp4,137; 137; 144
+ngày gia đình Việt Nam 28/6,3,D0056B.mp4; D0056N.mp4; D0056T.mp4,162; 148; 199
+ngày giải phóng thủ đô 10/10,3,D0043N.mp4; D0043T.mp4; D0043B.mp4,140; 165; 165
+ngày giỗ tổ Hùng Vương (âm lịch 10/3),3,D0051T.mp4; D0051B.mp4; D0051N.mp4,155; 155; 144
+ngày khai trường,1,W02327B.mp4,144
+ngày nay,3,W02336B.mp4; W02336T.mp4; W02336N.mp4,123; 75; 103
+ngày sinh,3,W02338N.mp4; W02338B.mp4; W02338T.mp4,68; 130; 137
+ngày thành lập quân đội nhân dân Việt Nam,3,D0058T.mp4; D0058B.mp4; D0058N.mp4,147; 147; 159
+ngày tháng,3,W02329N.mp4; W02329B.mp4; W02329T.mp4,119; 126; 139
+ngày thương bình liệt sĩ 27/7,3,D0050B.mp4; D0050N.mp4; D0050T.mp4,126; 114; 126
+ngày thầy thuốc Việt Nam,3,D0057N.mp4; D0057B.mp4; D0057T.mp4,168; 156; 168
+ngày xưa,1,W02339.mp4,114
+ngày đêm,1,W02334.mp4,114
+ngán,1,D0384.mp4,165
+ngâm hạt,1,W02346.mp4,116
+ngân hàng,1,W02348.mp4,124
+ngây thơ,1,W02352.mp4,165
+ngã,1,W02330.mp4,88
+ngã ba,1,W02325.mp4,217
+ngói,1,W02387.mp4,139
+ngón chân,1,W02392.mp4,109
+ngón tay,1,W02393.mp4,120
+ngô,2,W02395N.mp4; W02395T.mp4,65; 65
+ngôn ngữ,1,W02401.mp4,109
+ngôn ngữ kí hiệu,1,W04073.mp4,110
+ngõ,1,W02391.mp4,132
+ngăn chặn,1,W02342.mp4,213
+ngăn cản,1,W02340.mp4,194
+ngũ quả,3,W02402N.mp4; W02402B.mp4; W02402T.mp4,118; 101; 118
+ngước nhìn,1,W02422.mp4,151
+người bán hàng,1,W02426.mp4,145
+người gửi,1,W02428.mp4,129
+người lái xe (ô tô),3,W02430B.mp4; W02430T.mp4; W02430N.mp4,103; 108; 108
+người lạ,1,W02431.mp4,110
+người máy,1,W02432.mp4,109
+người nhận,1,W02433.mp4,120
+người nước ngoài,1,D0013.mp4,114
+người quen,3,W02435N.mp4; W02435T.mp4; W02435B.mp4,85; 85; 115
+người xưa,3,W02438N.mp4; W02438B.mp4; W02438T.mp4,85; 106; 156
+người xấu,3,W02437N.mp4; W02437B.mp4; W02437T.mp4,91; 113; 91
+người yêu,3,W02439T.mp4; W02439N.mp4; W02439B.mp4,104; 74; 181
+ngưỡng mộ,1,W02440.mp4,117
+ngược lại,1,W02424.mp4,139
+ngược đãi,1,W02423.mp4,107
+ngạc nhiên,1,W02332.mp4,87
+ngẩng đầu,1,W02349.mp4,113
+ngập lụt,1,W02350.mp4,125
+ngập ngừng,1,D0201.mp4,158
+ngắn,1,W02343.mp4,112
+ngắn nhất,1,W02344.mp4,103
+ngắt hoa,2,W02345N.mp4; W02345B.mp4,80; 115
+ngọn cây,3,W02394T.mp4; W02394N.mp4; W02394B.mp4,74; 74; 120
+ngồi,3,W02400N.mp4; W02400B.mp4; W02400T.mp4,68; 95; 95
+ngộ nghĩnh,1,W02399.mp4,170
+ngộ độc,1,W02398.mp4,107
+ngừng lại,1,D0179.mp4,152
+ngữ pháp,3,W03327B.mp4; W03327N.mp4; W03327T.mp4,88; 102; 102
+ngữ điệu,1,W02421.mp4,97
+nhanh nhẹn,1,W02462.mp4,102
+nhi đồng,1,W02495.mp4,72
+nhiều hơn,1,W02498.mp4,100
+nhiều vô cùng,1,W03865.mp4,114
+nhiệt kế,3,W02497B.mp4; W02497T.mp4; W02497N.mp4,112; 112; 131
+nhiệt độ,1,W01298.mp4,95
+nhu cầu,1,W02508.mp4,122
+nhà bác học,1,W02441.mp4,131
+nhà cửa,1,W02443.mp4,113
+nhà kho,1,D0379.mp4,121
+nhà nước,3,W01075T.mp4; W01075N.mp4; W01075B.mp4,106; 106; 107
+nhà rông,1,D0313.mp4,112
+nhà sàn,1,W02447.mp4,121
+nhà thơ,1,W02449.mp4,114
+nhà thờ,1,W02450.mp4,151
+nhà thờ Đức Bà,1,W02451.mp4,131
+nhà toán học,1,W02453.mp4,128
+nhà trường,3,W02455T.mp4; W02455B.mp4; W02455N.mp4,104; 113; 104
+nhà tù,1,W02456.mp4,112
+nhà tầng,1,W02448.mp4,123
+nhà văn hóa,3,D0470N.mp4; D0470T.mp4; D0470B.mp4,101; 101; 127
+nhà vệ sinh,1,D0485.mp4,119
+nhào lộn,1,W02463.mp4,126
+nhát gan,1,W02464.mp4,95
+nháy mắt,1,W02468.mp4,90
+nhân (Toán học),3,W02473T.mp4; W02473N.mp4; W02473B.mp4,78; 78; 78
+nhân chứng,1,W02477.mp4,153
+nhân cách hoá,1,W02476.mp4,122
+nhân dân,1,W02478.mp4,122
+nhân hậu,3,W02479T.mp4; W02479N.mp4; W02479B.mp4,84; 84; 110
+nhân viên,1,D0004.mp4,125
+nhân vật,1,W02481.mp4,109
+nhãn vở,3,W02461B.mp4; W02461T.mp4; W02461N.mp4,110; 142; 151
+nhìn,1,W02499.mp4,168
+nhóm,1,W02503.mp4,117
+nhõng nhẽo,1,D0265.mp4,99
+nhút nhát,1,D0453.mp4,144
+nhăn mặt,1,W02471.mp4,152
+như hình với bóng,1,W02513.mp4,124
+nhưng,3,D0242T.mp4; D0242N.mp4; D0242B.mp4,110; 89; 110
+nhường nhịn,1,W02515.mp4,135
+nhược điểm,1,W02514.mp4,126
+nhạy cảm,1,W02469.mp4,129
+nhảy bao bố,1,D0292.mp4,133
+nhảy cao,1,W02465.mp4,122
+nhảy dù,1,W02466.mp4,168
+nhảy lò cò,1,D0293.mp4,123
+nhảy múa,1,W02467.mp4,128
+nhấn mạnh,1,D0092.mp4,106
+nhấp nháy,1,W02488.mp4,135
+nhầm,3,D0060N.mp4; D0060T.mp4; D0060B.mp4,108; 108; 87
+nhận,1,W02485.mp4,85
+nhận hàng,1,W02483.mp4,135
+nhận thức,1,W02486.mp4,94
+nhận xét,1,W02487.mp4,129
+nhập khẩu,1,D0014.mp4,137
+nhập ngũ,3,W01259N.mp4; W01259B.mp4; W01259T.mp4,137; 104; 94
+nhập trường,3,W02490B.mp4; W02490T.mp4; W02490N.mp4,105; 94; 94
+nhắc nhở,1,W02470.mp4,106
+nhắm mắt,1,D0433.mp4,122
+nhặt rau,1,W02472.mp4,114
+nhẹ hơn,1,W02493.mp4,123
+nhẹ nhàng,1,W02494.mp4,137
+nhọn,1,W02504.mp4,153
+nhọn hoắt,1,W02505.mp4,66
+nhỏ hơn,1,W02501.mp4,133
+nhỏ tuổi,1,W02502.mp4,117
+nhỏ/ nhỏ bé,1,W02500.mp4,123
+nhổ củ cải,1,W02506.mp4,130
+nhổ lông mày,1,D0275.mp4,108
+nhổ râu,1,D0274.mp4,84
+nhổ răng,1,D0277.mp4,101
+nhổ tóc,1,D0273.mp4,133
+nhộn nhịp (đông người),1,D0301.mp4,138
+nhụy hoa,1,W02512.mp4,94
+niềm vui,1,W02517.mp4,114
+no,3,W02520T.mp4; W02520B.mp4; W02520N.mp4,105; 118; 120
+náo nức,1,W02291.mp4,83
+"náo động, náo nhiệt",1,W02290.mp4,120
+nén,1,W02305.mp4,113
+nét mặt,1,W02311.mp4,130
+nên không?,3,D0123B.mp4; D0123T.mp4; D0123N.mp4,96; 67; 67
+nóc nhà,1,W02522.mp4,124
+nói chuyện,1,W02523.mp4,135
+nói dối,1,W02524.mp4,135
+nói leo,1,W02526.mp4,110
+nói ngập ngừng,1,D0202.mp4,147
+nón,1,W02527.mp4,112
+nóng tính,1,D0125.mp4,126
+nô lệ,1,W02528.mp4,142
+nông nghiệp,1,W02544.mp4,127
+nông thôn,1,W02546.mp4,128
+núi cao,1,D0193.mp4,161
+núi lửa,1,W02551.mp4,141
+núi thấp,1,D0194.mp4,108
+năm là,1,D0150.mp4,110
+năm ngoái,1,W02294.mp4,113
+năm tới,1,D0349.mp4,111
+năn nỉ,1,D0261.mp4,122
+năng khiếu,1,W02297.mp4,122
+năng lực,1,W02298.mp4,110
+nơ,1,W02549.mp4,147
+nơi chốn,1,W02550.mp4,139
+nước Việt nam,3,W02555T.mp4; W02555N.mp4; W02555B.mp4,71; 71; 110
+nước mắm,1,D0457.mp4,114
+nước mắt,1,W02554.mp4,156
+nước tương (xì dầu),1,W03728.mp4,118
+nước tới chân mới nhảy,1,W00648.mp4,248
+"nước ép (cam, cà chua,..)",1,D0395.mp4,102
+nước ép trái cây,3,D0396N.mp4; D0396T.mp4; D0396B.mp4,151; 151; 142
+nướng,1,D0374.mp4,95
+nạn nhân,1,W02289.mp4,96
+nạp điện,3,W02292N.mp4; W02292B.mp4; W02292T.mp4,79; 118; 79
+nấm,1,W02303.mp4,100
+nấu nướng,1,D0104.mp4,101
+nắn nót,1,W02296.mp4,334
+nắp,1,W02302.mp4,87
+nằm,1,W02295.mp4,102
+nặn,1,W02300.mp4,112
+nặng hơn,1,W02301.mp4,95
+nẻ,1,W02304.mp4,114
+nếm,1,W02321.mp4,109
+nến,1,W02323.mp4,106
+nền nhà,1,W02322.mp4,112
+nỏ,1,W02521.mp4,169
+nối tiếp,1,W02539.mp4,138
+nốt ruồi,1,W02548.mp4,102
+nồi,1,W02532.mp4,103
+nồi cơm điện,1,W02534.mp4,153
+nổ lốp xe,1,W02529.mp4,108
+nổ mìn,1,W02530.mp4,107
+nổ súng,1,W02531.mp4,135
+nổi bật,1,W02535.mp4,81
+nổi da gà,1,D0018.mp4,143
+nổi dậy,1,W02536.mp4,107
+nổi giận,1,W02537.mp4,110
+nổi nóng,1,W02538.mp4,118
+nội dung,3,W02540N.mp4; W02540T.mp4; W02540B.mp4,65; 65; 92
+nội quy,1,W02541.mp4,112
+nội tiếp,1,W02542.mp4,126
+nứt nẻ (ruộng),1,D0222.mp4,134
+o,1,D0506.mp4,73
+p,3,D0509N.mp4; D0509T.mp4; D0509B.mp4,68; 68; 96
+pha chế,1,W02585.mp4,108
+pha cà phê,1,W02584.mp4,145
+pha lê,1,W02586.mp4,113
+phao,1,W02602.mp4,115
+phi công,1,W02645.mp4,130
+phi ngựa,1,W02647.mp4,111
+phi tiêu,1,W02648.mp4,133
+phim hoạt hình,3,W02656N.mp4; W02656B.mp4; W02656T.mp4,92; 107; 137
+phim truyện,3,W02658B.mp4; W02658T.mp4; W02658N.mp4,86; 86; 78
+phim tài liệu,1,W02657.mp4,119
+phiên dịch,3,W02651T.mp4; W02651B.mp4; W02651N.mp4,111; 111; 96
+phiền hà,1,D0211.mp4,114
+phong bì,1,W02660.mp4,252
+phong cách,1,W02661.mp4,113
+phong kiến,1,W02662.mp4,114
+phong toả,1,D0475.mp4,116
+phong trào,1,W02665.mp4,117
+phong tục,1,W02666.mp4,115
+phun nước,1,W02710.mp4,91
+phà,1,W02587.mp4,133
+phá,3,W02589T.mp4; W02589N.mp4; W02589B.mp4,112; 112; 135
+pháo hoa,1,W02605.mp4,94
+pháo sáng,1,W02606.mp4,117
+pháo đài,1,W01079.mp4,116
+phát biểu,1,W02608.mp4,85
+phát hiện,1,W02610.mp4,75
+phát động,1,W02609.mp4,92
+phân biệt,1,D0322.mp4,87
+phân công,1,W02614.mp4,96
+phân loại,1,W02615.mp4,160
+phân số,1,W02616.mp4,111
+phân số thập phân,1,W02618.mp4,143
+phân số tối giản,1,W02619.mp4,114
+phân tích,1,W02620.mp4,123
+phân vân,1,D0227.mp4,148
+phép mầu,1,W02640.mp4,126
+phép tính,1,W02641.mp4,89
+phê bình,1,W02643.mp4,102
+phích nước,1,W02649.mp4,127
+phòng bệnh,1,W02668.mp4,119
+phòng chống,1,W02669.mp4,103
+phòng chức năng,1,W02670.mp4,80
+phòng học tin học,1,W02675.mp4,121
+phòng máy tính,1,W02677.mp4,102
+phòng mĩ thuật,1,W02678.mp4,133
+phòng thí nghiệm,1,W02679.mp4,110
+phòng thư viện,1,W02680.mp4,117
+phòng y tế,1,W02682.mp4,123
+phòng âm nhạc,1,W02667.mp4,100
+phòng đa năng,1,W02672.mp4,98
+phó hiệu trưởng,3,D0214B.mp4; D0214N.mp4; D0214T.mp4,119; 124; 124
+phóng viên,1,D0469.mp4,177
+phô tô,1,W02685.mp4,95
+phù hợp,1,W02699.mp4,108
+phơi quần áo,1,W02698.mp4,116
+phương Tây,1,D0009.mp4,99
+phương hướng,1,W02713.mp4,100
+phương pháp,1,W02714.mp4,108
+phương tiện,1,W02715.mp4,103
+phương tiện giao thông,3,W02716N.mp4; W02716T.mp4; W02716B.mp4,95; 100; 100
+phương Đông,1,D0010.mp4,126
+phải không?,3,D0120T.mp4; D0120B.mp4; D0120N.mp4,113; 113; 113
+phản bội,3,W02597T.mp4; W02597N.mp4; W02597B.mp4,100; 100; 149
+phản xạ,1,W02600.mp4,130
+phản động,1,W02598.mp4,92
+phấn (viết bảng),3,W02630N.mp4; W02630T.mp4; W02630B.mp4,77; 118; 118
+phấn trang điểm,1,W02634.mp4,100
+phấn đấu,1,W02631.mp4,102
+phấp phới,1,W02635.mp4,83
+phần trăm,1,W02628.mp4,103
+phẫu thuật bụng,1,D0365.mp4,110
+phẫu thuật chân,1,D0361.mp4,124
+phẫu thuật cổ,1,D0364.mp4,98
+phẫu thuật mũi,1,D0363.mp4,81
+phẫu thuật mắt,1,D0362.mp4,105
+phẫu thuật tay,1,D0360.mp4,115
+phật (tượng),1,W02637.mp4,147
+phễu,1,W02644.mp4,165
+phố,1,W02689.mp4,76
+phố cổ,1,W02690.mp4,129
+phố cổ Hội an,1,W02691.mp4,146
+phổ biến,1,W02686.mp4,97
+phổi,1,W02693.mp4,114
+phở,3,W02696B.mp4; W02696T.mp4; W02696N.mp4,93; 71; 71
+phở cuốn,3,W02697B.mp4; W02697N.mp4; W02697T.mp4,89; 92; 92
+phụ huynh,1,W02704.mp4,124
+phụ thuộc,1,D0352.mp4,113
+phục hồi,1,W02707.mp4,130
+phục vụ,1,W02709.mp4,110
+phủ nhận,1,W02701.mp4,182
+phức tạp,1,W02712.mp4,84
+pi-a-nô (dương cầm),1,W02718.mp4,103
+q,1,D0510.mp4,82
+quan (chức vụ),1,D0233.mp4,118
+quan hệ,1,W02763.mp4,123
+quan hệ từ,1,D0231.mp4,99
+quan sát,1,D0256.mp4,126
+quan trọng,1,W02766.mp4,85
+quan tâm,1,W02765.mp4,111
+quan điểm,1,W02762.mp4,107
+quang hợp,1,W02769.mp4,110
+quanh năm,1,D0246.mp4,148
+quay cóp,1,W02778.mp4,93
+quay phim,1,W02779.mp4,95
+quy nạp,1,W02810.mp4,101
+quy tắc,1,W02811.mp4,121
+quy định,1,W02808.mp4,86
+quy đồng mẫu số,1,W02809.mp4,94
+quyên góp,1,D0334.mp4,108
+quyến luyến,1,D0164.mp4,142
+quyết tâm,3,W02820B.mp4; W02820N.mp4; W02820T.mp4,85; 81; 81
+quyết định,3,W02814N.mp4; W02814T.mp4; W02814B.mp4,99; 93; 93
+quyền lợi,3,W02813B.mp4; W02813N.mp4; W02813T.mp4,93; 89; 93
+quyển vở,3,W02818T.mp4; W02818B.mp4; W02818N.mp4,73; 80; 73
+quà,1,W02780.mp4,101
+quàng khăn,1,W02771.mp4,126
+quá cảnh,1,W02761.mp4,97
+quát mắng,1,W02776.mp4,106
+quân đội,2,W02784N.mp4; W02784B.mp4,72; 90
+quét dọn,1,W02794.mp4,98
+quét nhà,1,W02795.mp4,82
+quê,3,W02797B.mp4; W02797T.mp4; W02797N.mp4,84; 155; 155
+quên,1,W02798.mp4,106
+quý giá,1,W02812.mp4,124
+quý hiếm,1,W02816.mp4,97
+quạt cây,1,W02777.mp4,114
+quạt treo tường,1,W02783.mp4,138
+quạt trần,1,W03560.mp4,141
+quả,1,W02721.mp4,97
+quả bưởi,3,W02724T.mp4; W02724N.mp4; W02724B.mp4,69; 69; 98
+quả bầu,1,W02722.mp4,120
+quả bầu hồ lô,1,D0145.mp4,110
+quả cam,1,W02725.mp4,126
+quả chanh,1,W02728.mp4,104
+quả chuối,1,W02730.mp4,118
+quả chôm chôm,1,W02729.mp4,112
+quả dưa hấu,3,W02731N.mp4; W02731T.mp4; W02731B.mp4,89; 81; 81
+quả dừa,3,W02732N.mp4; W02732T.mp4; W02732B.mp4,65; 65; 95
+quả dừa xiêm,3,W02733B.mp4; W02733N.mp4; W02733T.mp4,116; 121; 121
+quả gấc,1,W02739.mp4,99
+quả hồng,1,W02740.mp4,74
+quả hồng xiêm,1,W02741.mp4,133
+quả khế,3,W02742N.mp4; W02742B.mp4; W02742T.mp4,108; 98; 108
+quả lê,1,W02744.mp4,123
+quả mít,1,W02745.mp4,126
+quả mướp,1,W02746.mp4,97
+quả na,1,W02747.mp4,107
+quả nho,1,W02749.mp4,90
+quả nhãn,3,W02748T.mp4; W02748B.mp4; W02748N.mp4,76; 96; 76
+quả quýt,1,W02753.mp4,92
+quả quất,1,W02752.mp4,127
+quả roi,3,W02754B.mp4; W02754T.mp4; W02754N.mp4,89; 79; 79
+quả su su,1,W02756.mp4,126
+quả sầu riêng,1,W02755.mp4,95
+quả thanh long,1,W02758.mp4,103
+quả táo,2,W02757B.mp4; W02757N.mp4,97; 70
+quả vải,1,W02759.mp4,126
+quả xoài,1,W02760.mp4,115
+quả điều,2,W01211N.mp4; W01211.mp4,125; 103
+quả đu đủ,3,W02737B.mp4; W02737T.mp4; W02737N.mp4,81; 267; 175
+quả đất,1,W02734.mp4,95
+quả địa cầu,1,W02735.mp4,119
+quả ổi,1,W02750.mp4,108
+quả ớt,1,W02751.mp4,83
+quảng cáo,1,W02773.mp4,103
+quần bò,3,W02787T.mp4; W02787B.mp4; W02787N.mp4,95; 94; 95
+quần yếm,1,W02789.mp4,139
+quần âu,1,W02786.mp4,109
+quần đùi,1,W02788.mp4,100
+quận,3,W02790N.mp4; W02790T.mp4; W02790B.mp4,71; 71; 102
+quốc ca,1,W02799.mp4,114
+quốc gia,1,W02800.mp4,102
+quốc hội,1,W02801.mp4,117
+quốc khánh,1,W02802.mp4,108
+quốc tế,1,W02805.mp4,121
+quỳ,1,W02815.mp4,115
+r,1,D0511.mp4,64
+ra lệnh,1,W02823.mp4,121
+ra ngoài,3,W02825B.mp4; W02825T.mp4; W02825N.mp4,95; 77; 77
+rau,1,W02835.mp4,91
+rau bắp cải,1,W02836.mp4,105
+rau cải,1,W02837.mp4,145
+rau cải thảo,1,W02839.mp4,112
+rau diếp cá,1,D0329.mp4,83
+rau dền,1,W02841.mp4,95
+rau mùng tơi,1,W02844.mp4,103
+rau ngò/rau mùi,1,D0330.mp4,101
+rau ngót,1,W02845.mp4,116
+reo hò,1,W02855.mp4,103
+ria mép,1,D0289.mp4,97
+riêng biệt,1,W02860.mp4,121
+riêng tư,1,W02861.mp4,105
+rong biển,1,W02867.mp4,115
+rong chơi,3,W02868B.mp4; W02868T.mp4; W02868N.mp4,101; 101; 81
+ru ngủ,1,W02876.mp4,124
+ruộng bậc thang,1,W02878.mp4,110
+ruột già,1,W02879.mp4,92
+ruột non,1,W02880.mp4,94
+rào chắn,1,W02832.mp4,139
+rách,1,W02828.mp4,111
+râu,1,W02851.mp4,123
+rèn luyện,1,W02854.mp4,151
+rèn sắt,1,W02853.mp4,98
+rình mò,1,W02862.mp4,100
+rìu,1,W02863.mp4,197
+róc rách,1,W02865N.mp4,83
+rón rén,1,W02866.mp4,97
+rõ ràng,2,W02864B.mp4; W02864T.mp4,82; 82
+rút gọn,1,W02883.mp4,109
+rút gọn phân số,1,W02884.mp4,114
+răng,1,W02848.mp4,116
+răng cưa,1,W02849.mp4,120
+răng hô,1,D0278.mp4,103
+răng khểnh,1,D0279.mp4,99
+rơi,1,W02874.mp4,103
+rơm,1,W02875.mp4,113
+rơm rớm,1,W01297.mp4,107
+rước đèn,1,W02895.mp4,111
+rưỡi,3,W02897T.mp4; W02897B.mp4; W02897N.mp4,107; 107; 99
+rượu,3,W02898T.mp4; W02898B.mp4; W02898N.mp4,101; 106; 101
+rạch,1,W02831.mp4,96
+rạp chiếu phim,1,W02833.mp4,117
+rắc rối,1,D0263.mp4,151
+rằm trung thu,3,W02847T.mp4; W02847N.mp4; W02847B.mp4,87; 87; 111
+rẽ phải,1,W02852.mp4,114
+rế,1,W02859.mp4,88
+rễ chùm,1,W02857.mp4,128
+rễ cây,1,W02856.mp4,129
+rễ cọc,1,W02858.mp4,88
+rổ,1,W02870.mp4,87
+rộng lớn,1,W02872.mp4,99
+rộng rãi,1,W02873.mp4,100
+rụng tóc (đt),1,W02877.mp4,115
+rừng núi,1,W02892.mp4,124
+rừng rậm,1,W02893.mp4,100
+rừng thưa,1,W02894.mp4,112
+rửa bát,1,W02885.mp4,108
+rửa chân,2,D0412.mp4; W02886.mp4,92; 107
+rửa mặt,2,D0413.mp4; W02887.mp4,129; 91
+rửa tay,1,W02888.mp4,104
+rực rỡ,1,D0107.mp4,163
+s,1,D0512.mp4,73
+sa mạc,1,D0191.mp4,169
+sa thải,1,W01324.mp4,82
+san hô,1,W02903.mp4,128
+san sẻ,1,W02906.mp4,101
+sao,2,W02919N.mp4; W02919T.mp4,88; 88
+sao chép,1,W02921.mp4,88
+sau,1,W02926.mp4,101
+say sưa,1,W02927.mp4,141
+sinh hoạt,1,W02955.mp4,108
+sinh sản,3,W02956N.mp4; W02956T.mp4; W02956B.mp4,67; 67; 110
+sinh sống,1,W02957.mp4,87
+sinh tố,1,W02958.mp4,89
+"sinh tố (bơ, dâu,..)",1,D0397.mp4,125
+sinh vật,1,W02960.mp4,118
+sinh đôi,3,D0423N.mp4; D0423T.mp4; D0423B.mp4,99; 103; 103
+sinh đẻ,3,W02953N.mp4; W02953B.mp4; W02953T.mp4,93; 135; 93
+sinh động,1,W02954.mp4,108
+siêng năng,1,W02948.mp4,124
+siêu thị,1,W02951.mp4,127
+siêu tốc,1,W02952.mp4,101
+siêu âm,1,W02949.mp4,104
+soi,1,W02962.mp4,97
+son môi,1,W02964.mp4,135
+song song,1,W02965.mp4,89
+sum họp,1,W03023.mp4,136
+suy nghĩ,2,W03025N.mp4; W03025T.mp4,81; 122
+suy ra (Toán học),1,D0186.mp4,209
+suýt,3,D0072N.mp4; D0072T.mp4; D0072B.mp4,100; 100; 94
+suối,1,W03024.mp4,83
+suỵt,1,D0071.mp4,129
+sách,1,W02900.mp4,96
+sách giáo khoa,1,W02901.mp4,112
+sách toán,1,W02902.mp4,103
+sáng,1,W00024.mp4,70
+sáng chói,1,W02915.mp4,111
+sáng kiến,1,W02916.mp4,107
+sáng tạo,1,W02918.mp4,78
+sáo,1,W02923.mp4,226
+sân chơi,2,W02936B.mp4; W02936T.mp4,135; 135
+sân khấu,1,W02937.mp4,99
+sân nhà,1,W02938.mp4,113
+sân thượng,1,W02939.mp4,132
+sân trường,3,W02940B.mp4; W02940N.mp4; W02940T.mp4,130; 106; 106
+sân vận động,1,W02941.mp4,120
+sâu,1,W02943.mp4,130
+sâu bọ,1,W02944.mp4,103
+sâu răng,1,W02945.mp4,94
+sâu thẳm,1,W02946.mp4,120
+sóng biển,1,W02967.mp4,98
+sóng thần,1,W02968.mp4,119
+sông Hồng,1,W03005.mp4,121
+súc miệng,1,W03021.mp4,101
+súp,1,D0078.mp4,131
+súp lơ,1,D0079.mp4,101
+săn bắn,1,W02929.mp4,108
+sĩ diện,2,W02947N.mp4; W02947B.mp4,98; 114
+sĩ quan,1,W00590.mp4,86
+sơ mi,3,W03011B.mp4; W03011T.mp4; W03011N.mp4,81; 132; 99
+sơ đồ,2,W03010N.mp4; W03010T.mp4,95; 95
+sơn,1,W03018.mp4,112
+sương gió,1,W03050.mp4,110
+sườn,1,W03051.mp4,100
+sản xuất,1,W02912.mp4,99
+sấm chớp,1,W02934.mp4,96
+sấm sét,1,W02935.mp4,97
+sắp xếp,3,W02931T.mp4; W02931N.mp4; W02931B.mp4,78; 78; 64
+sắt,3,W02932T.mp4; W02932N.mp4; W02932B.mp4,138; 96; 103
+số La Mã (Toán học),1,D0224.mp4,117
+số bé,1,W02975.mp4,77
+số chín,1,W02981.mp4,110
+số chẵn,1,W02979.mp4,124
+số liền sau,1,W02990.mp4,121
+số liền trước,1,W02991.mp4,154
+số lẻ,1,W02989.mp4,168
+số lớn,1,W02992.mp4,107
+số thập phân,1,W02996.mp4,100
+số đo,1,W02987.mp4,108
+sống sót,3,D0155T.mp4; D0155B.mp4; D0155N.mp4,108; 108; 105
+sốt,1,W03008.mp4,136
+sổ tay,1,W02974.mp4,124
+sổ điểm danh,1,W02972.mp4,105
+sổ đầu bài,1,W02970.mp4,189
+sờ,1,D0434.mp4,126
+sợ không?,1,D0126.mp4,233
+sợi,1,W03014.mp4,109
+sợi chỉ,1,W03015.mp4,108
+sợi dây,1,W03016.mp4,114
+sợi len,1,W03017.mp4,124
+sụp đổ,1,D0205.mp4,102
+sức khỏe,1,W03043.mp4,85
+sừng,1,W03046.mp4,125
+sừng bò,1,W03047.mp4,78
+sừng trâu,1,W03048.mp4,98
+sửa chữa,1,W03034.mp4,95
+sữa,3,W03042B.mp4; W03042N.mp4; W03042T.mp4,120; 122; 120
+sữa bò,3,W03036T.mp4; W03036B.mp4; W03036N.mp4,81; 114; 81
+sữa bột,3,W03037T.mp4; W03037B.mp4; W03037N.mp4,93; 133; 93
+sữa dê,3,W03038N.mp4; W03038T.mp4; W03038B.mp4,77; 77; 91
+sữa hộp,3,W03040B.mp4; W03040N.mp4; W03040T.mp4,156; 103; 156
+sữa rửa mặt,1,W03041.mp4,113
+sữa đặc,1,W03039.mp4,96
+sự thật,1,W03031.mp4,98
+t,3,D0513N.mp4; D0513B.mp4; D0513T.mp4,80; 86; 160
+tai,1,W03061.mp4,90
+tai nạn,1,W03062.mp4,91
+tai nạn giao thông,1,W03543.mp4,85
+tam giác,1,W03074.mp4,113
+taxi,1,W03089.mp4,103
+tay,1,W03090.mp4,109
+tay chân sạch sẽ,3,D0432N.mp4; D0432T.mp4; D0432B.mp4,126; 306; 306
+tay phải,1,W03095.mp4,95
+tay trái,1,W03097.mp4,77
+tha,1,W03135.mp4,98
+tha mồi,1,W03136.mp4,98
+tha thứ,3,W03138N.mp4; W03138T.mp4; W03138B.mp4,78; 114; 214
+tham dự,3,W03153B.mp4; W03153N.mp4; W03153T.mp4,132; 92; 92
+tham khảo,1,W03154.mp4,119
+tham lam,1,W03155.mp4,81
+tham quan,3,W03156T.mp4; W03156B.mp4; W03156N.mp4,109; 134; 109
+tham ăn,3,D0024B.mp4; D0024T.mp4; D0024N.mp4,174; 183; 183
+thanh niên,1,W03171.mp4,91
+thao thức,1,D0331.mp4,300
+theo dõi,1,W03228.mp4,111
+theo đuổi,1,W03229.mp4,79
+thi cử,3,W03243B.mp4; W03243T.mp4; W03243N.mp4,83; 83; 77
+thiu,1,D0382.mp4,157
+thiên nhiên,1,W03256.mp4,146
+thiên thần,1,W03258.mp4,155
+thiên đình,1,W03254.mp4,133
+thiếp mời,1,W03263.mp4,128
+thiếp đi,1,W03262.mp4,161
+thiết kế,3,W03265B.mp4; W03265N.mp4; W03265T.mp4,125; 107; 125
+thiếu nhi,1,W03269.mp4,105
+thiếu niên,1,W03270.mp4,106
+thiếu thốn,3,D0206N.mp4; D0206T.mp4; D0206B.mp4,110; 110; 106
+thiệp sinh nhật,3,D0108T.mp4; D0108B.mp4; D0108N.mp4,134; 127; 134
+thiệt thòi,1,W03268.mp4,123
+thoát hiểm,1,W03276.mp4,129
+thoăn thoắt,1,D0458.mp4,139
+thu mua,1,W03316.mp4,110
+thu nhỏ,1,W03317.mp4,112
+thu thập,1,W03318.mp4,125
+thung lũng,1,D0477.mp4,160
+thuyết phục,1,W03351.mp4,143
+thuyết trình,1,W03352.mp4,125
+thuyền chài,1,W03347.mp4,133
+thuyền rồng,1,W03349.mp4,147
+thuê,3,W03329N.mp4; W03329B.mp4; W03329T.mp4,83; 86; 86
+thuận lợi,1,W03326.mp4,125
+thuốc bắc,1,W03333.mp4,123
+thuốc bổ,1,W03334.mp4,108
+thuốc lá,1,W03335.mp4,122
+thuộc lòng,1,W03338.mp4,111
+thuộc địa,1,D0353.mp4,101
+thuỷ thủ,1,W03341.mp4,116
+thuỷ điện,3,W03339N.mp4; W03339T.mp4; W03339B.mp4,96; 96; 76
+thành công,1,W03173.mp4,102
+thành lập,4,W03175N.mp4; W03175T.mp4; W03175B.mp4; W03175.mp4,124; 123; 123; 81
+thành thạo,1,W03180.mp4,105
+thành thị,1,W03181.mp4,95
+thành viên,1,W03185.mp4,125
+thác,1,W03141.mp4,81
+thái độ,3,W03148T.mp4; W03148N.mp4; W03148B.mp4,76; 76; 218
+thám tử,1,W03160.mp4,127
+thán phục,1,W03164.mp4,117
+tháng,3,W03167B.mp4; W03167T.mp4; W03167N.mp4,101; 108; 108
+thánh địa Mỹ Sơn,1,W03186.mp4,130
+tháo gỡ,1,W03191.mp4,91
+tháp,1,W03192.mp4,89
+tháp Rùa,1,W03193.mp4,131
+thâm quầng mắt,1,D0332.mp4,110
+thân cây,3,W03204T.mp4; W03204N.mp4; W03204B.mp4,113; 113; 122
+thân hình,1,W03205.mp4,104
+thân thiết,1,W03207.mp4,95
+thân thiện,1,W03208.mp4,87
+thèm,1,D0026.mp4,145
+thèm rỏ dãi,1,D0027.mp4,129
+thét,1,W03232.mp4,98
+thêm,1,W03240.mp4,101
+thêu,2,W03242B.mp4; W03242N.mp4,116; 112
+thì thầm,1,D0187.mp4,237
+thìa,3,W03251N.mp4; W03251B.mp4; W03251T.mp4,133; 257; 133
+thí nghiệm,1,D0094.mp4,112
+thích nghi,1,W00653.mp4,63
+thích thú,3,W03252N.mp4; W03252B.mp4; W03252T.mp4,106; 122; 142
+thím,1,W03272.mp4,116
+thóc (gạo),1,W03278.mp4,124
+thói quen,3,D0029N.mp4; D0029T.mp4; D0029B.mp4,117; 117; 129
+thông báo,1,W03285.mp4,113
+thông cảm,1,W03286.mp4,221
+thông minh,3,W03288B.mp4; W03288T.mp4; W03288N.mp4,88; 72; 72
+thông qua,1,W03289.mp4,129
+thông thường,1,W03291.mp4,123
+thông tin,3,W03292T.mp4; W03292N.mp4; W03292B.mp4,70; 70; 101
+thù lao,1,W03319.mp4,117
+thùng,1,W03330.mp4,125
+thú dữ,3,W03323N.mp4; W03323T.mp4; W03323B.mp4,85; 85; 96
+thú y,3,W03324B.mp4; W03324N.mp4; W03324T.mp4,116; 104; 104
+thúc đẩy,1,W03328.mp4,110
+thăm hỏi,3,W03197T.mp4; W03197N.mp4; W03197B.mp4,129; 93; 129
+thăng bằng,1,W03199.mp4,86
+thơm,3,W03314B.mp4; W03314N.mp4; W03314T.mp4,113; 87; 87
+thư giãn,1,W03354.mp4,128
+thương (số),1,W03370.mp4,112
+thương mại,1,D0306.mp4,105
+thương yêu,6,W03373B.mp4; W03373N.mp4; W03373T.mp4; W03450B.mp4; W03450T.mp4; W03450N.mp4,127; 80; 127; 102; 114; 114
+thường xuyên,4,D0156N.mp4; D0156B.mp4; D0156.mp4; D0156T.mp4,139; 110; 163; 139
+thả diều,1,W03139.mp4,110
+thả mồi,1,W03140.mp4,83
+thản nhiên,1,W03163.mp4,100
+thấp hơn,1,W03215.mp4,101
+thấp nhất,1,W03216.mp4,103
+thần chết,1,W03210.mp4,92
+thần kinh,1,W03211N.mp4,94
+thần kì,1,W03445.mp4,107
+thầy cô,3,W03222N.mp4; W03222B.mp4; W03222T.mp4,93; 166; 93
+thầy cúng,1,W03223.mp4,96
+thầy giáo,3,W03224B.mp4; W03224N.mp4; W03224T.mp4,98; 97; 97
+thận,1,W03214.mp4,97
+thập thò,1,W03219.mp4,109
+thật thà,1,W03221.mp4,97
+thắc mắc,1,W03196.mp4,95
+thắng lợi,1,W03203.mp4,101
+thắp đèn,1,D0450.mp4,98
+thẳng hàng (Toán học),1,W03201.mp4,84
+thẳng tắp,1,W03202.mp4,123
+thẻ,1,W03230.mp4,88
+thế hệ,1,W03237.mp4,111
+thế nào?,3,W03239T.mp4; W03239N.mp4; W03239B.mp4,75; 75; 101
+thề,1,W03233.mp4,89
+thềm,1,W03241.mp4,134
+thị giác,1,W03247.mp4,138
+thị lực,1,W03248.mp4,142
+thịnh vượng,1,D0340.mp4,103
+thối,1,D0381.mp4,103
+thống nhất,1,W03294.mp4,131
+thống nhất đất nước,1,D0304.mp4,90
+thổ dân,1,W01943.mp4,91
+thổi,1,W03281.mp4,136
+thổi bóng,1,W03282.mp4,142
+thổi kèn,1,W03283.mp4,149
+thờ cúng,1,W03299.mp4,122
+thời gian biểu,1,W03303.mp4,125
+thở,1,W03305.mp4,155
+thở dài,1,W03300.mp4,167
+thợ kim hoàn,1,W03306.mp4,134
+thợ rèn,1,W03308.mp4,122
+thợ thêu,1,W03309.mp4,142
+thụ phấn (hoa),1,W03427.mp4,118
+thủ công,3,W03320T.mp4; W03320B.mp4; W03320N.mp4,114; 144; 119
+thủ tướng,3,W03321B.mp4; W03321N.mp4; W03321T.mp4,94; 136; 136
+thủng,1,W03331.mp4,111
+thủy chung,1,W03344.mp4,136
+thứ tự,1,W03357.mp4,211
+thừa,3,W03359N.mp4; W03359B.mp4; W03359T.mp4,66; 99; 66
+thực hiện,1,W03365.mp4,114
+thực hành,1,W03364.mp4,98
+thực phẩm,1,W03366.mp4,76
+thực sự,1,W03367.mp4,92
+thực tế,1,W03368.mp4,76
+thực vật,1,W03369.mp4,104
+ti hí mắt,1,D0067.mp4,132
+tia chớp,1,W03386.mp4,87
+tia nắng,1,W03387.mp4,106
+tia số,1,W03388.mp4,102
+tim,1,W03431.mp4,118
+tin cậy,1,W03435.mp4,93
+tin học,1,W03436.mp4,116
+tin nhắn,1,W03437.mp4,94
+tin tức,1,W03438.mp4,79
+tinh mắt,1,D0117.mp4,331
+tinh trùng,1,W03342.mp4,94
+tiêm,1,W03394.mp4,118
+tiêu cực,1,W03424.mp4,100
+tiêu diệt,1,W03425.mp4,95
+tiêu hoá,1,W03426.mp4,104
+tiếc,3,W03392B.mp4; W03392T.mp4; W03392N.mp4,133; 133; 180
+tiến bộ,1,D0315.mp4,118
+tiến sĩ,1,W03405.mp4,109
+tiếng Anh,3,W03409N.mp4; W03409T.mp4; W03409B.mp4,69; 69; 122
+tiếng nói,1,W03414.mp4,92
+tiếp nhận,1,W03416.mp4,94
+tiếp theo,1,W03418.mp4,82
+tiếp thu,1,W03419.mp4,111
+tiếp tân,1,D0003.mp4,125
+tiếp tục,3,W03421N.mp4; W03421B.mp4; W03421T.mp4,68; 145; 68
+tiết kiệm,3,W03422N.mp4; W03422B.mp4; W03422T.mp4,88; 191; 97
+tiểu học,1,W03430.mp4,98
+tiệc,1,W03393.mp4,85
+tiện nghi,1,W03407.mp4,97
+to lớn,1,W03466.mp4,129
+toa lét,1,W03469.mp4,110
+toa xe,3,W03471T.mp4; W03471N.mp4; W03471B.mp4,128; 128; 158
+toà án,3,W03472N.mp4; W03472B.mp4; W03472T.mp4,145; 130; 145
+toàn cầu,1,W03476.mp4,137
+trang phục,1,W03537.mp4,152
+trang trí,1,W03519.mp4,165
+trang điểm,1,D0445.mp4,120
+tranh luận,1,W03542.mp4,70
+trao tặng,1,W03545.mp4,144
+tre,3,W03571N.mp4; W03571T.mp4; W03571B.mp4,99; 117; 141
+tri kỉ,1,W03238.mp4,113
+triều cường,1,W03585.mp4,160
+triều đình,1,W03587.mp4,134
+triệu phú,1,W00069.mp4,101
+trong khoảng,1,D0290.mp4,105
+trong ngoài,3,W03611N.mp4; W03611B.mp4; W03611T.mp4,279; 125; 279
+trong suốt,1,W03612.mp4,266
+trong sáng,1,W03606.mp4,114
+trung bình,1,W03638.mp4,128
+trung thành,1,W03644.mp4,245
+trung tâm,1,W03643.mp4,154
+trung điểm,1,W03641.mp4,103
+trung ương,1,W03646.mp4,127
+truyền dịch,1,W03650.mp4,152
+truyền thông,1,W03653.mp4,133
+truyền thống,1,W03654.mp4,154
+trà,1,W03524.mp4,128
+trà nóng,1,D0404.mp4,128
+trà sữa,1,D0405.mp4,133
+trà đá,1,D0403.mp4,69
+tràn ngập (nước),1,W03536.mp4,107
+trách mắng,1,W03514.mp4,107
+trách nhiệm,1,W03528.mp4,154
+trái nghĩa,2,W03531T.mp4; W03531N.mp4,115; 115
+tránh thai,1,W03544.mp4,131
+trêu,1,W03573.mp4,155
+trêu tức,1,W03575.mp4,159
+trình bày,1,W03593.mp4,124
+trình độ,1,W03594.mp4,247
+trí khôn,1,W03576.mp4,118
+trí thức,1,W03578.mp4,264
+trò chơi,1,W03599.mp4,133
+tròn,1,W03607.mp4,270
+tròn trịa (mặt),1,W03605.mp4,138
+trói tay,1,W03603.mp4,118
+trông chờ,3,W03620B.mp4; W03620N.mp4; W03620T.mp4,132; 145; 145
+trông coi,1,W03621.mp4,122
+trông nhà,1,D0174.mp4,68
+trông nom,3,W03622N.mp4; W03622B.mp4; W03622T.mp4,119; 133; 119
+trùm chăn,1,W03637.mp4,131
+trú mưa,1,W03632.mp4,142
+trúng thưởng,1,W03648.mp4,90
+trúng tuyển,3,W03649T.mp4; W03649B.mp4; W03649N.mp4,117; 144; 117
+trăng,3,W03550B.mp4; W03550N.mp4; W03550T.mp4,140; 222; 222
+trưng bày,1,W03666.mp4,122
+trước,3,W03669B.mp4; W03669N.mp4; W03669T.mp4,118; 141; 118
+trường PTCS (cấp 2),3,W03674N.mp4; W03674B.mp4; W03674T.mp4,137; 157; 137
+trường THPT ( cấp 3),3,W03675T.mp4; W03675B.mp4; W03675N.mp4,129; 116; 129
+trường hợp,1,W03672.mp4,257
+trường mầm non,3,W03673B.mp4; W03673N.mp4; W03673T.mp4,159; 139; 139
+trường tiểu học,2,W03663N.mp4; W03663T.mp4,130; 130
+trưởng nhóm,1,W03676.mp4,126
+trưởng thành,1,W03350.mp4,108
+trại giam,1,W03517.mp4,108
+trạm xe buýt,1,W03534.mp4,152
+trạm y tế,1,W03535.mp4,136
+trả (đt),1,W03525.mp4,91
+trả lời,1,W03526.mp4,125
+trả thù,1,W04065.mp4,139
+trầm trồ,1,W03554.mp4,83
+trần nhà,1,W03562.mp4,110
+trắng muốt,3,W03552T.mp4; W03552N.mp4; W03552B.mp4,121; 121; 104
+trắng tay,1,W03553.mp4,162
+trẻ con/con nít,3,D0464B.mp4; D0464N.mp4; D0464T.mp4,92; 91; 91
+trọc đầu,3,W03602N.mp4; W03602B.mp4; W03602T.mp4,134; 157; 134
+trọng nam khinh nữ,1,W00728.mp4,80
+trọng tài,1,W03614.mp4,142
+trốn chạy,3,W03619B.mp4; W03619N.mp4; W03619T.mp4,136; 250; 250
+trốn tìm,1,D0291.mp4,124
+trống,1,W03624.mp4,163
+trống (không có gì),1,W01284.mp4,92
+trộm cắp,1,W03618.mp4,126
+trộn (đt),1,W03626.mp4,121
+trở thành,1,W03629.mp4,164
+trục hoành,1,W03633.mp4,123
+trục tung,1,W03634.mp4,117
+trục xuất,1,W03635.mp4,111
+trụi lá,3,W03636B.mp4; W03636N.mp4; W03636T.mp4,118; 214; 214
+trứng,3,W03659B.mp4; W03659T.mp4; W03659N.mp4,119; 106; 116
+trực nhật,1,W03657.mp4,129
+trực tiếp,1,W03665.mp4,133
+tung tăng,1,W03696.mp4,102
+tuyên bố,1,W03701.mp4,127
+tuyên ngôn,1,W03702.mp4,125
+tuyên truyền,1,D0339.mp4,105
+tuyệt vọng,1,W03708.mp4,144
+tuân lệnh,1,W03683.mp4,108
+tuân thủ,1,W03684.mp4,123
+tuần,3,W03685T.mp4; W03685N.mp4; W03685B.mp4,94; 121; 121
+tuần lễ người Điếc thế giới,3,D0053B.mp4; D0053T.mp4; D0053N.mp4,175; 175; 211
+tuần này,3,D0416B.mp4; D0416N.mp4; D0416T.mp4,109; 105; 105
+tuần sau,3,D0417N.mp4; D0417T.mp4; D0417B.mp4,113; 113; 110
+tuần trăng mật,1,D0348.mp4,91
+tuần trước,3,D0418N.mp4; D0418B.mp4; D0418T.mp4,93; 123; 98
+tuốt lúa,1,W03699.mp4,144
+tuổi thơ,1,W03698.mp4,110
+tuổi thơ ấu,1,W03297.mp4,127
+tuỷ sống,1,W03700.mp4,144
+tài giỏi,1,W03063.mp4,109
+tài năng,1,W03064.mp4,97
+tài trợ,1,W03067.mp4,94
+tàu hoả,3,W03085N.mp4; W03085B.mp4; W03085T.mp4,92; 93; 185
+tàu ngầm,1,W03086.mp4,221
+tàu thuyền,1,W03087.mp4,120
+tàu thủy,1,W03088.mp4,105
+tác dụng,1,W03054.mp4,102
+tác giả,1,W03056.mp4,93
+tác phẩm,1,W03058.mp4,83
+tác động,2,W01301.mp4; W03055.mp4,80; 97
+tách,1,W03059.mp4,101
+tách lớp,1,W03060.mp4,93
+tái phát,1,W03070.mp4,140
+tái phạm,3,W03071B.mp4; W03071N.mp4; W03071T.mp4,84; 121; 121
+tán thành,1,W03077.mp4,97
+tát,1,W03084.mp4,86
+tâm thần,1,W03103.mp4,91
+tên là gì?,2,W03129N.mp4; W03129T.mp4,97; 126
+tên riêng,1,W03130N.mp4,75
+tìm hiểu,3,W03433B.mp4; W03433N.mp4; W03433T.mp4,136; 81; 136
+tình cảm,1,W03447.mp4,135
+tình cờ,1,W03448.mp4,148
+tình huống,1,W03449.mp4,132
+tình yêu,1,W03451.mp4,114
+tí hon,1,W03383.mp4,100
+tích (số),1,W03390.mp4,131
+tích cực,1,W03391.mp4,104
+tím tái,1,W03434.mp4,89
+tính,1,W01313.mp4,132
+tính chất,1,W03455.mp4,95
+tính chất bằng nhau,1,W03456.mp4,126
+tính chất cơ bản của phân số,1,W03457.mp4,158
+tính chất giao hoán,1,W03458.mp4,107
+tính chất kết hợp,1,W03459.mp4,110
+tính cách,1,W03454.mp4,112
+tính nhẩm,1,W03461.mp4,83
+tính toán,1,W03463.mp4,142
+tính từ,1,W03464.mp4,126
+tò mò,2,W03467B.mp4; W03467T.mp4,148; 148
+tòa soạn,1,W03473.mp4,115
+tóc dài,1,D0428.mp4,111
+tóc dựng đứng,1,W04007.mp4,120
+tóc ngắn,3,D0429N.mp4; D0429B.mp4; D0429T.mp4,87; 112; 112
+tóc xoăn,1,W03479.mp4,129
+tóm cổ,1,W03480.mp4,146
+tóm lược,1,W03481.mp4,137
+tóm tắt,1,W03482.mp4,220
+tô màu,3,W03486B.mp4; W03486T.mp4; W03486N.mp4,139; 139; 139
+tôi yêu bạn,3,W04056B.mp4; W04056N.mp4; W04056T.mp4,111; 106; 111
+tôi yêu bạn ấy,1,D0139.mp4,155
+tôm hùm,1,D0385.mp4,133
+tôn thờ,1,W03492.mp4,146
+tôn trọng,2,W03491.mp4; W03501.mp4,111; 125
+tù giam,1,W03678.mp4,142
+túm tóc,1,W03692.mp4,122
+tăm,1,W03100.mp4,104
+tĩnh lặng,1,W03452.mp4,153
+tươi cười,1,W03725.mp4,146
+tương lai,1,D0288.mp4,98
+tương ớt,3,D0111B.mp4; D0111N.mp4; D0111T.mp4,118; 136; 118
+tương ứng,1,W03729.mp4,260
+tưới cây,3,W03727T.mp4; W03727B.mp4; W03727N.mp4,148; 141; 148
+tưởng,1,W03730.mp4,122
+tưởng tượng,4,W03732T.mp4; W03732.mp4; W03732N.mp4; W03732B.mp4,106; 148; 89; 106
+tượng,1,W03734.mp4,141
+tượng đài,1,W03735.mp4,151
+tạm biệt,1,W03075.mp4,94
+tạo dáng,1,W03081.mp4,103
+tạo thành,1,W00559.mp4,70
+tải về,1,D0264.mp4,120
+tấm lòng,1,W01204.mp4,93
+tấm vải,3,W03105N.mp4; W03105B.mp4; W03105T.mp4,97; 137; 137
+tấn công,1,W03107.mp4,96
+tẩy chay,1,D0354.mp4,92
+tận số,1,D0221.mp4,242
+tập hợp (Toán học),1,W03110.mp4,76
+tập hợp rỗng,1,W03111.mp4,73
+tập làm văn,1,W03112.mp4,104
+tập thể,1,W03115N.mp4,79
+tập thể dục,2,W03116T.mp4; W03116B.mp4,138; 138
+tập trung,1,W03117.mp4,95
+tập viết,1,W03118.mp4,143
+tặc lưỡi,1,W03099.mp4,91
+tỉ lệ,1,W03377.mp4,107
+tỉ mỉ,1,W03379.mp4,116
+tỉ số,1,W03380.mp4,115
+tỉ số phần trăm,1,W03381.mp4,87
+tỉnh,1,D0002.mp4,147
+tỉnh táo,1,D0300.mp4,95
+tỏa hương,1,W03474.mp4,147
+tống tiền,1,W03507.mp4,128
+tồn tại,1,W00158.mp4,91
+tổ chim,1,W03488.mp4,121
+tổ tiên,1,W03494.mp4,112
+tổ trưởng,1,W03495.mp4,134
+tổng (số),1,W03502.mp4,118
+tổng hợp,1,W03503.mp4,115
+tổng kết/bế giảng,3,D0430T.mp4; D0430B.mp4; D0430N.mp4,80; 178; 178
+tổng thống,3,W03505B.mp4; W03505T.mp4; W03505N.mp4,144; 132; 132
+tờ báo,3,W03508N.mp4; W03508B.mp4; W03508T.mp4,123; 130; 123
+tờ giấy,3,W03509N.mp4; W03509T.mp4; W03509B.mp4,132; 132; 128
+tờ tiền,1,W03512.mp4,131
+tụ tập,1,W03682.mp4,121
+tủi thân,1,W03689.mp4,140
+từ bỏ,1,W03710.mp4,154
+từ chối,3,D0103N.mp4; D0103T.mp4; D0103B.mp4,97; 97; 179
+từ ngữ,1,W03712.mp4,92
+từ phải sang trái,1,W03713.mp4,71
+từ trái nghĩa,3,W03714T.mp4; W03714B.mp4; W03714N.mp4,129; 138; 129
+từ trái sang phải,1,W03715.mp4,76
+từ đồng âm,1,W03711.mp4,70
+tự (tự làm),1,W03568.mp4,91
+tự do,3,W03717N.mp4; W03717B.mp4; W03717T.mp4,110; 144; 110
+tự giác,1,D0037.mp4,109
+tự hào,1,D0333.mp4,119
+tự lập,3,W03719B.mp4; W03719T.mp4; W03719N.mp4,121; 110; 145
+tự tin,3,W03720T.mp4; W03720B.mp4; W03720N.mp4,135; 130; 135
+tự trọng,1,D0336.mp4,103
+tự vệ,3,W03722T.mp4; W03722B.mp4; W03722N.mp4,132; 135; 153
+u,1,D0514.mp4,77
+u ám ( trời u ám),1,W03738.mp4,145
+ung dung,1,W03740.mp4,248
+ung thư,3,D0213B.mp4; D0213N.mp4; D0213T.mp4,106; 123; 106
+uốn,1,W03745.mp4,79
+uốn cong,1,W03746.mp4,114
+uốn dẻo,1,W03747.mp4,114
+uốn tóc,1,W03748.mp4,107
+v,1,D0516.mp4,63
+va chạm,1,W03759.mp4,61
+va li,1,W03761.mp4,226
+vai,1,W03767.mp4,148
+vai trò,1,W03768.mp4,135
+vi khuẩn,1,W03823.mp4,142
+viết lia lịa,1,W03842.mp4,128
+việc làm,1,W03835.mp4,90
+viện bảo tàng,1,W03840.mp4,151
+viện nghiên cứu,1,W03841.mp4,137
+vua Hùng,1,W03887.mp4,105
+vui chơi,3,W03888T.mp4; W03888N.mp4; W03888B.mp4,130; 96; 130
+vui mừng,3,W03889N.mp4; W03889B.mp4; W03889T.mp4,73; 133; 133
+vui sướng,3,W03890T.mp4; W03890N.mp4; W03890B.mp4,177; 111; 177
+vui tính,1,W03892.mp4,137
+vun đắp,1,W03894.mp4,110
+vuông góc,1,W03911.mp4,108
+vuốt tóc,1,W03909.mp4,130
+vàng (kim loại),1,W03777.mp4,115
+vàng bạc,1,W03778.mp4,118
+vào,1,W03780.mp4,179
+vào lớp,1,W03781.mp4,115
+vào mùa,2,W03782B.mp4; W03782.mp4,128; 144
+vá quần áo,1,W04062.mp4,137
+vá xe,1,W03784.mp4,144
+vác,1,W03762.mp4,117
+vái lạy,1,W03770.mp4,132
+vái tứ phương,1,W03771.mp4,152
+vây bắt,1,W03810.mp4,111
+vé,1,W03814.mp4,243
+vênh váo,1,W03820.mp4,108
+vì sao?,3,W03825B.mp4; W03825T.mp4; W03825N.mp4,127; 148; 148
+ví dụ,3,W03828T.mp4; W03828N.mp4; W03828B.mp4,115; 143; 115
+vòi nước,1,W03858.mp4,152
+vòi voi,1,W03852.mp4,236
+vòm lá,1,W03860.mp4,132
+vòng cung,1,W03861.mp4,145
+vòng nguyệt quế,1,D0216.mp4,125
+vòng quanh Trái Đất,1,W03854.mp4,184
+vòng tròn,1,W03863.mp4,154
+vòng đeo tay,1,W03853.mp4,95
+vòng đời,1,W03862.mp4,137
+vô duyên,3,D0066B.mp4; D0066T.mp4; D0066N.mp4,109; 104; 104
+vô lo vô nghĩ,1,W03867.mp4,136
+vô lí,1,W03866.mp4,153
+vô tâm,1,W03868.mp4,131
+vô tình,1,D0039.mp4,139
+vô tư,1,W03870.mp4,131
+vô ý,1,W03871.mp4,141
+vô ý thức,1,W03872.mp4,116
+võ thuật,1,W03856.mp4,258
+võng (cái võng),1,W03864.mp4,142
+vùng vẫy (dành cho người),1,W03903.mp4,104
+văn,1,W03786.mp4,141
+văn bản,1,W03787.mp4,131
+văn nghệ,3,W03793B.mp4; W03793T.mp4; W03793N.mp4,131; 131; 137
+vĩ cầm,1,W03826.mp4,122
+vĩ đại,1,W03827.mp4,102
+vũ công,1,W03885.mp4,118
+vũ trụ,1,W03886.mp4,127
+vườn thú,1,W03917.mp4,101
+vượt trội,1,W03924.mp4,99
+vạch trần,1,W03765.mp4,135
+vạch xuất phát,1,W03766.mp4,228
+vạm vỡ,1,W03773.mp4,123
+vạt áo,1,W03785.mp4,70
+vải lụa,3,D0326B.mp4; D0326N.mp4; D0326T.mp4,114; 119; 114
+vấn đề,3,W03799T.mp4; W03799B.mp4; W03799N.mp4,133; 134; 133
+vầng trăng,2,W03805T.mp4; W03805N.mp4,147; 147
+vẫn,3,D0168B.mp4; D0168N.mp4; D0168T.mp4,105; 106; 106
+vẫy tay,1,W03812.mp4,241
+vẫy vùng (cá),1,W03813.mp4,137
+vận chuyển,1,W03800.mp4,85
+vận tốc,1,W03804.mp4,118
+vận động,1,W03801.mp4,105
+vật,1,W03806.mp4,121
+vật nuôi,3,W03809B.mp4; W03809N.mp4; W03809T.mp4,140; 144; 228
+vắn tắt,1,W03794.mp4,110
+vắng,3,W03795T.mp4; W03795N.mp4; W03795B.mp4,132; 134; 236
+vắng lặng,1,W03796.mp4,94
+vắt cam,1,W03797.mp4,100
+vắt chanh,1,D0398.mp4,121
+vết thương,1,W03821.mp4,105
+về (Sài Gòn),1,D0158N.mp4,107
+về 2 (Miền Bắc),2,D0159B.mp4; D0159T.mp4,124; 141
+về 3 (đi về),1,D0160.mp4,129
+về 4 (từ nơi khác về),1,D0161.mp4,110
+về 5 (về nhà),1,D0162.mp4,120
+vệ sinh cá nhân,1,W03819.mp4,124
+vị ngữ,1,W03829.mp4,124
+vị trí,1,W03832.mp4,133
+vịnh,1,W03848.mp4,248
+vịnh Hạ Long,1,W03849.mp4,145
+vịt quay,1,D0389.mp4,113
+vỏ,1,W03855.mp4,137
+vồ,1,W03873.mp4,122
+vỗ cánh,1,W03875.mp4,126
+vỗ tay,1,W03876.mp4,238
+vỗ về,1,D0235.mp4,96
+vội vã,1,W03878.mp4,127
+vớt,1,W03884.mp4,121
+vở chèo,1,W03881.mp4,79
+vỡ,1,W03882.mp4,119
+vỡ lòng,1,W03883.mp4,118
+vợt cầu lông,1,D0448.mp4,121
+vững chắc,1,W03912.mp4,131
+vực sâu,1,W01852.mp4,79
+w,1,D0523.mp4,72
+x,3,D0517N.mp4; D0517T.mp4; D0517B.mp4,106; 106; 173
+xa cách,1,W03925.mp4,98
+xa vô tận,1,W03869.mp4,262
+xa xôi,1,W03928.mp4,135
+xanh xao,3,W03938T.mp4; W03938N.mp4; W03938B.mp4,108; 108; 137
+xe ben,1,W03960.mp4,152
+xe container,1,D0176.mp4,150
+xe cảnh sát,3,W03962B.mp4; W03962N.mp4; W03962T.mp4,115; 134; 134
+xe cẩu,1,W03971.mp4,150
+xe cứu hỏa,2,W03964B.mp4; W03964N.mp4,115; 201
+xe cứu thương,1,W03965.mp4,107
+xe khách,3,W03967N.mp4; W03967B.mp4; W03967T.mp4,141; 112; 140
+xe lam,1,W03968.mp4,98
+xe lu,1,W03969.mp4,98
+xe máy,1,W03961.mp4,127
+xe tải,1,W03615.mp4,131
+xe đạp,1,W03959.mp4,109
+xem,3,D0192B.mp4; D0192N.mp4; D0192T.mp4,88; 101; 101
+xem xét,1,W03974.mp4,104
+xem đã,1,D0196.mp4,113
+xen,1,W03975.mp4,126
+xin lỗi,1,W03990.mp4,104
+xinh,1,W03991.mp4,105
+xinh xắn,1,W03992.mp4,112
+xoa đầu,1,D0105.mp4,186
+xoá bỏ,1,W03995.mp4,99
+xoáy,1,W03996.mp4,125
+xu (tiền),1,W04006.mp4,77
+xui xẻo,1,D0268N.mp4,116
+xung phong,1,W04016.mp4,142
+xung quanh nhà,1,W04017.mp4,159
+xung đột,1,W04014.mp4,107
+xuyên Việt,1,D0207.mp4,128
+xuất hiện,3,W04010T.mp4; W04010N.mp4; W04010B.mp4,113; 113; 138
+xuất khẩu,1,W04011.mp4,119
+xuống,1,W04019.mp4,121
+xà phòng,3,W03930N.mp4; W03930T.mp4; W03930B.mp4,91; 111; 121
+xà phòng giặt,3,W03931B.mp4; W03931N.mp4; W03931T.mp4,103; 125; 125
+xào,1,D0376.mp4,224
+xác chết,1,W03940.mp4,91
+xác định,1,W03941.mp4,94
+xách nặng,1,W03943.mp4,154
+xách túi,1,W03936.mp4,106
+xâm hại tình dục,1,W02380.mp4,97
+xâm lược,1,W03953.mp4,120
+xây,3,W03956B.mp4; W03956T.mp4; W03956N.mp4,141; 134; 134
+xây nhà,1,W03958.mp4,110
+xã,1,W03939.mp4,226
+xã hội,3,W03935B.mp4; W03935N.mp4; W03935T.mp4,126; 137; 137
+xé rách,1,W03973.mp4,80
+xì hơi (đánh rắm),2,W00175N.mp4; W00175.mp4,57; 99
+xích đạo,1,W03986.mp4,137
+xóa bảng,1,W03993.mp4,187
+xóm làng,1,W03999.mp4,119
+xô,1,W04000.mp4,125
+xôi,1,W04001.mp4,110
+xôi gà,1,D0089.mp4,130
+xôi gấc,1,D0088.mp4,108
+xông hơi,1,W04003.mp4,100
+xúc xắc,1,W04013.mp4,120
+xăm,1,W03947.mp4,114
+xăng,1,W03948.mp4,113
+xăng-ti-mét (cm),1,W03949.mp4,121
+xăng-ti-mét-khối (cm3),1,W03950.mp4,159
+xăng-ti-mét-vuông (cm2),1,W03951.mp4,145
+xưa,3,W04025N.mp4; W04025T.mp4; W04025B.mp4,89; 144; 180
+xương rồng,1,W04028.mp4,139
+xả rác,1,W03933.mp4,72
+xảy ra,1,D0258.mp4,103
+xẻng,1,W03976.mp4,122
+xếp,1,W03978.mp4,117
+xếp hàng,1,W03979.mp4,100
+xếp hàng dọc,1,W03980.mp4,92
+xếp hàng ngang,1,W03981.mp4,98
+xếp hàng ưu tiên,1,W03982.mp4,130
+xếp hình,1,W03983.mp4,107
+xịt côn trùng,1,W01043.mp4,153
+xứ Nghệ,1,W04023.mp4,112
+xử lý,1,D0115.mp4,131
+y,1,D0518N.mp4,64
+y tế,1,W04034.mp4,114
+yên bình,1,W04044.mp4,151
+yên lòng,1,W04046.mp4,146
+yên ngựa,1,W00942.mp4,127
+yên tâm,1,W04048.mp4,136
+yêu cầu,3,W04057B.mp4; W04057T.mp4; W04057N.mp4,149; 225; 225
+yêu mến (yêu quí),3,W04058B.mp4; W04058N.mp4; W04058T.mp4,103; 143; 143
+yêu nước Việt Nam,1,D0232.mp4,320
+yếm,1,W04041.mp4,88
+yếu,3,W04059T.mp4; W04059N.mp4; W04059B.mp4,99; 99; 106
+yếu tố,1,W04060.mp4,132
+z,1,D0519.mp4,170
+Âu Cơ,1,W00062.mp4,114
+Ê Đê,1,W01357.mp4,128
+Ê-ti-ô-pi-a (nước Ê-ti-ô-pi-a),1,W01360.mp4,136
+Ô-lim-píc,1,D0215.mp4,140
+ác,1,W00000.mp4,120
+ác cảm,1,W00001.mp4,130
+ác mộng,1,W00003.mp4,118
+ác độc,1,W00002.mp4,114
+áo,1,W00028.mp4,119
+áo cánh,1,W00030.mp4,98
+áo kẻ sọc,1,D0302.mp4,127
+áo len,1,W00033.mp4,106
+áo phao,1,W00034.mp4,130
+áo phông,3,W00035B.mp4; W00035N.mp4; W00035T.mp4,157; 161; 159
+áo đồng phục,3,W00032T.mp4; W00032B.mp4; W00032N.mp4,161; 175; 161
+áo ấm,1,W00029.mp4,113
+áp phích,1,W00036.mp4,141
+â,3,D0491B.mp4; D0491N.mp4; D0491T.mp4,108; 111; 111
+âm thanh,1,W00045.mp4,118
+ân hận,3,W00057N.mp4; W00057T.mp4; W00057B.mp4,114; 126; 142
+ê,3,D0497B.mp4; D0497T.mp4; D0497N.mp4,76; 129; 129
+ích lợi,1,W01727.mp4,95
+ít,1,W01730.mp4,106
+ít hơn,1,W01731.mp4,131
+ít nhất,1,W01732.mp4,110
+óc,1,W02557.mp4,159
+ô,3,D0507T.mp4; D0507B.mp4; D0507N.mp4,68; 84; 68
+ô nhiễm,1,W02559.mp4,134
+ô tô,1,W02561.mp4,107
+ô ăn quan,1,W02558.mp4,111
+ôm,1,W02565.mp4,102
+ôn luyện,1,W02569.mp4,105
+ôn tập,1,W02570.mp4,105
+ông bà,3,D0151B.mp4; D0151N.mp4; D0151T.mp4,113; 112; 113
+ông già,1,W02572.mp4,122
+ông ngoại,3,W02575T.mp4; W02575N.mp4; W02575B.mp4,109; 84; 109
+ông nội,3,W02576T.mp4; W02576N.mp4; W02576B.mp4,157; 84; 110
+úp,1,W03749.mp4,110
+ý chí,1,W04035.mp4,107
+ý nghĩa,3,W04038T.mp4; W04038B.mp4; W04038N.mp4,124; 121; 124
+ý thức,1,W04039.mp4,106
+ý tưởng,1,W04040.mp4,131
+ă,3,D0490B.mp4; D0490T.mp4; D0490N.mp4,89; 128; 128
+ăn bám,1,D0338.mp4,98
+ăn cóc,1,D0600.mp4,120
+ăn diện,1,W00039.mp4,144
+ăn hối lộ,1,W00040.mp4,142
+ăn uống,1,W00042.mp4,280
+ăn vú sữa,1,D0172.mp4,105
+ăn vú sữa (bằng thìa),1,D0171.mp4,135
+ăn vặt,1,W00043.mp4,119
+ăn vụng,1,D0257.mp4,78
+ăn vừa,1,D0441.mp4,123
+ăn xin,1,W00044.mp4,116
+ăn ít,1,D0442.mp4,82
+ăn đủ,1,D0440.mp4,98
+Điện Biên Phủ,1,W01207.mp4,154
+Đu Bai (nước Đu Bai),1,D0011.mp4,100
+Đông Dương,1,W01286.mp4,108
+Đông Nam,1,W01262.mp4,115
+Đông Nam Á,1,W01263.mp4,253
+Đông Timor (nước Đông Timor),1,W01288.mp4,102
+Đảng,1,D0425.mp4,108
+Đắk Lắk,1,W01125.mp4,87
+Đặng Văn Ngữ,1,W01130.mp4,131
+Đền Hùng,1,W01186.mp4,146
+Đồng Nai,1,W01266.mp4,134
+Đồng Tháp Mười,1,W01267.mp4,129
+đ,1,D0495.mp4,105
+đan,1,W01095.mp4,126
+đau bụng,1,D0356.mp4,110
+đau chân,1,D0358.mp4,89
+đau mắt,1,D0355.mp4,104
+đau mắt đỏ,1,D0446.mp4,140
+đau tai,1,D0359.mp4,122
+đau tay,1,D0357.mp4,105
+đen láy (như đen nhánh),3,W01153N.mp4; W01153T.mp4; W01153B.mp4,109; 109; 129
+đen đủi,1,D0267B.mp4,245
+đeo kính,1,W01164.mp4,122
+đi,1,W01190.mp4,107
+đi dạo,3,D0157N.mp4; D0157B.mp4; D0157T.mp4,124; 129; 129
+đi học,1,W01191.mp4,109
+"đi lạc (đường, rừng..)",1,D0251.mp4,140
+đi tuần,1,D0234.mp4,135
+đi vệ sinh,1,D0486.mp4,115
+đinh,1,W01219.mp4,78
+điêu khắc,1,W01210.mp4,158
+điều hòa,2,W01213T.mp4; W01213B.mp4,157; 119
+điều khiển,1,W01214.mp4,133
+điều kiện,1,W01215.mp4,116
+điều phối,2,W01212N.mp4; W01212B.mp4,94; 101
+điều tra,1,W01216.mp4,135
+điều trị,1,W01217.mp4,170
+điểm ở giữa đoạn thẳng,1,W01203.mp4,143
+điện,3,W01205T.mp4; W01205B.mp4; W01205N.mp4,111; 72; 111
+điện thoại,1,W01208.mp4,179
+đo,1,W01227.mp4,118
+đoàn cải lương,1,W01229.mp4,149
+đoàn thanh niên,1,W01231.mp4,135
+đoàn tụ,1,W01232.mp4,157
+đoán,1,W01234.mp4,121
+đoạn thơ,1,W01236.mp4,138
+đoạn thẳng,1,W01235.mp4,124
+đoạn văn,1,W01237.mp4,145
+đua ngựa,1,W01315.mp4,118
+đua thuyền,1,W01316.mp4,133
+đua xe máy,1,W01317.mp4,124
+đua đòi,1,D0460.mp4,114
+đun nấu,1,W01321.mp4,119
+đuôi,1,W01323.mp4,128
+đuôi chuột,1,D0076.mp4,164
+đuôi cá,1,D0075.mp4,134
+đuốc,1,W01322.mp4,119
+đài sen,1,W01080.mp4,100
+đàn bướm,1,W01099.mp4,96
+đàn bầu,1,W01098.mp4,126
+đàn ghi ta,1,W01100.mp4,96
+đàn kiến,1,W01101.mp4,108
+đàn tơ-rưng,1,W01103.mp4,224
+đàn xê lô đại vĩ cầm,1,W01096.mp4,97
+đàng hoàng,1,D0226.mp4,116
+đàng ngoài,1,W01104.mp4,100
+đàng trong,1,W01105.mp4,83
+đào tạo,1,W01115.mp4,79
+đá bóng,1,W01078.mp4,182
+đám ma,1,W01093.mp4,182
+đám mây,1,W01094.mp4,105
+đáng quý,1,W01106.mp4,91
+đánh,1,W01107.mp4,82
+đánh bắt,1,W01108.mp4,94
+đánh cầu lông,1,D0343.mp4,119
+đánh giá,1,W01110.mp4,87
+đánh răng,2,D0414.mp4; W01112.mp4,114; 89
+đánh trống,1,W01113.mp4,86
+đèn báo giao thông,3,W01154B.mp4; W01154T.mp4; W01154N.mp4,91; 109; 109
+đèn lồng,1,W01158.mp4,134
+đèn pin,3,W01159N.mp4; W01159B.mp4; W01159T.mp4,101; 92; 250
+đèn vàng,3,W01161N.mp4; W01161T.mp4; W01161B.mp4,97; 131; 111
+đèn xanh,3,W01162B.mp4; W01162N.mp4; W01162T.mp4,115; 122; 123
+đèn ông sao,1,D0212.mp4,242
+đèn điện,3,W01155T.mp4; W01155B.mp4; W01155N.mp4,101; 80; 101
+đèn đỏ,1,W01156.mp4,162
+đèo,1,W01166.mp4,97
+đèo Hải Vân,3,W01165B.mp4; W01165N.mp4; W01165T.mp4,91; 82; 82
+đích,1,W01201.mp4,71
+đòi,1,D0462.mp4,110
+đòi hỏi,1,D0463.mp4,123
+đói không?,1,D0371.mp4,119
+đón,1,W01241.mp4,146
+đón tiếp,1,W01242.mp4,144
+đóng cửa,1,W01243.mp4,118
+đóng dấu,1,W01244.mp4,135
+đóng góp,1,W01246.mp4,118
+đô thị,1,W01248.mp4,118
+đôi chân,1,W01273.mp4,146
+đôi dép,1,W01255.mp4,112
+đôi tay,1,W01274.mp4,129
+đôi/cặp,1,D0424.mp4,121
+đông lạnh,1,W01287.mp4,116
+đùa,3,D0437T.mp4; D0437N.mp4; D0437B.mp4,80; 80; 123
+đùm bọc,1,D0324.mp4,114
+đúng không?,3,D0119B.mp4; D0119N.mp4; D0119T.mp4,94; 117; 88
+đăng ký,1,W01126.mp4,93
+đăng nhập,1,W01127.mp4,80
+đĩa,1,W01192.mp4,121
+đĩa DVD,1,W01193.mp4,134
+đũa,1,W01318.mp4,120
+đơn giản,1,W01305.mp4,161
+đưa đón,1,W01325.mp4,118
+đường Nguyễn Huệ,1,W01341.mp4,130
+đường biên giới,1,W01329.mp4,131
+đường bộ,1,W01330.mp4,138
+đường cao,1,W01331.mp4,130
+đường chéo,1,W01332.mp4,117
+đường chỉ tay,1,W00569.mp4,132
+đường hàng không,1,W01335.mp4,161
+đường hầm,1,W01336.mp4,150
+đường kính,1,W01337.mp4,111
+đường ray xe lửa,1,W03172.mp4,118
+đường sắt,1,W01343.mp4,128
+đường thuỷ,1,W01345.mp4,164
+đường thẳng,1,W01344.mp4,146
+đường tròn,1,W01346.mp4,157
+đại diện,3,W01082B.mp4; W01082N.mp4; W01082T.mp4,77; 82; 77
+đại dương,1,W01083.mp4,100
+đại số,1,W01085.mp4,110
+đại sứ,1,D0253.mp4,109
+đại tá,1,W01086.mp4,113
+đại tướng,1,W01088.mp4,117
+đại úy,1,W01089.mp4,131
+đạn,1,W01114.mp4,82
+đạo diễn,1,D0093.mp4,211
+đảm nhiệm,1,W01092.mp4,104
+đảo,1,W01116.mp4,101
+đảo Hoàng Sa,1,W03076.mp4,89
+đảo Lý Sơn,1,W01117.mp4,105
+đảo Phú Quốc,1,W01118.mp4,98
+đảo Trường Sa,1,W03073.mp4,86
+đất,1,W01135.mp4,70
+đất màu mỡ,1,W01137.mp4,88
+đất nước bị chia cắt (Việt Nam),1,D0303.mp4,153
+đất nặn,1,W01138.mp4,88
+đất ruộng,1,D0116.mp4,148
+đất trồng cây,1,W01140.mp4,110
+đấu tranh,1,W01146.mp4,144
+đấu vật,1,W01148.mp4,150
+đầu gối,1,W01141.mp4,105
+đầu hàng,1,W01142.mp4,79
+đầu tiên,1,W01144.mp4,80
+đầu tàu,1,W01143.mp4,160
+đầu tư,1,D0260.mp4,80
+đầu xuôi đuôi lọt,1,W01145.mp4,147
+đầy,1,W01149.mp4,218
+đầy tớ,1,W01151.mp4,137
+đầy đủ,1,W01150.mp4,123
+đẩy,1,W01152.mp4,119
+đập,1,W01134.mp4,205
+đắt đỏ,1,W01131.mp4,90
+đằng sau,1,W01128.mp4,91
+đằng trước,1,W01129.mp4,82
+đặc biệt,4,W01122B.mp4; W01122T.mp4; W01122N.mp4; W01122.mp4,67; 88; 88; 316
+đặc điểm,1,W01124.mp4,105
+đặt,1,W01132.mp4,90
+đẹp không?,3,D0195B.mp4; D0195N.mp4; D0195T.mp4,82; 107; 82
+đẹp không? (người),3,D0128T.mp4; D0128B.mp4; D0128N.mp4,94; 94; 117
+đẹp mê hồn,1,W01172.mp4,176
+đẹp đẽ (như đẹp),1,W01170.mp4,134
+đếm,1,W01184.mp4,71
+đề nghị,3,W01177B.mp4; W01177N.mp4; W01177T.mp4,87; 219; 219
+đề phòng,1,W02804.mp4,115
+đề tài,1,W01179.mp4,71
+đề-ca-mét (dam),1,W01175.mp4,142
+đề-ca-mét vuông (dam2),1,W01176.mp4,136
+đề-xi-mét (dm),1,W01181.mp4,115
+đề-xi-mét khối (dm3),1,W01182.mp4,123
+đề-xi-mét vuông (dm2),1,W01183.mp4,123
+đền,1,W01185N.mp4,114
+đều đặn,1,W01188.mp4,114
+để (đặt),1,W01173.mp4,120
+đệm,1,W04069.mp4,140
+đỉnh,1,W01224.mp4,112
+đỉnh núi,1,W01225.mp4,131
+địa chỉ,3,D0001N.mp4; D0001T.mp4; D0001B.mp4,133; 133; 130
+địa cầu,1,W01194.mp4,105
+địa hình,1,D0478.mp4,148
+địa lí,1,W01199.mp4,82
+địa điểm,1,W01197.mp4,74
+địa đạo Củ Chi,1,W01196.mp4,143
+định vị,1,W01226.mp4,87
+đọc sách,1,W01239.mp4,127
+đỏ thắm,1,W02922.mp4,99
+đối diện,1,W01257.mp4,121
+đối thoại,1,W01279.mp4,136
+đối tượng,1,W01258.mp4,136
+đối xứng,1,W01281.mp4,109
+đối xử,1,W01280.mp4,182
+đồ chơi,1,W01249.mp4,148
+đồ dùng dạy học,1,W01250.mp4,134
+đồ dùng học tập,1,W01251.mp4,153
+đồ uống,1,D0443.mp4,103
+đồ ăn,1,D0444.mp4,114
+đồn công an,1,W01261.mp4,134
+đồng bào,1,W01289.mp4,124
+đồng bằng,1,W01264.mp4,145
+đồng bằng duyên hải miền Trung,1,D0063.mp4,136
+đồng bằng sông Cửu Long,1,D0061.mp4,150
+đồng bằng sông Hồng,1,D0062.mp4,155
+đồng hồ,1,W01265.mp4,126
+đồng lúa,1,W01293.mp4,148
+đồng phục,3,W01294N.mp4; W01294T.mp4; W01294B.mp4,145; 145; 175
+đồng ruộng,1,W01295.mp4,101
+đồng tiền,1,W01296.mp4,129
+đổ nước,1,W01268.mp4,91
+đổi,1,W01256.mp4,139
+đổi mới,1,W01277.mp4,135
+độc hại,1,W01254.mp4,67
+độc lập,1,W01272.mp4,117
+đội thiếu niên,1,W01283.mp4,161
+đội trưởng,1,W01260.mp4,129
+động cơ,1,W01299.mp4,139
+động viên,1,W01302.mp4,134
+đỡ,1,W01314.mp4,106
+đợi,3,W01304N.mp4; W01304B.mp4; W01304T.mp4,95; 88; 88
+đứng nghiêm,1,W01326.mp4,99
+đứng đầu (hàng đầu),1,D0028.mp4,98
+đựng,1,W01328.mp4,121
+ơ,1,D0508N.mp4,89
+ư,1,D0515N.mp4,118
+ưu tiên,3,W03758N.mp4; W03758B.mp4; W03758T.mp4,132; 136; 132
+ưu điểm,1,W03757.mp4,148
+Ả Rập (nước Ả Rập),1,D0008.mp4,99
+ảo thuật,1,W00027.mp4,109
+ấm no,1,W00053.mp4,159
+ấm trà,1,W00055.mp4,135
+ấm áp,1,W00051.mp4,98
+ấm đun nước,1,W00052.mp4,175
+ấn,1,W00059.mp4,135
+ấn tượng,1,W00061.mp4,144
+ầm ĩ,1,W00048.mp4,102
+ẩm mốc,1,W00049.mp4,154
+ẩm ướt,1,W00050.mp4,126
+ế ẩm,1,W01358.mp4,104
+ốc vít,1,W02564.mp4,212
+ốm đau,1,W02567.mp4,151
+ống nghe,1,W02577.mp4,132
+ống nhòm,1,W02578.mp4,234
+ống nước,1,W02579.mp4,130
+ổn định,1,W02571.mp4,121
+ở ngoài,3,W02580B.mp4; W02580N.mp4; W02580T.mp4,95; 251; 251
+ở trong,1,W02581.mp4,129
+ủng,1,W03741.mp4,139
+ủng hộ,1,W03742.mp4,115
+ủy ban,1,W03750.mp4,146
+ủy ban nhân dân,1,W037511.mp4,148
+ủy quyền,3,W03751N.mp4; W03751B.mp4; W03751T.mp4,166; 154; 154
+ức chế,1,W03752.mp4,174
