@@ -106,12 +106,12 @@ class MediaPipeProcessor:
             Image with landmarks drawn
         """
         # Face landmarks
-        if results.face_landmarks:
-            self.mp_drawing.draw_landmarks(
-                image, results.face_landmarks, self.mp_holistic.FACEMESH_TESSELATION,
-                self.mp_drawing.DrawingSpec(color=(80, 110, 10), thickness=1, circle_radius=1),
-                self.mp_drawing.DrawingSpec(color=(80, 256, 121), thickness=1, circle_radius=1)
-            )
+        # if results.face_landmarks:
+        #     self.mp_drawing.draw_landmarks(
+        #         image, results.face_landmarks, self.mp_holistic.FACEMESH_TESSELATION,
+        #         self.mp_drawing.DrawingSpec(color=(80, 110, 10), thickness=1, circle_radius=1),
+        #         self.mp_drawing.DrawingSpec(color=(80, 256, 121), thickness=1, circle_radius=1)
+        #     )
         
         # Pose landmarks
         if results.pose_landmarks:
