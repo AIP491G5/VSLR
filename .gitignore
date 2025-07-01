@@ -1,0 +1,9 @@
+/data
+/Dataset
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.db
+/models
