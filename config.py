@@ -99,8 +99,8 @@ class TrainingConfig:
     gradient_clip_norm: float = 1.0
     
     # Data split
-    train_split: float = 0.9
-    val_split: float = 0.1
+    train_split: float = 0.8
+    val_split: float = 0.2
     
     # Saving and logging
     save_dir: str = "models"
