@@ -3,7 +3,7 @@ import shutil
 import pandas as pd
 from collections import defaultdict
 
-def extract_label_and_organize_videos(input_folder, output_folder="new_data", csv_file="labels.csv"):
+def extract_csv(input_folder, output_folder="new_data", csv_file="labels.csv"):
     """
     Tạo file CSV chứa id, label, videos từ folder chứa video có format <id>_label_...
     và chuyển video sang thư mục mới với tên <id>_<No>.mp4
@@ -75,7 +75,7 @@ if __name__ == "__main__":
     input_folder = "new_dataset"  # Thư mục chứa video gốc
     
     # Chạy hàm
-    df = extract_label_and_organize_videos(input_folder)
+    df = extract_csv(input_folder)
     
     # Hiển thị kết quả
     print("\n[INFO] Nội dung file CSV:")
