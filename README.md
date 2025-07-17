@@ -10,13 +10,11 @@ Dự án này sử dụng:
 - **THGC-LSTM** model để nhận dạng cử chỉ
 - **Graph Convolution** để model mối quan hệ giữa các keypoints
 - **LSTM** để model temporal dynamics
-- **Data Augmentation** để tăng cường dữ liệu
+- **Data Augmentation** để tăng cường dữ liệu (future)
 
 ## 🚀 Quy trình thực hiện
 
-### Bước 1: Chuẩn bị dữ liệu video
-
-#### 1.1 Tổ chức video và tạo CSV labels
+### Bước 1: Chuẩn bị dữ liệu video và tạo CSV labels
 
 ```bash
 python extract_csv.py
@@ -39,17 +37,6 @@ id,label,videos
 1,xin_chao,"1_01.mp4, 1_02.mp4, 1_03.mp4"
 2,cam_on,"2_01.mp4, 2_02.mp4, 2_03.mp4"
 ```
-
-#### 1.2 Chuyển đổi video sang 60 FPS
-
-```bash
-python cv_to_60.py
-```
-
-**Mục đích:** Chuẩn hóa tất cả video về 60 FPS để đồng nhất sequence length
-
-**Input:** Video từ `new_data/`
-**Output:** Video 60 FPS trong `data/Videos/`
 
 ### Bước 2: Trích xuất keypoints
 
