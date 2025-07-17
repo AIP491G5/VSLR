@@ -11,16 +11,6 @@ from dataclasses import dataclass, field
 
 
 @dataclass
-class ModelConfig:
-    """Configuration for the ML model."""
-    model_path: str = "Models/final_model.keras"
-    sequence_length: int = 60
-    prediction_threshold: float = 0.7
-    min_consecutive_predictions: int = 3
-    prediction_smoothing_window: int = 5
-
-
-@dataclass
 class MediaPipeConfig:
     """Configuration for MediaPipe processing."""
     min_detection_confidence: float = 0.5
@@ -30,68 +20,110 @@ class MediaPipeConfig:
 
 
 @dataclass
-class CameraConfig:
-    """Configuration for camera capture."""
-    camera_index: int = 0
-    frame_width: int = 640
-    frame_height: int = 480
-    fps: int = 30
-    flip_horizontal: bool = True
-
-
-@dataclass
-class AudioConfig:
-    """Configuration for audio/TTS."""
-    language: str = "vi"
-    auto_speak: bool = False
-    auto_speak_threshold: int = 5
-    voice_dir: str = "Voice"
-    temp_audio_cleanup: bool = True
-
-
-@dataclass
-class UIConfig:
-    """Configuration for the user interface."""
-    window_title: str = "Hệ Thống Nhận Dạng Ngôn Ngữ Ký Hiệu"
-    window_width: int = 1200
-    window_height: int = 800
-    show_landmarks: bool = True
-    show_confidence: bool = True
-    theme: str = "default"
-
-
-@dataclass
 class DataConfig:
     """Configuration for data handling."""
-    dataset_dir: str = "Dataset"
-    data_dir: str = "Data"
-    models_dir: str = "Models"
-    logs_dir: str = "Logs"
-    checkpoints_dir: str = "Models/checkpoints"
+    # Input data paths
+    input_csv_file: str = "labels.csv"
+    video_input_dir: str = "new_data"
+    
+    # Output data paths
+    data_dir: str = "data"
+    video_output_dir: str = "data/Videos"
+    keypoints_output_dir: str = "data/Keypoints"
+    labels_output_dir: str = "data/Labels"
+    
+    # Processing parameters
+    movement_threshold: float = 0.36
+    video_fps: int = 30
+    label_frames_needed: int = 0
+    
+    # LSTM training data parameters
+    sequence_length: int = 60
+    use_all_frames: bool = True
+    train_split: float = 0.9
+    val_split: float = 0.1
+    
+    # File extensions
+    video_input_ext: str = ".mp4"
+    video_output_ext: str = ".mp4"
+    keypoints_ext: str = ".npy"
+    labels_ext: str = ".npy"
 
 
 @dataclass
-class LoggingConfig:
-    """Configuration for logging."""
-    level: str = "INFO"
-    format: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-    file_handler: bool = True
-    console_handler: bool = True
-    log_file: str = "Logs/app.log"
-    max_file_size: int = 10 * 1024 * 1024  # 10MB
-    backup_count: int = 5
+class THGCLSTMConfig:
+    """Configuration for THGC-LSTM model."""
+    # Model architecture
+    in_channels: int = 2  # x, y coordinates
+    hidden_gcn: int = 128
+    hidden_lstm: int = 128
+    dropout: float = 0.5
+    
+    # Data parameters
+    sequence_length: int = 60
+    num_vertices: int = 75  # Total keypoints (33 pose + 21 left hand + 21 right hand)
+    
+    # GCN parameters
+    gcn_layers: int = 2
+    use_batch_norm: bool = True
+    
+    # LSTM parameters
+    lstm_bidirectional: bool = True  # Set to True for bidirectional LSTM
+    lstm_layers: int = 2
+    
+    # Pooling parameters
+    pooling_type: str = "attention"  # "adaptive_avg", "adaptive_max", "attention"
+    
+
+
+@dataclass
+class TrainingConfig:
+    """Configuration for training process."""
+    # Training parameters
+    num_epochs: int = 100
+    batch_size: int = 8
+    learning_rate: float = 1e-3
+    weight_decay: float = 1e-4
+    
+    # Optimizer settings
+    optimizer: str = "adam"  # "adam" or "sgd"
+    momentum: float = 0.9  # For SGD
+    
+    # Learning rate scheduler
+    scheduler: str = "step"  # "step", "cosine", or None
+    scheduler_step_size: int = 20  # For THGC-LSTM
+    scheduler_gamma: float = 0.5   # For THGC-LSTM
+    
+    # Training behavior
+    early_stopping_patience: int = 50
+    gradient_clip_norm: float = 1.0
+    
+    # Data split
+    train_split: float = 0.9
+    val_split: float = 0.1
+    
+    # Saving and logging
+    save_dir: str = "models"
+    save_interval: int = 10
+    log_interval: int = 1
+    model_save_name: str = "best_thgc_lstm.pth"
+    
+    # Device settings
+    device: str = "auto"  # "auto", "cpu", "cuda"
+    mixed_precision: bool = False
+    random_seed: int = 42
+    
+    # Debugging
+    cuda_launch_blocking: bool = True
 
 
 @dataclass
 class Config:
     """Main configuration class."""
-    model: ModelConfig = field(default_factory=ModelConfig)
     mediapipe: MediaPipeConfig = field(default_factory=MediaPipeConfig)
-    camera: CameraConfig = field(default_factory=CameraConfig)
-    audio: AudioConfig = field(default_factory=AudioConfig)
-    ui: UIConfig = field(default_factory=UIConfig)
     data: DataConfig = field(default_factory=DataConfig)
-    logging: LoggingConfig = field(default_factory=LoggingConfig)
+    thgc_lstm: THGCLSTMConfig = field(default_factory=THGCLSTMConfig)
+    training: TrainingConfig = field(default_factory=TrainingConfig)
     
     @classmethod
     def from_file(cls, config_path: str) -> "Config":
@@ -102,7 +134,7 @@ class Config:
             raise FileNotFoundError(f"Configuration file not found: {config_path}")
         
         with open(config_path, 'r', encoding='utf-8') as f:
-            if config_path.suffix.lower() == '.yaml' or config_path.suffix.lower() == '.yml':
+            if config_path.suffix.lower() in ['.yaml', '.yml']:
                 data = yaml.safe_load(f)
             elif config_path.suffix.lower() == '.json':
                 data = json.load(f)
@@ -116,33 +148,24 @@ class Config:
         """Create configuration from dictionary."""
         config = cls()
         
-        if 'model' in data:
-            config.model = ModelConfig(**data['model'])
         if 'mediapipe' in data:
             config.mediapipe = MediaPipeConfig(**data['mediapipe'])
-        if 'camera' in data:
-            config.camera = CameraConfig(**data['camera'])
-        if 'audio' in data:
-            config.audio = AudioConfig(**data['audio'])
-        if 'ui' in data:
-            config.ui = UIConfig(**data['ui'])
         if 'data' in data:
             config.data = DataConfig(**data['data'])
-        if 'logging' in data:
-            config.logging = LoggingConfig(**data['logging'])
+        if 'thgc_lstm' in data:
+            config.thgc_lstm = THGCLSTMConfig(**data['thgc_lstm'])
+        if 'training' in data:
+            config.training = TrainingConfig(**data['training'])
         
         return config
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert configuration to dictionary."""
         return {
-            'model': self.model.__dict__,
             'mediapipe': self.mediapipe.__dict__,
-            'camera': self.camera.__dict__,
-            'audio': self.audio.__dict__,
-            'ui': self.ui.__dict__,
             'data': self.data.__dict__,
-            'logging': self.logging.__dict__,
+            'thgc_lstm': self.thgc_lstm.__dict__,
+            'training': self.training.__dict__,
         }
     
     def save(self, config_path: str) -> None:
@@ -153,7 +176,7 @@ class Config:
         data = self.to_dict()
         
         with open(config_path, 'w', encoding='utf-8') as f:
-            if config_path.suffix.lower() == '.yaml' or config_path.suffix.lower() == '.yml':
+            if config_path.suffix.lower() in ['.yaml', '.yml']:
                 yaml.safe_dump(data, f, default_flow_style=False, allow_unicode=True)
             elif config_path.suffix.lower() == '.json':
                 json.dump(data, f, indent=2, ensure_ascii=False)
@@ -166,24 +189,51 @@ class Config:
             return relative_path
         
         # Get the project root directory
-        current_dir = Path(__file__).parent.parent.parent.parent
+        current_dir = Path(__file__).parent
         return str(current_dir / relative_path)
     
     def ensure_directories(self) -> None:
         """Ensure all required directories exist."""
         directories = [
-            self.data.dataset_dir,
+            self.data.video_input_dir,
             self.data.data_dir,
-            self.data.models_dir,
-            self.data.logs_dir,
-            self.data.checkpoints_dir,
-            self.audio.voice_dir,
-            os.path.dirname(self.logging.log_file),
+            self.data.video_output_dir,
+            self.data.keypoints_output_dir,
+            self.data.labels_output_dir,
+            self.training.save_dir,
         ]
         
         for directory in directories:
             abs_path = self.get_absolute_path(directory)
             Path(abs_path).mkdir(parents=True, exist_ok=True)
+    
+    def print_config(self) -> None:
+        """Print all configuration parameters."""
+        print("\n" + "="*60)
+        print(" " * 20 + "CONFIGURATION SUMMARY")
+        print("="*60)
+        
+        print(f"\n[MEDIAPIPE CONFIG]")
+        for key, value in self.mediapipe.__dict__.items():
+            print(f"  {key}: {value}")
+        
+        print(f"\n[DATA CONFIG]")
+        for key, value in self.data.__dict__.items():
+            print(f"  {key}: {value}")
+        
+        print(f"\n[MODEL CONFIG]")
+        for key, value in self.model.__dict__.items():
+            print(f"  {key}: {value}")
+        
+        print(f"\n[THGC-LSTM CONFIG]")
+        for key, value in self.thgc_lstm.__dict__.items():
+            print(f"  {key}: {value}")
+        
+        print(f"\n[TRAINING CONFIG]")
+        for key, value in self.training.__dict__.items():
+            print(f"  {key}: {value}")
+        
+        print("="*60)
 
 
 def load_config(config_path: Optional[str] = None) -> Config:

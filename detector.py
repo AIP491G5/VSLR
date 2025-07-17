@@ -36,10 +36,6 @@ class MediaPipeProcessor:
         Returns:
             Tuple of (processed_frame, results)
         """
-        # Flip frame horizontally if configured
-        if self.config.camera.flip_horizontal:
-            frame = cv2.flip(frame, 1)
-        
         # Convert BGR to RGB
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         frame_rgb.flags.writeable = False
@@ -117,23 +113,23 @@ class MediaPipeProcessor:
         if results.pose_landmarks:
             self.mp_drawing.draw_landmarks(
                 image, results.pose_landmarks, self.mp_holistic.POSE_CONNECTIONS,
-                self.mp_drawing.DrawingSpec(color=(80, 22, 10), thickness=2, circle_radius=4),
-                self.mp_drawing.DrawingSpec(color=(80, 44, 121), thickness=2, circle_radius=2)
+                self.mp_drawing.DrawingSpec(color=(80, 22, 10), thickness=2, circle_radius=2),
+                self.mp_drawing.DrawingSpec(color=(80, 44, 121), thickness=2, circle_radius=1)
             )
         
         # Hand landmarks
         if results.left_hand_landmarks:
             self.mp_drawing.draw_landmarks(
                 image, results.left_hand_landmarks, self.mp_holistic.HAND_CONNECTIONS,
-                self.mp_drawing.DrawingSpec(color=(121, 22, 76), thickness=2, circle_radius=4),
-                self.mp_drawing.DrawingSpec(color=(121, 44, 250), thickness=2, circle_radius=2)
+                self.mp_drawing.DrawingSpec(color=(121, 22, 76), thickness=2, circle_radius=2),
+                self.mp_drawing.DrawingSpec(color=(121, 44, 250), thickness=2, circle_radius=1)
             )
         
         if results.right_hand_landmarks:
             self.mp_drawing.draw_landmarks(
                 image, results.right_hand_landmarks, self.mp_holistic.HAND_CONNECTIONS,
-                self.mp_drawing.DrawingSpec(color=(245, 117, 66), thickness=2, circle_radius=4),
-                self.mp_drawing.DrawingSpec(color=(245, 66, 230), thickness=2, circle_radius=2)
+                self.mp_drawing.DrawingSpec(color=(245, 117, 66), thickness=2, circle_radius=2),
+                self.mp_drawing.DrawingSpec(color=(245, 66, 230), thickness=2, circle_radius=1)
             )
         
         return image
