@@ -51,8 +51,8 @@ class DataConfig:
 
 
 @dataclass
-class THGCLSTMConfig:
-    """Configuration for THGC-LSTM model."""
+class HGCLSTMConfig:
+    """Configuration for HGC-LSTM model."""
     # Model architecture
     in_channels: int = 2  # x, y coordinates
     hidden_gcn: int = 128
@@ -91,8 +91,8 @@ class TrainingConfig:
     
     # Learning rate scheduler
     scheduler: str = "step"  # "step", "cosine", or None
-    scheduler_step_size: int = 20  # For THGC-LSTM
-    scheduler_gamma: float = 0.5   # For THGC-LSTM
+    scheduler_step_size: int = 20  # For HGC-LSTM
+    scheduler_gamma: float = 0.5   # For HGC-LSTM
     
     # Training behavior
     early_stopping_patience: int = 50
@@ -106,7 +106,7 @@ class TrainingConfig:
     save_dir: str = "models"
     save_interval: int = 10
     log_interval: int = 1
-    model_save_name: str = "best_thgc_lstm.pth"
+    model_save_name: str = "best_hgc_lstm.pth"
     
     # Device settings
     device: str = "auto"  # "auto", "cpu", "cuda"
@@ -122,7 +122,7 @@ class Config:
     """Main configuration class."""
     mediapipe: MediaPipeConfig = field(default_factory=MediaPipeConfig)
     data: DataConfig = field(default_factory=DataConfig)
-    thgc_lstm: THGCLSTMConfig = field(default_factory=THGCLSTMConfig)
+    hgc_lstm: HGCLSTMConfig = field(default_factory=HGCLSTMConfig)
     training: TrainingConfig = field(default_factory=TrainingConfig)
     
     @classmethod
@@ -152,8 +152,8 @@ class Config:
             config.mediapipe = MediaPipeConfig(**data['mediapipe'])
         if 'data' in data:
             config.data = DataConfig(**data['data'])
-        if 'thgc_lstm' in data:
-            config.thgc_lstm = THGCLSTMConfig(**data['thgc_lstm'])
+        if 'hgc_lstm' in data:
+            config.hgc_lstm = HGCLSTMConfig(**data['hgc_lstm'])
         if 'training' in data:
             config.training = TrainingConfig(**data['training'])
         
@@ -164,7 +164,7 @@ class Config:
         return {
             'mediapipe': self.mediapipe.__dict__,
             'data': self.data.__dict__,
-            'thgc_lstm': self.thgc_lstm.__dict__,
+            'hgc_lstm': self.hgc_lstm.__dict__,
             'training': self.training.__dict__,
         }
     
@@ -225,8 +225,8 @@ class Config:
         for key, value in self.model.__dict__.items():
             print(f"  {key}: {value}")
         
-        print(f"\n[THGC-LSTM CONFIG]")
-        for key, value in self.thgc_lstm.__dict__.items():
+        print(f"\n[HGC-LSTM CONFIG]")
+        for key, value in self.hgc_lstm.__dict__.items():
             print(f"  {key}: {value}")
         
         print(f"\n[TRAINING CONFIG]")
