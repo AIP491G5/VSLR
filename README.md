@@ -1,13 +1,13 @@
 # VSLR (Vietnamese Sign Language Recognition)
 
-Hệ thống nhận dạng ngôn ngữ ký hiệu Việt Nam sử dụng THGC-LSTM (Temporal Hierarchical Graph Convolution + LSTM) với MediaPipe để trích xuất keypoints từ video.
+Hệ thống nhận dạng ngôn ngữ ký hiệu Việt Nam sử dụng HGC-LSTM(Hierarchical Graph Convolution + LSTM) với MediaPipe để trích xuất keypoints từ video.
 
 ## 📋 Tổng quan
 
 Dự án này sử dụng:
 
 - **MediaPipe** để trích xuất keypoints từ video (pose, hands)
-- **THGC-LSTM** model để nhận dạng cử chỉ
+- **HGC-LSTM** model để nhận dạng cử chỉ
 - **Graph Convolution** để model mối quan hệ giữa các keypoints
 - **LSTM** để model temporal dynamics
 - **Data Augmentation** để tăng cường dữ liệu (future)
@@ -60,7 +60,7 @@ python extract_kpts_n_label.py
 ### Bước 3: Training Model
 
 ```bash
-jupyter notebook train_THGC_LSTM.ipynb
+jupyter notebook train_HGC_LSTM.ipynb
 ```
 
 hoặc chạy từng cell trong notebook.
@@ -81,18 +81,18 @@ class DataConfig:
     train_split: float = 0.9
 ```
 
-### THGC-LSTM Configuration
+###HGC-LSTMConfiguration
 
 ```python
 @dataclass
-class THGCLSTMConfig:
+class HGCLSTMConfig:
     sequence_length: int = 60
     num_vertices: int = 75
     in_channels: int = 2
     hidden_gcn: int = 128
     hidden_lstm: int = 128
     dropout: float = 0.5
-    pooling_type: str = "adaptive_avg"
+    pooling_type: str = "attention"
 
     # Data Augmentation
     data_augmentation: bool = True
@@ -111,7 +111,7 @@ class TrainingConfig:
     optimizer: str = "adam"
     scheduler: str = "step"
     early_stopping_patience: int = 50
-    model_save_name: str = "best_thgc_lstm.pth"
+    model_save_name: str = "best_hgc_lstm.pth"
 ```
 
 ## 📊 Data Augmentation
@@ -136,7 +136,7 @@ data_augmentation: bool = True
 
 ## 🏗️ Model Architecture
 
-### THGC-LSTM Model
+### HGC-LSTMModel
 
 ```
 Input: (B, T, V, C) = (batch, 60, 75, 2)
@@ -189,7 +189,7 @@ history = train_model(model, train_loader, val_loader, config, device)
 
 ```python
 # Load best model và evaluate
-model.load_state_dict(torch.load('best_thgc_lstm.pth'))
+model.load_state_dict(torch.load('best_hgc_lstm.pth'))
 accuracy = evaluate_model(model, val_loader, device)
 ```
 
@@ -210,7 +210,7 @@ VSLR/
 ├── extract_csv.py            # Video organization & CSV creation
 ├── cv_to_60.py              # Video FPS conversion
 ├── extract_kpts_n_label.py  # Keypoints extraction
-├── train_THGC_LSTM.ipynb    # Training notebook
+├── train_HGC_LSTM.ipynb    # Training notebook
 ├── detector.py              # MediaPipe processing
 ├── labels.csv               # Labels mapping
 ├── new_dataset/             # Original videos
@@ -220,7 +220,7 @@ VSLR/
 │   ├── Keypoints/           # Extracted keypoints (.npy)
 │   └── Labels/              # Labels (.npy)
 └── models/
-    └── best_thgc_lstm.pth   # Trained model
+    └── best_hgc_lstm.pth   # Trained model
 ```
 
 ## 🔍 Troubleshooting
@@ -277,7 +277,7 @@ scheduler_gamma = 0.7
 Model sẽ output:
 
 - **Training history:** Loss và accuracy curves
-- **Best model:** Saved as `best_thgc_lstm.pth`
+- **Best model:** Saved as `best_hgc_lstm.pth`
 - **Classification report:** Precision, recall, F1-score cho từng class
 
 ---
