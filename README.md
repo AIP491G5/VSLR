@@ -193,15 +193,6 @@ model.load_state_dict(torch.load('best_hgc_lstm.pth'))
 accuracy = evaluate_model(model, val_loader, device)
 ```
 
-## 🎯 Inference
-
-```python
-# Predict single sequence
-result = predict_sequence(model, keypoints, device, labels)
-print(f"Predicted: {result['predicted_label']}")
-print(f"Confidence: {result['confidence']:.4f}")
-```
-
 ## 📁 Cấu trúc thư mục
 
 ```
@@ -222,64 +213,3 @@ VSLR/
 └── models/
     └── best_hgc_lstm.pth   # Trained model
 ```
-
-## 🔍 Troubleshooting
-
-### Common Issues
-
-1. **CUDA Out of Memory:**
-
-   - Giảm `batch_size` trong config
-   - Tắt data augmentation: `data_augmentation = False`
-
-2. **Low Accuracy:**
-
-   - Tăng `num_epochs`
-   - Thử `pooling_type = "attention"`
-   - Kiểm tra data quality
-
-3. **Training quá chậm:**
-   - Giảm `sequence_length`
-   - Giảm `hidden_gcn` và `hidden_lstm`
-   - Tắt data augmentation
-
-### Performance Tips
-
-1. **Tối ưu Data Augmentation:**
-
-```python
-# Giảm augmentation combinations
-scale_factors = [0.9, 1.0, 1.1]     # 3 scales
-translation_x = [0.1, -0.1]         # 2 translations
-# Total: 3 × 2 = 6 combinations thay vì 18
-```
-
-2. **Tối ưu Model:**
-
-```python
-# Giảm model complexity
-hidden_gcn = 64
-hidden_lstm = 64
-dropout = 0.3
-```
-
-3. **Tối ưu Training:**
-
-```python
-# Faster convergence
-learning_rate = 2e-3
-scheduler_step_size = 10
-scheduler_gamma = 0.7
-```
-
-## 🎊 Kết quả
-
-Model sẽ output:
-
-- **Training history:** Loss và accuracy curves
-- **Best model:** Saved as `best_hgc_lstm.pth`
-- **Classification report:** Precision, recall, F1-score cho từng class
-
----
-
-**Ngày cập nhật:** July 2025
