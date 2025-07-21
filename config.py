@@ -43,6 +43,15 @@ class DataConfig:
     train_split: float = 0.9
     val_split: float = 0.1
     
+    # Dataset splitting and augmentation
+    use_strategy: bool = True  # True for stratified split, False for random split
+    use_flip_augmentation: bool = True  # True to enable horizontal flip augmentation
+    use_transform_augmentation: bool = True  # True to enable translation and scaling augmentation
+    
+    # Augmentation parameters
+    translation_range: float = 0.1  # Random translation range (-0.1 to +0.1)
+    scale_range: float = 0.1  # Random scaling range (0.9 to 1.1)
+    
     # File extensions
     video_input_ext: str = ".mp4"
     video_output_ext: str = ".mp4"
@@ -69,7 +78,7 @@ class HGCLSTMConfig:
     
     # LSTM parameters
     lstm_bidirectional: bool = True  # Set to True for bidirectional LSTM
-    lstm_layers: int = 2
+    lstm_layers: int = 1
     
     # Pooling parameters
     pooling_type: str = "attention"  # "adaptive_avg", "adaptive_max", "attention"
@@ -80,7 +89,7 @@ class HGCLSTMConfig:
 class TrainingConfig:
     """Configuration for training process."""
     # Training parameters
-    num_epochs: int = 100
+    num_epochs: int = 300
     batch_size: int = 8
     learning_rate: float = 1e-3
     weight_decay: float = 1e-4
@@ -95,7 +104,7 @@ class TrainingConfig:
     scheduler_gamma: float = 0.5   # For HGC-LSTM
     
     # Training behavior
-    early_stopping_patience: int = 50
+    early_stopping_patience: int = 100
     gradient_clip_norm: float = 1.0
     
     # Data split
