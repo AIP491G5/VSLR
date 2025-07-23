@@ -34,9 +34,6 @@ def load_labels_from_csv(csv_file, config):
     unique_labels = sorted(df['id'].unique())
     label_to_idx = {label: idx for idx, label in enumerate(unique_labels)}
     
-    print(f" {len(unique_labels)} classes: {unique_labels}")
-    print(f" {len(video_to_label_mapping)} videos")
-    
     return video_to_label_mapping, label_to_idx, unique_labels, id_to_label_mapping
 
 

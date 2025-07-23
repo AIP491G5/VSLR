@@ -17,7 +17,7 @@ from configs.config import Config
 from src.utils.detector import MediaPipeProcessor
 from src.models.model_utils import create_model, create_adjacency_matrix
 from src.utils.data_utils import load_labels_from_csv
-from src.utils.cv_to_60 import interpolate_frames
+from src.utils.interpolate import interpolate_frames
 # Load configuration
 config = Config()
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -61,7 +61,7 @@ def predict_from_video(video_path, thresh_hold = 0.8):
             keypoints_sequence.append(keypoints)
     
     cap.release()
-    
+    label = None
     # Interpolate to target sequence length
     input_data = interpolate_frames(keypoints_sequence, config.hgc_lstm.sequence_length)
     input_data = torch.tensor(input_data, dtype=torch.float32).unsqueeze(0).to(device)  # Add batch dimension
@@ -78,6 +78,7 @@ def predict_from_video(video_path, thresh_hold = 0.8):
         label = id_to_label_mapping.get(prediction + 1, "Unknown")
         print(f"Predicted class: {prediction + 1}, label: {label}, confidence: {max_prob.item()}")
     cap.release()
+    return label
 
 # def predict_from_camera():
 #     """Perform inference using a webcam."""
@@ -114,7 +115,7 @@ def predict_from_video(video_path, thresh_hold = 0.8):
 
 # Example usage
 if __name__ == "__main__":
-    video_path = "data/datatest/test_01_contran.mp4"  # Replace with your video path
+    video_path = "data/datatest/test_01.mp4"  # Replace with your video path
     predict_from_video(video_path, thresh_hold=0.7)
 
     # Predict from camera

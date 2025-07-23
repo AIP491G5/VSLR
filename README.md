@@ -2,7 +2,7 @@
 
 A deep learning project for Vietnamese Sign Language Recognition using HGC-LSTM (Hierarchical Graph Convolution + Long Short-Term Memory) architecture with MediaPipe keypoints extraction.
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 VSLR/
@@ -38,19 +38,19 @@ VSLR/
 └── train_HGC_LSTM.ipynb    # Main training notebook (updated with modular imports)
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
-### 1. Training with Script
+### Training with Script
 
 ```bash
 python scripts/train_hgc_lstm.py
 ```
 
-### 2. Training with Notebook
+### Training with Notebook
 
 Open `train_HGC_LSTM.ipynb` in Jupyter/VS Code and run the cells.
 
-## 🔧 Configuration
+## Configuration
 
 All configuration is centralized in `configs/config.py`:
 
@@ -59,7 +59,7 @@ All configuration is centralized in `configs/config.py`:
 - **Training Config**: Optimizer, scheduler, training parameters
 - **Output Config**: Paths for models, plots, logs
 
-## 📊 Features
+## Features
 
 ### Model Architecture
 
@@ -70,8 +70,21 @@ All configuration is centralized in `configs/config.py`:
 
 ### Data Augmentation
 
+The new augmentation system uses a simple array configuration:
+
+```python
+# Available augmentations: 'flip', 'translation', 'scaling'
+config.data.augmentations = ['flip', 'translation', 'scaling']  # All augmentations
+config.data.augmentations = ['flip']                            # Only horizontal flip
+config.data.augmentations = ['translation', 'scaling']         # No flip (for sign language)
+config.data.augmentations = []                                 # No augmentation
+```
+
+**Augmentation Options:**
+
 - **Horizontal Flipping**: Left-right hand/pose swapping
-- **Geometric Transforms**: Translation and scaling
+- **Translation**: Random position shifts
+- **Scaling**: Random size changes
 - **Stratified Splitting**: Balanced train/validation sets
 
 ### Visualization
@@ -80,7 +93,7 @@ All configuration is centralized in `configs/config.py`:
 - **Confusion Matrix**: Classification performance analysis
 - **Real-time Monitoring**: Progress tracking during training
 
-## 📈 Usage Examples
+## Usage Examples
 
 ### Training Configuration
 
@@ -90,7 +103,7 @@ from configs.config import Config
 config = Config()
 config.training.num_epochs = 300
 config.training.batch_size = 8
-config.data.use_flip_augmentation = True
+config.data.augmentations = ['flip', 'translation']  # Use flip and translation only
 ```
 
 ### Data Loading
@@ -113,20 +126,15 @@ train_dataset = SignLanguageDataset(
 ### Model Training
 
 ```python
-from src.models.model_utils import HGC_LSTM
+from src.models.model_utils import create_model, create_adjacency_matrix
 from src.training.train_utils import train_model
 
-model = HGC_LSTM(
-    num_vertices=75,
-    in_channels=2,
-    hidden_channels=128,
-    num_classes=len(unique_labels)
-)
-
-history = train_model(model, train_loader, val_loader, optimizer, scheduler, config, device)
+A = create_adjacency_matrix(config)
+model = create_model(config, A, num_classes=10, device='cuda')
+history = train_model(model, train_loader, val_loader, config, device)
 ```
 
-## 🛠️ Dependencies
+## Dependencies
 
 - PyTorch >= 1.9.0
 - MediaPipe >= 0.8.0
@@ -136,11 +144,12 @@ history = train_model(model, train_loader, val_loader, optimizer, scheduler, con
 - Scikit-learn >= 1.0.0
 - OpenCV >= 4.5.0
 
-## 📝 File Organization
+## File Organization
 
 ### Core Modules
 
-- `src/models/model_utils.py`: Model architectures and layers
+- `src/models/model.py`: Model architectures and layers
+- `src/models/model_utils.py`: Model utils, create model
 - `src/training/train_utils.py`: Training pipeline and utilities
 - `src/utils/data_utils.py`: Data loading and augmentation
 - `src/utils/visualization_utils.py`: Plotting and visualization
@@ -155,7 +164,7 @@ history = train_model(model, train_loader, val_loader, optimizer, scheduler, con
 
 - `configs/config.py`: Centralized configuration management
 
-## 🎯 Model Performance
+## Model Performance
 
 The HGC-LSTM model achieves state-of-the-art performance on Vietnamese Sign Language recognition tasks with:
 
@@ -164,29 +173,20 @@ The HGC-LSTM model achieves state-of-the-art performance on Vietnamese Sign Lang
 - Attention pooling for adaptive feature aggregation
 - Comprehensive data augmentation for improved generalization
 
-## 📄 License
+## Data Augmentation System
+
+The project includes a flexible augmentation system that supports:
+
+| Configuration                        | Combinations                                        | Multiplier |
+| ------------------------------------ | --------------------------------------------------- | ---------- |
+| `[]`                                 | original                                            | 1x         |
+| `['flip']`                           | original, flip                                      | 2x         |
+| `['translation']`                    | original, translation                               | 2x         |
+| `['scaling']`                        | original, scaling                                   | 2x         |
+| `['flip', 'translation']`            | original, flip, translation, flip+translation       | 4x         |
+| `['translation', 'scaling']`         | original, translation, scaling, translation+scaling | 4x         |
+| `['flip', 'translation', 'scaling']` | All combinations                                    | 8x         |
+
+## License
 
 This project is for educational and research purposes.
-
----
-
-## 🔄 Migration Notes
-
-This project has been reorganized from a monolithic Jupyter notebook structure to a modular Python package:
-
-### What Changed:
-
-- ✅ Functions extracted to separate modules in `src/`
-- ✅ Configuration centralized in `configs/config.py`
-- ✅ Scripts organized in `scripts/` folder
-- ✅ Outputs organized in `outputs/` folder
-- ✅ Import statements updated in notebook
-- ✅ Proper folder hierarchy established
-
-### Benefits:
-
-- 🔧 **Modularity**: Each component has a specific role
-- 🔄 **Reusability**: Functions can be imported and reused
-- 🧪 **Testability**: Individual modules can be tested
-- 📦 **Maintainability**: Easier to update and debug
-- 🚀 **Scalability**: Easy to add new features

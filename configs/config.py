@@ -24,7 +24,8 @@ class DataConfig:
     """Configuration for data handling."""
     # Input data paths
     input_csv_file: str = "labels.csv"
-    input_kp_path: str = "data_original/Keypoints"
+    input_kp_path: str = "dataset/Keypoints"
+    raw_video_input_dir: str = "data/dataset"  # Raw video input directory for processing
     video_input_dir: str = "data/videos"
     
     # Output data paths
@@ -39,7 +40,7 @@ class DataConfig:
     label_frames_needed: int = 0
     
     # LSTM training data parameters
-    sequence_length: int = 60
+    sequence_length: int = 90
     use_all_frames: bool = True
     train_split: float = 0.8
     val_split: float = 0.2
@@ -75,7 +76,7 @@ class HGCLSTMConfig:
     dropout: float = 0.5
     
     # Data parameters
-    sequence_length: int = 60
+    sequence_length: int = 75
     num_vertices: int = 75  # Total keypoints (33 pose + 21 left hand + 21 right hand)
     
     # GCN parameters

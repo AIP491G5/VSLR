@@ -159,3 +159,33 @@ def analyze_model_performance(model, val_loader, device, config, unique_labels, 
         'predictions': all_predictions,
         'labels': all_labels
     }
+
+def visualize_attention_weights(attention_weights, config, save_plots=True):
+    """
+    Visualize attention weights for a single sample
+    Args:
+        attention_weights: attention weights tensor of shape (num_vertices, num_vertices)
+        config: configuration object
+        save_plots: whether to save the plot to disk
+    """
+    # Create plots directory
+    plots_dir = Path("attention_plots")
+    plots_dir.mkdir(exist_ok=True)
+    
+    fig, ax = plt.subplots(figsize=(8, 6))
+    
+    sns.heatmap(attention_weights.cpu().numpy(), annot=True, fmt=".2f", cmap='viridis', ax=ax)
+    
+    ax.set_title('Attention Weights Heatmap', fontsize=14, fontweight='bold')
+    ax.set_xlabel('Target Vertex')
+    ax.set_ylabel('Source Vertex')
+    
+    plt.tight_layout()
+    
+    # Save plot
+    if save_plots:
+        plot_path = plots_dir / "attention_weights.png"
+        plt.savefig(plot_path, dpi=300, bbox_inches='tight', facecolor='white')
+        print(f"Attention weights heatmap saved to: {plot_path}")
+    
+    plt.show()

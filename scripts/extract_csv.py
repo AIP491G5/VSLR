@@ -2,17 +2,39 @@ import os
 import shutil
 import pandas as pd
 from collections import defaultdict
+import sys
 
-def extract_csv(input_folder, output_folder="new_data", csv_file="labels.csv"):
+# Add project root to path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+
+from configs.config import Config
+
+def extract_csv(input_folder=None, output_folder=None, csv_file=None):
     """
     Tạo file CSV chứa id, label, videos từ folder chứa video có format <id>_label_...
     và chuyển video sang thư mục mới với tên <id>_<No>.mp4
     
     Args:
-        input_folder (str): Thư mục chứa video gốc
-        output_folder (str): Thư mục đích để lưu video đã đổi tên
-        csv_file (str): Tên file CSV output
+        input_folder (str): Thư mục chứa video gốc (nếu None, sẽ dùng từ config)
+        output_folder (str): Thư mục đích để lưu video đã đổi tên (nếu None, sẽ dùng từ config)
+        csv_file (str): Tên file CSV output (nếu None, sẽ dùng từ config)
     """
+    
+    # Initialize config
+    config = Config()
+    
+    # Use config values if parameters are None
+    if input_folder is None:
+        input_folder = getattr(config.data, 'raw_video_input_dir', 'new_dataset')
+    if output_folder is None:
+        output_folder = config.data.video_input_dir
+    if csv_file is None:
+        csv_file = config.data.input_csv_file
+    
+    print(f"[INFO] Input folder: {input_folder}")
+    print(f"[INFO] Output folder: {output_folder}")
+    print(f"[INFO] CSV file: {csv_file}")
     
     # Tạo thư mục đích nếu chưa có
     os.makedirs(output_folder, exist_ok=True)
@@ -71,11 +93,19 @@ def extract_csv(input_folder, output_folder="new_data", csv_file="labels.csv"):
 
 # Ví dụ sử dụng
 if __name__ == "__main__":
-    # Thay đổi đường dẫn folder theo thực tế
-    input_folder = "new_dataset"  # Thư mục chứa video gốc
+    # Sử dụng config mặc định hoặc có thể override
+    config = Config()
     
-    # Chạy hàm
-    df = extract_csv(input_folder)
+    # Option 1: Sử dụng config mặc định
+    print("[INFO] Sử dụng config mặc định:")
+    df = extract_csv()
+    
+    # Option 2: Override một số tham số
+    # df = extract_csv(
+    #     input_folder="my_raw_videos",  # Thư mục chứa video gốc
+    #     output_folder="processed_videos",  # Thư mục đích
+    #     csv_file="my_labels.csv"  # File CSV output
+    # )
     
     # Hiển thị kết quả
     print("\n[INFO] Nội dung file CSV:")
