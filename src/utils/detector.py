@@ -7,7 +7,7 @@ import numpy as np
 import mediapipe as mp
 from typing import Tuple, Any
 from dataclasses import dataclass
-from config import Config
+from configs.config import Config
 
 class MediaPipeProcessor:
     """MediaPipe landmark extraction processor."""

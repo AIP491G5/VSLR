@@ -2,9 +2,15 @@ import cv2
 import pandas as pd
 import numpy as np
 import os
-from detector import MediaPipeProcessor
-from config import Config
-from cv_to_60 import interpolate_frames
+import sys
+
+# Add project root to path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+
+from src.utils.detector import MediaPipeProcessor
+from configs.config import Config
+from src.utils.cv_to_60 import interpolate_frames
 
 # ========== KHỞI TẠO CONFIG ==========
 config = Config()

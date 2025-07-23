@@ -24,13 +24,14 @@ class DataConfig:
     """Configuration for data handling."""
     # Input data paths
     input_csv_file: str = "labels.csv"
-    video_input_dir: str = "new_data"
+    input_kp_path: str = "data_original/Keypoints"
+    video_input_dir: str = "data/videos"
     
     # Output data paths
     data_dir: str = "data"
-    video_output_dir: str = "data/Videos"
-    keypoints_output_dir: str = "data/Keypoints"
-    labels_output_dir: str = "data/Labels"
+    video_output_dir: str = "dataset/Videos"
+    keypoints_output_dir: str = "dataset/Keypoints"
+    labels_output_dir: str = "dataset/Labels"
     
     # Processing parameters
     movement_threshold: float = 0.36
@@ -40,13 +41,18 @@ class DataConfig:
     # LSTM training data parameters
     sequence_length: int = 60
     use_all_frames: bool = True
-    train_split: float = 0.9
-    val_split: float = 0.1
+    train_split: float = 0.8
+    val_split: float = 0.2
     
     # Dataset splitting and augmentation
     use_strategy: bool = True  # True for stratified split, False for random split
-    use_flip_augmentation: bool = True  # True to enable horizontal flip augmentation
-    use_transform_augmentation: bool = True  # True to enable translation and scaling augmentation
+    
+    # New flexible augmentation system
+    # Available options: 'flip', 'translation', 'scaling'
+    # Example: ['flip', 'translation'] will use flip and translation augmentations
+    # Example: ['scaling'] will use only scaling augmentation
+    # Example: [] will use no augmentation
+    augmentations: list = field(default_factory=lambda: ['flip', 'translation', 'scaling'])
     
     # Augmentation parameters
     translation_range: float = 0.1  # Random translation range (-0.1 to +0.1)
@@ -104,7 +110,7 @@ class TrainingConfig:
     scheduler_gamma: float = 0.5   # For HGC-LSTM
     
     # Training behavior
-    early_stopping_patience: int = 100
+    early_stopping_patience: int = 50
     gradient_clip_norm: float = 1.0
     
     # Data split
@@ -112,7 +118,7 @@ class TrainingConfig:
     val_split: float = 0.2
     
     # Saving and logging
-    save_dir: str = "models"
+    save_dir: str = "outputs/models"
     save_interval: int = 10
     log_interval: int = 1
     model_save_name: str = "best_hgc_lstm.pth"
@@ -127,12 +133,30 @@ class TrainingConfig:
 
 
 @dataclass
+class ModelConfig:
+    """Configuration for model saving and loading."""
+    checkpoint_dir: str = "outputs/models"
+    save_name: str = "best_hgc_lstm.pth"
+
+
+@dataclass
+class OutputConfig:
+    """Configuration for output paths."""
+    base_dir: str = "outputs"
+    plots_dir: str = "outputs/plots"
+    logs_dir: str = "outputs/logs"
+    models_dir: str = "outputs/models"
+
+
+@dataclass
 class Config:
     """Main configuration class."""
     mediapipe: MediaPipeConfig = field(default_factory=MediaPipeConfig)
     data: DataConfig = field(default_factory=DataConfig)
     hgc_lstm: HGCLSTMConfig = field(default_factory=HGCLSTMConfig)
     training: TrainingConfig = field(default_factory=TrainingConfig)
+    model: ModelConfig = field(default_factory=ModelConfig)
+    output: OutputConfig = field(default_factory=OutputConfig)
     
     @classmethod
     def from_file(cls, config_path: str) -> "Config":

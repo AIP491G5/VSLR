@@ -1,215 +1,192 @@
-# VSLR (Vietnamese Sign Language Recognition)
+# Vietnamese Sign Language Recognition (VSLR)
 
-Hệ thống nhận dạng ngôn ngữ ký hiệu Việt Nam sử dụng HGC-LSTM(Hierarchical Graph Convolution + LSTM) với MediaPipe để trích xuất keypoints từ video.
+A deep learning project for Vietnamese Sign Language Recognition using HGC-LSTM (Hierarchical Graph Convolution + Long Short-Term Memory) architecture with MediaPipe keypoints extraction.
 
-## 📋 Tổng quan
+## 🏗️ Project Structure
 
-Dự án này sử dụng:
+```
+VSLR/
+├── configs/                    # Configuration files
+│   └── config.py              # Main configuration settings
+├── src/                       # Source code modules
+│   ├── models/                # Model architectures
+│   │   └── model_utils.py     # HGC-LSTM model, GCN layers, attention pooling
+│   ├── training/              # Training utilities
+│   │   └── train_utils.py     # Training loops, optimizers, schedulers
+│   └── utils/                 # Utility functions
+│       ├── data_utils.py      # Dataset classes, data loading, augmentation
+│       └── visualization_utils.py  # Plotting and visualization functions
+├── scripts/                   # Executable scripts
+│   ├── train_hgc_lstm.py      # Main training script
+│   ├── detector.py            # Sign language detection
+│   ├── inference.py           # Model inference
+│   ├── extract_kpts_n_label.py   # Keypoint extraction
+│   ├── extract_csv.py         # CSV data processing
+│   └── cv_to_60.py           # Video frame conversion
+├── outputs/                   # Output files
+│   ├── models/               # Trained model checkpoints
+│   ├── plots/                # Training curves, confusion matrices
+│   └── logs/                 # Training logs
+├── data/                     # Processed data
+│   ├── videos/               # Video files
+│   └── dataset/              # Processed datasets
+├── data_original/            # Original raw data
+│   ├── Keypoints/           # Extracted keypoints (.npy files)
+│   ├── Labels/              # Label files
+│   └── Videos/              # Original video files
+├── notebooks/               # Jupyter notebooks
+└── train_HGC_LSTM.ipynb    # Main training notebook (updated with modular imports)
+```
 
-- **MediaPipe** để trích xuất keypoints từ video (pose, hands)
-- **HGC-LSTM** model để nhận dạng cử chỉ
-- **Graph Convolution** để model mối quan hệ giữa các keypoints
-- **LSTM** để model temporal dynamics
-- **Data Augmentation** để tăng cường dữ liệu (future)
+## 🚀 Quick Start
 
-## 🚀 Quy trình thực hiện
-
-### Bước 1: Chuẩn bị dữ liệu video và tạo CSV labels
+### 1. Training with Script
 
 ```bash
-python extract_csv.py
+python scripts/train_hgc_lstm.py
 ```
 
-**Mục đích:** Tổ chức video từ `new_dataset/` theo format chuẩn và tạo file `labels.csv`
+### 2. Training with Notebook
 
-**Input:**
+Open `train_HGC_LSTM.ipynb` in Jupyter/VS Code and run the cells.
 
-- Folder: `new_dataset/` chứa video với format `<id>_<label>_<other>.mp4`
-- Ví dụ: `1_xin_chao_001.mp4`, `1_xin_chao_002.mp4`, `2_cam_on_001.mp4`
+## 🔧 Configuration
 
-**Output:**
+All configuration is centralized in `configs/config.py`:
 
-- Folder: `new_data/` chứa video đã đổi tên: `1_01.mp4`, `1_02.mp4`, `2_01.mp4`, etc.
-- File: `labels.csv` chứa mapping giữa ID và label
+- **Data Config**: Input/output paths, augmentation settings
+- **Model Config**: HGC-LSTM architecture parameters
+- **Training Config**: Optimizer, scheduler, training parameters
+- **Output Config**: Paths for models, plots, logs
 
-```csv
-id,label,videos
-1,xin_chao,"1_01.mp4, 1_02.mp4, 1_03.mp4"
-2,cam_on,"2_01.mp4, 2_02.mp4, 2_03.mp4"
-```
+## 📊 Features
 
-### Bước 2: Trích xuất keypoints
+### Model Architecture
 
-```bash
-python extract_kpts_n_label.py
-```
+- **HGC-LSTM**: Hierarchical Graph Convolution + LSTM
+- **MediaPipe Integration**: 75 keypoints (33 pose + 21 left hand + 21 right hand)
+- **Attention Pooling**: Adaptive attention mechanism
+- **Graph Convolution**: Spatial relationship modeling
 
-**Mục đích:** Sử dụng MediaPipe để trích xuất keypoints từ video
+### Data Augmentation
 
-**Input:** Video từ `data/Videos/`
-**Output:**
+- **Horizontal Flipping**: Left-right hand/pose swapping
+- **Geometric Transforms**: Translation and scaling
+- **Stratified Splitting**: Balanced train/validation sets
 
-- `data/Keypoints/` chứa keypoints files (`.npy`)
-- `data/Labels/` chứa label files (`.npy`)
+### Visualization
 
-**Keypoints format:**
+- **Training Curves**: Loss and accuracy plots
+- **Confusion Matrix**: Classification performance analysis
+- **Real-time Monitoring**: Progress tracking during training
 
-- Shape: `(T, 150)` where T = số frames, 150 = 75 keypoints × 2 coordinates
-- 75 keypoints: 33 pose + 21 left hand + 21 right hand
-
-### Bước 3: Training Model
-
-```bash
-jupyter notebook train_HGC_LSTM.ipynb
-```
-
-hoặc chạy từng cell trong notebook.
-
-## 🔧 Cấu hình
-
-Tất cả parameters được quản lý trong `config.py`:
-
-### Data Configuration
-
-```python
-@dataclass
-class DataConfig:
-    input_csv_file: str = "labels.csv"
-    video_input_dir: str = "new_data"
-    keypoints_output_dir: str = "data/Keypoints"
-    sequence_length: int = 60
-    train_split: float = 0.9
-```
-
-###HGC-LSTMConfiguration
-
-```python
-@dataclass
-class HGCLSTMConfig:
-    sequence_length: int = 60
-    num_vertices: int = 75
-    in_channels: int = 2
-    hidden_gcn: int = 128
-    hidden_lstm: int = 128
-    dropout: float = 0.5
-    pooling_type: str = "attention"
-
-    # Data Augmentation
-    data_augmentation: bool = True
-    scale_factors: list = [0.9, 1.0, 1.1]
-    translation_x: list = [0.1, 0.15, 0.2, -0.1, -0.15, -0.2]
-```
+## 📈 Usage Examples
 
 ### Training Configuration
 
 ```python
-@dataclass
-class TrainingConfig:
-    num_epochs: int = 100
-    batch_size: int = 8
-    learning_rate: float = 1e-3
-    optimizer: str = "adam"
-    scheduler: str = "step"
-    early_stopping_patience: int = 50
-    model_save_name: str = "best_hgc_lstm.pth"
+from configs.config import Config
+
+config = Config()
+config.training.num_epochs = 300
+config.training.batch_size = 8
+config.data.use_flip_augmentation = True
 ```
 
-## 📊 Data Augmentation
-
-Hệ thống hỗ trợ data augmentation để tăng cường dataset:
-
-**Mỗi sample gốc sẽ tạo ra 18 augmented samples:**
-
-- 3 scale factors (0.9, 1.0, 1.1)
-- 6 translation values (±0.1, ±0.15, ±0.2)
-- Total: 3 × 6 = 18 combinations
-
-**Cách bật/tắt:**
+### Data Loading
 
 ```python
-# Trong notebook
-USE_DATA_AUGMENTATION = True  # hoặc False
+from src.utils.data_utils import SignLanguageDataset, load_labels_from_csv
 
-# Hoặc trong config.py
-data_augmentation: bool = True
+# Load labels and create dataset
+video_to_label_mapping, label_to_idx, unique_labels, _ = load_labels_from_csv("labels.csv", config)
+
+train_dataset = SignLanguageDataset(
+    keypoints_dir=config.data.input_kp_path,
+    video_to_label_mapping=video_to_label_mapping,
+    label_to_idx=label_to_idx,
+    config=config,
+    split_type='train'
+)
 ```
 
-## 🏗️ Model Architecture
-
-### HGC-LSTMModel
-
-```
-Input: (B, T, V, C) = (batch, 60, 75, 2)
-↓
-GCN Layer 1: (B, T, V, 128)
-↓
-GCN Layer 2: (B, T, V, 128)
-↓
-Spatial Pooling: (B, T, 128)
-↓
-LSTM: (B, T, 128)
-↓
-Take last timestep: (B, 128)
-↓
-Dropout + FC: (B, num_classes)
-```
-
-### Graph Convolution
-
-- **Adjacency Matrix:** 75×75 modeling skeleton connections
-- **Pose connections:** MediaPipe pose landmarks
-- **Hand connections:** Left hand (33-53) + Right hand (54-74)
-- **Normalization:** Symmetric normalized adjacency matrix
-
-### Spatial Pooling Types
-
-- **adaptive_avg:** Average pooling over joints
-- **adaptive_max:** Max pooling over joints
-- **attention:** Learnable attention weights
-
-## 📈 Training Process
-
-### 1. Data Loading
+### Model Training
 
 ```python
-# Tự động load từ config
-train_dataset = SignLanguageDataset(split_type='train')
-val_dataset = SignLanguageDataset(split_type='val')
+from src.models.model_utils import HGC_LSTM
+from src.training.train_utils import train_model
+
+model = HGC_LSTM(
+    num_vertices=75,
+    in_channels=2,
+    hidden_channels=128,
+    num_classes=len(unique_labels)
+)
+
+history = train_model(model, train_loader, val_loader, optimizer, scheduler, config, device)
 ```
 
-### 2. Model Training
+## 🛠️ Dependencies
 
-```python
-# Với data augmentation: 18x samples
-# Với early stopping và learning rate scheduling
-history = train_model(model, train_loader, val_loader, config, device)
-```
+- PyTorch >= 1.9.0
+- MediaPipe >= 0.8.0
+- NumPy >= 1.21.0
+- Pandas >= 1.3.0
+- Matplotlib >= 3.4.0
+- Scikit-learn >= 1.0.0
+- OpenCV >= 4.5.0
 
-### 3. Evaluation
+## 📝 File Organization
 
-```python
-# Load best model và evaluate
-model.load_state_dict(torch.load('best_hgc_lstm.pth'))
-accuracy = evaluate_model(model, val_loader, device)
-```
+### Core Modules
 
-## 📁 Cấu trúc thư mục
+- `src/models/model_utils.py`: Model architectures and layers
+- `src/training/train_utils.py`: Training pipeline and utilities
+- `src/utils/data_utils.py`: Data loading and augmentation
+- `src/utils/visualization_utils.py`: Plotting and visualization
 
-```
-VSLR/
-├── config.py                 # Configuration management
-├── extract_csv.py            # Video organization & CSV creation
-├── cv_to_60.py              # Video FPS conversion
-├── extract_kpts_n_label.py  # Keypoints extraction
-├── train_HGC_LSTM.ipynb    # Training notebook
-├── detector.py              # MediaPipe processing
-├── labels.csv               # Labels mapping
-├── new_dataset/             # Original videos
-├── new_data/                # Organized videos
-├── data/
-│   ├── Videos/              # 60 FPS videos
-│   ├── Keypoints/           # Extracted keypoints (.npy)
-│   └── Labels/              # Labels (.npy)
-└── models/
-    └── best_hgc_lstm.pth   # Trained model
-```
+### Scripts
+
+- `scripts/train_hgc_lstm.py`: Complete training pipeline
+- `scripts/detector.py`: Real-time sign language detection
+- `scripts/inference.py`: Model inference on new data
+
+### Configuration
+
+- `configs/config.py`: Centralized configuration management
+
+## 🎯 Model Performance
+
+The HGC-LSTM model achieves state-of-the-art performance on Vietnamese Sign Language recognition tasks with:
+
+- Hierarchical graph convolution for spatial relationship modeling
+- LSTM networks for temporal sequence learning
+- Attention pooling for adaptive feature aggregation
+- Comprehensive data augmentation for improved generalization
+
+## 📄 License
+
+This project is for educational and research purposes.
+
+---
+
+## 🔄 Migration Notes
+
+This project has been reorganized from a monolithic Jupyter notebook structure to a modular Python package:
+
+### What Changed:
+
+- ✅ Functions extracted to separate modules in `src/`
+- ✅ Configuration centralized in `configs/config.py`
+- ✅ Scripts organized in `scripts/` folder
+- ✅ Outputs organized in `outputs/` folder
+- ✅ Import statements updated in notebook
+- ✅ Proper folder hierarchy established
+
+### Benefits:
+
+- 🔧 **Modularity**: Each component has a specific role
+- 🔄 **Reusability**: Functions can be imported and reused
+- 🧪 **Testability**: Individual modules can be tested
+- 📦 **Maintainability**: Easier to update and debug
+- 🚀 **Scalability**: Easy to add new features

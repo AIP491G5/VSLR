@@ -7,6 +7,5 @@ __pycache__
 *.pkl
 *.db
 /models
-/new_dataset
-/new_data
+/dataset
 .venv
