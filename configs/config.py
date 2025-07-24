@@ -39,12 +39,6 @@ class DataConfig:
     video_fps: int = 30
     label_frames_needed: int = 0
     
-    # LSTM training data parameters
-    sequence_length: int = 90
-    use_all_frames: bool = True
-    train_split: float = 0.8
-    val_split: float = 0.2
-    
     # Dataset splitting and augmentation
     use_strategy: bool = True  # True for stratified split, False for random split
     
@@ -53,7 +47,7 @@ class DataConfig:
     # Example: ['flip', 'translation'] will use flip and translation augmentations
     # Example: ['scaling'] will use only scaling augmentation
     # Example: [] will use no augmentation
-    augmentations: list = field(default_factory=lambda: ['flip', 'translation', 'scaling'])
+    augmentations: list = field(default_factory=lambda: ['translation', 'scaling'])
     
     # Augmentation parameters
     translation_range: float = 0.1  # Random translation range (-0.1 to +0.1)
@@ -76,21 +70,8 @@ class HGCLSTMConfig:
     dropout: float = 0.5
     
     # Data parameters
-    sequence_length: int = 75
+    sequence_length: int = 60
     num_vertices: int = 75  # Total keypoints (33 pose + 21 left hand + 21 right hand)
-    
-    # GCN parameters
-    gcn_layers: int = 2
-    use_batch_norm: bool = True
-    
-    # LSTM parameters
-    lstm_bidirectional: bool = True  # Set to True for bidirectional LSTM
-    lstm_layers: int = 1
-    
-    # Pooling parameters
-    pooling_type: str = "attention"  # "adaptive_avg", "adaptive_max", "attention"
-    
-
 
 @dataclass
 class TrainingConfig:
@@ -115,12 +96,12 @@ class TrainingConfig:
     gradient_clip_norm: float = 1.0
     
     # Data split
-    train_split: float = 0.8
-    val_split: float = 0.2
+    train_split: float = 0.9
+    val_split: float = 0.1
     
     # Saving and logging
     save_dir: str = "outputs/models"
-    save_interval: int = 10
+    # save_interval: int = 10
     log_interval: int = 1
     model_save_name: str = "best_hgc_lstm.pth"
     

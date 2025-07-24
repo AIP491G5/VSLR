@@ -5,6 +5,7 @@ import sys
 import os
 import warnings
 import logging
+import glob
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'    
 warnings.filterwarnings("ignore")
@@ -15,7 +16,7 @@ sys.path.insert(0, project_root)
 
 from configs.config import Config
 from src.utils.detector import MediaPipeProcessor
-from src.models.model_utils import create_model, create_adjacency_matrix
+from src.utils.model_utils import create_model, create_adjacency_matrix
 from src.utils.data_utils import load_labels_from_csv
 from src.utils.interpolate import interpolate_frames
 # Load configuration
@@ -30,7 +31,7 @@ num_classes = len(unique_labels)
 # Create model with updated constructor
 model = create_model(config, A, num_classes=num_classes, device=device)
 
-model_path = 'outputs/models/best_hgc_lstm.pth'
+model_path = 'outputs/models/best_hgc_lstm_13.pth'
 model.load_state_dict(torch.load(model_path, map_location=device))
 model.eval()
 
@@ -72,13 +73,13 @@ def predict_from_video(video_path, thresh_hold = 0.8):
         if max_prob.item() > thresh_hold:
             prediction = prediction.item()
         else:
-            print(prediction, max_prob.item())
+            print(prediction + 1, max_prob.item())
             prediction = None
     if prediction is not None:
         label = id_to_label_mapping.get(prediction + 1, "Unknown")
         print(f"Predicted class: {prediction + 1}, label: {label}, confidence: {max_prob.item()}")
     cap.release()
-    return label
+    return label, int(prediction + 1) if prediction is not None else None
 
 # def predict_from_camera():
 #     """Perform inference using a webcam."""
@@ -115,8 +116,17 @@ def predict_from_video(video_path, thresh_hold = 0.8):
 
 # Example usage
 if __name__ == "__main__":
-    video_path = "data/datatest/test_01.mp4"  # Replace with your video path
-    predict_from_video(video_path, thresh_hold=0.7)
+    test_dir = "data/datatest"  # Replace with your video path
+    videos = glob.glob(os.path.join(test_dir, "*.mp4"))
+    count = 0
+    for video_path in videos:
+        filename = os.path.basename(video_path)
+        number = int(filename.split('_')[1].split('.')[0])
+        label, res = predict_from_video(test_dir+'/'+filename, thresh_hold=0.6)
+        print(f"{number}: {res}")
+        if res == number:
+            count += 1
+    print(f"{count}/{len(videos)} videos matched the expected labels.")
 
     # Predict from camera
     # predict_from_camera()

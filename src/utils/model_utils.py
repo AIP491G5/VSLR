@@ -5,7 +5,7 @@ Contains GCN layers, HGC-LSTM model, and adjacency matrix creation
 
 import numpy as np
 import torch
-from .model import HGC_LSTM
+from ..models.model import HGC_LSTM
 
 def create_adjacency_matrix(config, num_vertices=None):
     """Create adjacency matrix for skeleton graph"""
@@ -61,19 +61,18 @@ def create_model(config, A, num_classes, device):
     model.to(device)
     
     print(f"Model created with {sum(p.numel() for p in model.parameters())} parameters")
-    print(f"Model configuration:")
-    print(f"  - GCN layers: {config.hgc_lstm.gcn_layers}")
-    print(f"  - GCN hidden dim: {config.hgc_lstm.hidden_gcn}")
-    print(f"  - LSTM hidden dim: {config.hgc_lstm.hidden_lstm}")
-    print(f"  - LSTM layers: {config.hgc_lstm.lstm_layers}")
-    print(f"  - Bidirectional: {config.hgc_lstm.lstm_bidirectional}")
-    print(f"  - Dropout: {config.hgc_lstm.dropout}")
-    print(f"  - Pooling type: {config.hgc_lstm.pooling_type}")
-    print(f"  - Sequence length: {config.hgc_lstm.sequence_length}")
-    print(f"  - Number of vertices: {config.hgc_lstm.num_vertices}")
-
-    if config.hgc_lstm.pooling_type == "attention":
-        print(f"  - Using Attention Pooling with dropout: {config.hgc_lstm.dropout}")
-        print(f"  - Attention weights can be visualized after forward pass")
     
+    return model
+
+def load_model(config, A, num_classes, device, checkpoint_path):
+    """Load a pre-trained HGC-LSTM model from checkpoint"""
+    model = create_model(config, A, num_classes, device)
+    
+    if checkpoint_path:
+        checkpoint = torch.load(checkpoint_path, map_location=device)
+        model.load_state_dict(checkpoint)
+        print(f"Model loaded from {checkpoint_path}")
+    else:
+        print("No checkpoint path provided")
+        return None
     return model

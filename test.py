@@ -3,7 +3,7 @@ import os
 import torch
 from scripts.inference import predict_from_video
 from src.utils.data_utils import load_labels_from_csv
-from src.models.model_utils import create_model
+from src.utils.model_utils import create_model
 from configs.config import Config
 
 # Load configuration
