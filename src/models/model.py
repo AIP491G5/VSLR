@@ -26,13 +26,18 @@ class GCNLayer(nn.Module):
             x = self.bn(x.contiguous().view(B, -1, T * V))  # Batch norm
             x = x.view(B, -1, T, V).permute(0, 2, 3, 1)  # Back to (B, T, V, out_features)
         
-        return F.relu(x)
+        # return F.relu(x)
+        return F.leaky_relu(x, negative_slope=0.01)
 
-class AttentionPooling(nn.Module):
+class JointsAttentionPooling(nn.Module):
     """Attention-based pooling over joints dimension"""
     def __init__(self, hidden_dim, dropout=0.1):
-        super(AttentionPooling, self).__init__()
-        self.attention = nn.Linear(hidden_dim, 1)
+        super(JointsAttentionPooling, self).__init__()
+        self.attention = nn.Sequential(
+            nn.Linear(hidden_dim, hidden_dim),
+            nn.Tanh(),
+            nn.Linear(hidden_dim, 1)
+        )
         self.dropout = nn.Dropout(dropout)
         
     def forward(self, x):
@@ -55,7 +60,11 @@ class TemporalAttentionPooling(nn.Module):
     """Attention-based pooling over temporal dimension"""
     def __init__(self, hidden_dim, dropout=0.1):
         super(TemporalAttentionPooling, self).__init__()
-        self.attention = nn.Linear(hidden_dim, 1)
+        self.attention = nn.Sequential(
+            nn.Linear(hidden_dim, hidden_dim),
+            nn.Tanh(),
+            nn.Linear(hidden_dim, 1)
+        )
         self.dropout = nn.Dropout(dropout)
         
     def forward(self, x):
@@ -86,7 +95,7 @@ class HGC_LSTM(nn.Module):
         ])
         
         # First attention pooling (after GCN, over joints dimension)
-        self.joint_attention = AttentionPooling(hidden_gcn, dropout)
+        self.joint_attention = JointsAttentionPooling(hidden_gcn, dropout)
         
         # LSTM layer
         self.lstm = nn.LSTM(
