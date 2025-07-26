@@ -19,26 +19,8 @@ from src.utils.detector import MediaPipeProcessor
 from src.utils.model_utils import create_model, create_adjacency_matrix
 from src.utils.data_utils import load_labels_from_csv
 from src.utils.interpolate import interpolate_frames
-# Load configuration
-config = Config()
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-A = create_adjacency_matrix(config)
 
-# Load labels
-video_to_label_mapping, label_to_idx, unique_labels, id_to_label_mapping = load_labels_from_csv(None, config)
-num_classes = len(unique_labels)
-
-# Create model with updated constructor
-model = create_model(config, A, num_classes=num_classes, device=device)
-
-model_path = 'outputs/models/best_hgc_lstm_13.pth'
-model.load_state_dict(torch.load(model_path, map_location=device))
-model.eval()
-
-# Initialize MediaPipe processor
-processor = MediaPipeProcessor(config)
-
-def predict_from_video(video_path, thresh_hold = 0.8):
+def predict_from_video(model, processor, id_to_label_mapping, config, device, video_path, thresh_hold=0.8):
     """Perform inference on a video file."""
     cap = cv2.VideoCapture(video_path)
     keypoints_sequence = []
@@ -116,13 +98,32 @@ def predict_from_video(video_path, thresh_hold = 0.8):
 
 # Example usage
 if __name__ == "__main__":
+    # Load configuration
+    config = Config()
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    A = create_adjacency_matrix(config)
+
+    # Load labels
+    video_to_label_mapping, label_to_idx, unique_labels, id_to_label_mapping = load_labels_from_csv(None, config)
+    num_classes = len(unique_labels)
+
+    # Create model with updated constructor
+    model = create_model(config, A, num_classes=num_classes, device=device)
+
+    model_path = 'outputs/models/best_hgc_lstm_13.pth'
+    model.load_state_dict(torch.load(model_path, map_location=device))
+    model.eval()
+
+    # Initialize MediaPipe processor
+    processor = MediaPipeProcessor(config)
+    
     test_dir = "data/datatest"  # Replace with your video path
     videos = glob.glob(os.path.join(test_dir, "*.mp4"))
     count = 0
     for video_path in videos:
         filename = os.path.basename(video_path)
         number = int(filename.split('_')[1].split('.')[0])
-        label, res = predict_from_video(test_dir+'/'+filename, thresh_hold=0.6)
+        label, res = predict_from_video(model, processor, id_to_label_mapping, config, device, video_path, thresh_hold=0.6)
         print(f"{number}: {res}")
         if res == number:
             count += 1

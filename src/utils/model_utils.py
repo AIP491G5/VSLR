@@ -6,6 +6,7 @@ Contains GCN layers, HGC-LSTM model, and adjacency matrix creation
 import numpy as np
 import torch
 from ..models.model import HGC_LSTM
+from .data_utils import load_labels_from_csv
 
 def create_adjacency_matrix(config, num_vertices=None):
     """Create adjacency matrix for skeleton graph"""
@@ -64,15 +65,47 @@ def create_model(config, A, num_classes, device):
     
     return model
 
-def load_model(config, A, num_classes, device, checkpoint_path):
-    """Load a pre-trained HGC-LSTM model from checkpoint"""
-    model = create_model(config, A, num_classes, device)
+def load_model(model_path='outputs/models/best_hgc_lstm_13.pth', config=None):
+    """
+    Load a pre-trained HGC-LSTM model from checkpoint
     
-    if checkpoint_path:
-        checkpoint = torch.load(checkpoint_path, map_location=device)
+    Args:
+        model_path: Path to the model checkpoint
+        config: Configuration object (optional, will create new if None)
+    
+    Returns:
+        model: Loaded HGC-LSTM model
+    """
+    # Import here to avoid circular imports
+    from configs.config import Config
+    
+    # Initialize config if not provided
+    if config is None:
+        config = Config()
+    
+    # Initialize device
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    
+    # Create adjacency matrix
+    A = create_adjacency_matrix(config)
+    
+    # Load labels
+    video_to_label_mapping, label_to_idx, unique_labels, id_to_label_mapping = load_labels_from_csv(None, config)
+    num_classes = len(unique_labels)
+    
+    # Create model
+    model = HGC_LSTM(config, A, num_classes)
+    model.to(device)
+    
+    if model_path:
+        checkpoint = torch.load(model_path, map_location=device)
         model.load_state_dict(checkpoint)
-        print(f"Model loaded from {checkpoint_path}")
+        print(f"Model loaded from {model_path}")
     else:
         print("No checkpoint path provided")
         return None
+    
+    model.eval()
+    print(f"Model created with {sum(p.numel() for p in model.parameters())} parameters")
+    
     return model
