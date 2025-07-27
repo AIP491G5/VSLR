@@ -241,12 +241,9 @@ The HGC-LSTM model achieves state-of-the-art performance on Vietnamese Sign Lang
 
 ### Performance Metrics
 
-| Metric    | Training | Validation | Test  |
-| --------- | -------- | ---------- | ----- |
-| Accuracy  | 95.8%    | 92.3%      | 91.7% |
-| Precision | 96.1%    | 93.0%      | 92.4% |
-| Recall    | 95.5%    | 92.1%      | 91.2% |
-| F1-Score  | 95.8%    | 92.5%      | 91.8% |
+| Metric   | Training | Validation | Test  |
+| -------- | -------- | ---------- | ----- |
+| Accuracy | 88.06%   | 86.67%     | 68.4% |
 
 ### Key Achievements
 
