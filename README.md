@@ -17,35 +17,34 @@ This project implements a state-of-the-art deep learning model for recognizing V
 
 ```
 VSLR/
-├── configs/                    # Configuration files
-│   └── config.py              # Main configuration settings
-├── src/                       # Source code modules
-│   ├── models/                # Model architectures
-│   │   └── model_utils.py     # HGC-LSTM model, GCN layers, attention pooling
-│   ├── training/              # Training utilities
-│   │   └── train_utils.py     # Training loops, optimizers, schedulers
-│   └── utils/                 # Utility functions
-│       ├── data_utils.py      # Dataset classes, data loading, augmentation
+├── configs/                        # Configuration files
+│   └── config.py                   # Main configuration settings
+├── src/                            # Source code modules
+│   ├── models/                     # Model architectures
+│   │   └── model.py                # HGC-LSTM model, GCN layers, attention pooling
+│   └── utils/                      # Utility functions
+│       ├── train_utils.py          # Training loops, optimizers, schedulers
+│       ├── data_utils.py           # Dataset classes, data loading, augmentation
+│       ├── detector.py             # Use Mediapipe to extract keypoints
+│       ├── interpolate.py          # Video frame conversion
+│       ├── data_utils.py           # Dataset classes, data loading, augmentation
 │       └── visualization_utils.py  # Plotting and visualization functions
 ├── scripts/                   # Executable scripts
 │   ├── train_hgc_lstm.py      # Main training script
-│   ├── detector.py            # Sign language detection
 │   ├── inference.py           # Model inference
-│   ├── extract_kpts_n_label.py   # Keypoint extraction
+│   ├── extract_kpts.py        # Keypoint extraction
 │   ├── extract_csv.py         # CSV data processing
-│   └── cv_to_60.py           # Video frame conversion
 ├── outputs/                   # Output files
-│   ├── models/               # Trained model checkpoints
+│   ├── models/               # Trained model saved
 │   ├── plots/                # Training curves, confusion matrices
 │   └── logs/                 # Training logs
-├── data/                     # Processed data
-│   ├── videos/               # Video files
-│   └── dataset/              # Processed datasets
-├── data_original/            # Original raw data
-│   ├── Keypoints/           # Extracted keypoints (.npy files)
-│   ├── Labels/              # Label files
-│   └── Videos/              # Original video files
-├── notebooks/               # Jupyter notebooks
+├── data/
+│   ├── dataset/          # Raw video files (.mp4) contact me to have data
+│   ├── datatest/         # Video test you can add here
+│   └── videos/           # change name video
+├──dataset/
+│   ├── Keypoints/        # Extracted keypoints (.npy)
+│   └── Videos/           # Video visualize keypoints
 └── train_HGC_LSTM.ipynb    # Main training notebook (updated with modular imports)
 ```
 
@@ -55,8 +54,6 @@ VSLR/
 
 - Python 3.8 or higher
 - CUDA-compatible GPU (recommended for training)
-- 8GB+ RAM
-- 50GB+ free disk space
 
 ### Environment Setup
 
@@ -78,22 +75,25 @@ pip install -r requirements.txt
 1. **Organize your data structure:**
 
 ```
-data_original/
-├── Videos/          # Raw video files (.mp4)
-├── Keypoints/       # Extracted keypoints (.npy)
-└── Labels/          # Label files
+data/
+├── dataset/          # Raw video files (.mp4) contact me to have data
+├── datatest/         # Video test you can add here
+└── videos/           # change name video
+dataset/
+├── Keypoints/        # Extracted keypoints (.npy)
+└── Videos/           # Video visualize keypoints
 ```
 
 2. **Prepare CSV labels:**
 
 ```bash
-python scripts/extract_csv.py --labels_dir data_original/Labels --output labels.csv
+python scripts/extract_csv.py
 ```
 
 3. **Extract keypoints from videos:**
 
 ```bash
-python scripts/extract_kpts.py --input_dir data_original/Videos --output_dir data_original/Keypoints
+python scripts/extract_kpts.py
 ```
 
 ## Quick Start
