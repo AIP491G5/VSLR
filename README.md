@@ -123,7 +123,7 @@ All configuration is centralized in `configs/config.py`:
 
 The HGC-LSTM (Hierarchical Graph Convolution + Long Short-Term Memory) model is specifically designed for sign language recognition tasks. It combines the spatial modeling capabilities of Graph Convolutional Networks (GCN) with the temporal sequence learning power of LSTM networks.
 
-![Model Architecture Overview](docs/images/model_overview.png)
+![Model Architecture Overview](docs/images/HGC-LSTM.png)
 
 ### Architecture Components
 
@@ -131,7 +131,7 @@ The HGC-LSTM (Hierarchical Graph Convolution + Long Short-Term Memory) model is 
 
 The GCN component models the spatial relationships between human joints using an adjacency matrix that represents the skeletal structure:
 
-![GCN Architecture](docs/images/gcn_architecture.png)
+![GCN Architecture](docs/images/GCN.png)
 
 **Key Features:**
 
@@ -154,37 +154,29 @@ Where:
 - `W^(l)` is the learnable weight matrix
 - `σ` is the activation function
 
-#### 2. Temporal Attention Mechanism
-
-The temporal attention mechanism allows the model to focus on the most relevant time steps in the sequence:
-
-![Temporal Attention](docs/images/temporal_attention.png)
-
-**Process Flow:**
-
-1. **Linear Transformation**: Input matrix is linearly transformed
-2. **Tanh Activation**: Non-linear activation for feature enhancement
-3. **Attention Weight Computation**: Softmax normalization creates attention weights
-4. **Weighted Aggregation**: Element-wise multiplication and sum reduction
-
-**Implementation:**
-
-```python
-attention_weights = F.softmax(self.attention_linear(torch.tanh(linear_out)), dim=1)
-attended_output = torch.sum(input_matrix * attention_weights, dim=1)
-```
-
-#### 3. Joint Attention Mechanism
+#### 2. Joint Attention Mechanism
 
 The joint attention mechanism focuses on the most discriminative joints for each gesture:
 
-![Joint Attention](docs/images/joint_attention.png)
+![Joint Attention](docs/images/JointsAttention.png)
 
 **Key Characteristics:**
 
 - **Spatial Focus**: Identifies important body parts for each gesture
 - **Adaptive Weighting**: Learns to emphasize relevant joints dynamically
 - **Feature Enhancement**: Improves discriminative power of joint features
+
+#### 3. Temporal Attention Mechanism
+
+The temporal attention mechanism allows the model to focus on the most relevant time steps in the sequence:
+
+![Temporal Attention](docs/images/TemporalAttention.png)
+
+**Key Characteristics:**
+
+- **Temporal Focus**: Identifies important time steps in the gesture sequence
+- **Adaptive Weighting**: Learns to emphasize relevant temporal moments dynamically
+- **Feature Enhancement**: Improves discriminative power of temporal features
 
 #### 4. LSTM Temporal Modeling
 
@@ -209,16 +201,7 @@ The complete HGC-LSTM pipeline processes sign language videos through the follow
 
 ### Model Configuration
 
-The model architecture is highly configurable through the config system:
-
-```python
-# Model dimensions
-config.model.input_dim = 2          # (x, y) coordinates
-config.model.hidden_dim = 128       # Hidden layer dimensions
-config.model.num_gcn_layers = 3     # Number of GCN layers
-config.model.num_lstm_layers = 2    # Number of LSTM layers
-config.model.dropout_rate = 0.3     # Dropout for regularization
-```
+The model architecture is highly configurable through the config system
 
 ## Features
 

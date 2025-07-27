@@ -20,7 +20,7 @@ sys.path.insert(0, project_root)
 from configs.config import Config
 from src.utils.data_utils import load_labels_from_csv, SignLanguageDataset, create_data_loaders
 from src.utils.model_utils import create_adjacency_matrix, create_model
-from src.training.train_utils import train_model
+from src.utils.train_utils import train_model
 from src.utils.visualization_utils import visualize_training_process, analyze_model_performance
 
 warnings.filterwarnings("ignore")
