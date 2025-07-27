@@ -224,33 +224,6 @@ config.data.augmentations = []                                 # No augmentation
 - **Scaling**: Random size changes with aspect ratio preservation
 - **Stratified Splitting**: Balanced train/validation sets ensuring class distribution
 
-### Advanced Features
-
-#### MediaPipe Integration
-
-- **75 Keypoints**: 33 pose + 21 left hand + 21 right hand keypoints
-- **Real-time Processing**: Optimized for real-time inference
-- **Robust Detection**: Handles various lighting conditions and backgrounds
-- **Coordinate Normalization**: Automatic scaling and centering of keypoints
-
-#### Attention Mechanisms
-
-- **Dual Attention**: Both temporal and spatial attention mechanisms
-- **Adaptive Pooling**: Dynamic feature aggregation based on gesture complexity
-- **Interpretability**: Attention weights provide model interpretability
-
-#### Graph Neural Networks
-
-- **Hierarchical Structure**: Multi-level graph convolution for different body parts
-- **Skeletal Connectivity**: Biologically-inspired adjacency matrix design
-- **Feature Propagation**: Efficient message passing between connected joints
-
-### Visualization
-
-- **Training Curves**: Loss and accuracy plots
-- **Confusion Matrix**: Classification performance analysis
-- **Real-time Monitoring**: Progress tracking during training
-
 ### Model Training
 
 ```python
@@ -261,26 +234,6 @@ A = create_adjacency_matrix(config)
 model = create_model(config, A, num_classes=10, device='cuda')
 history = train_model(model, train_loader, val_loader, config, device)
 ```
-
-## File Organization
-
-### Core Modules
-
-- `src/models/model.py`: Model architectures and layers
-- `src/models/model_utils.py`: Model utils, create model
-- `src/training/train_utils.py`: Training pipeline and utilities
-- `src/utils/data_utils.py`: Data loading and augmentation
-- `src/utils/visualization_utils.py`: Plotting and visualization
-
-### Scripts
-
-- `scripts/train_hgc_lstm.py`: Complete training pipeline
-- `scripts/detector.py`: keypoints detection
-- `scripts/inference.py`: Model inference
-
-### Configuration
-
-- `configs/config.py`: Centralized configuration management
 
 ## Model Performance
 
