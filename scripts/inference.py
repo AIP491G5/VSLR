@@ -26,42 +26,54 @@ def predict_from_video(model, processor, id_to_label_mapping, config, device, vi
     keypoints_sequence = []
     
     print(f"🎬 Processing video: {video_path}")
-    #check video existence
     if not cap.isOpened():
         print(f"❌ Error: Could not open video file {video_path}")
-        return
-    frame_count = 0
+        return None, None # Sửa đổi: trả về 2 giá trị None
+    
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
             break
-
-        frame_count += 1
-        # Process frame to extract keypoints
+        
         _, res = processor.process_frame(frame)
         keypoints = processor.extract_keypoints(res)
         if keypoints is not None:
             keypoints_sequence.append(keypoints)
     
     cap.release()
+    
+    # --- BẮT ĐẦU PHẦN SỬA LỖI ---
+    # Kiểm tra nếu chuỗi quá ngắn để thực hiện nội suy
+    if len(keypoints_sequence) < 2:
+        print(f"❌ Error: Video quá ngắn hoặc không thể phát hiện đủ keypoints. Tìm thấy: {len(keypoints_sequence)} frames.")
+        return None, None # Trả về không có nhãn, không có dự đoán
+    # --- KẾT THÚC PHẦN SỬA LỖI ---
+    
     label = None
+    prediction = None # Khởi tạo prediction là None
+
     # Interpolate to target sequence length
     input_data = interpolate_frames(keypoints_sequence, config.hgc_lstm.sequence_length)
-    input_data = torch.tensor(input_data, dtype=torch.float32).unsqueeze(0).to(device)  # Add batch dimension
+    input_data = torch.tensor(input_data, dtype=torch.float32).unsqueeze(0).to(device)
+    
     with torch.no_grad():
         output = model(input_data)
         probs = torch.softmax(output, dim=1)
-        max_prob, prediction = torch.max(probs, dim=1)
+        max_prob, pred_idx = torch.max(probs, dim=1)
+        
         if max_prob.item() > thresh_hold:
-            prediction = prediction.item()
+            prediction = pred_idx.item()
         else:
-            print(prediction + 1, max_prob.item())
-            prediction = None
+            # prediction vẫn là None nếu độ tin cậy thấp
+            print(f"Confidence too low: {max_prob.item()}")
+
     if prediction is not None:
         label = id_to_label_mapping.get(prediction + 1, "Unknown")
         print(f"Predicted class: {prediction + 1}, label: {label}, confidence: {max_prob.item()}")
-    cap.release()
-    return label, int(prediction + 1) if prediction is not None else None
+
+    prediction_result = int(prediction + 1) if prediction is not None else None
+    
+    return label, prediction_result
 
 # def predict_from_camera():
 #     """Perform inference using a webcam."""
