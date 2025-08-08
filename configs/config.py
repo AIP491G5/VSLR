@@ -24,6 +24,7 @@ class DataConfig:
     """Configuration for data handling."""
     # Input data paths
     input_csv_file: str = "labels.csv"
+    triplet_csv_file: str = "triplet_dataset.csv"
     input_kp_path: str = "dataset/Keypoints"
     raw_video_input_dir: str = "data/dataset"  # Raw video input directory for processing
     video_input_dir: str = "data/videos"
@@ -78,10 +79,10 @@ class TrainingConfig:
     """Configuration for training process."""
     # Training parameters
     num_epochs: int = 300
-    batch_size: int = 8
+    batch_size: int = 64
     learning_rate: float = 1e-3
     weight_decay: float = 1e-4
-    
+    triplet_margin: float = 5.0  # Margin for triplet loss
     # Optimizer settings
     optimizer: str = "adam"  # "adam" or "sgd"
     momentum: float = 0.9  # For SGD
@@ -101,9 +102,11 @@ class TrainingConfig:
     
     # Saving and logging
     save_dir: str = "outputs/models"
+    save_triplet_dir: str = "outputs/models"
     # save_interval: int = 10
     log_interval: int = 1
     model_save_name: str = "best_hgc_lstm.pth"
+    model_triplet_save_name: str = "best_hgc_lstm_embedding.pth"
     
     # Device settings
     device: str = "auto"  # "auto", "cpu", "cuda"

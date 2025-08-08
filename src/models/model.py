@@ -85,13 +85,14 @@ class TemporalAttentionPooling(nn.Module):
 
 class HGC_LSTM(nn.Module):
     """Hierarchical Graph Convolution + LSTM with Dual Attention"""
-    def __init__(self, config, A, num_classes, in_channels=2, hidden_gcn=64, hidden_lstm=128, dropout=0.1):
+    def __init__(self, config, A, num_classes, in_channels=2, hidden_gcn=64, hidden_lstm=128, dropout=0.1, is_encoder=False):
         super(HGC_LSTM, self).__init__()
-        
-        # Fixed architecture: 2 GCN layers
+
+        # Fixed architecture: n GCN layers
         self.gcn_layers = nn.ModuleList([
             GCNLayer(in_channels, hidden_gcn, A, use_batch_norm=True),
-            GCNLayer(hidden_gcn, hidden_gcn, A, use_batch_norm=True)
+            GCNLayer(hidden_gcn, hidden_gcn, A, use_batch_norm=True),
+            GCNLayer(hidden_gcn, hidden_gcn, A, use_batch_norm=True),
         ])
         
         # First attention pooling (after GCN, over joints dimension)
@@ -101,7 +102,7 @@ class HGC_LSTM(nn.Module):
         self.lstm = nn.LSTM(
             hidden_gcn, 
             hidden_lstm, 
-            num_layers=1,
+            num_layers=2,
             batch_first=True, 
             bidirectional=True,
             dropout=dropout
@@ -114,7 +115,9 @@ class HGC_LSTM(nn.Module):
         self.temporal_attention = TemporalAttentionPooling(lstm_output_size, dropout)
         
         self.dropout = nn.Dropout(dropout)
-        self.fc = nn.Linear(lstm_output_size, num_classes)
+        if not is_encoder:
+            self.fc = nn.Linear(lstm_output_size, num_classes)
+        self.is_encoder = is_encoder
 
     def forward(self, x):
         # x: (B, T, V, C)
@@ -135,6 +138,9 @@ class HGC_LSTM(nn.Module):
         
         # Final classification
         x = self.dropout(x)
-        x = self.fc(x)  # (B, num_classes)
-        
-        return x
+        if self.is_encoder:
+            # return F.normalize(x, dim=1)
+            return x
+        else:
+            x = self.fc(x)  # (B, num_classes)
+            return x

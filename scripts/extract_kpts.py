@@ -55,6 +55,73 @@ def validate_video_file(video_path: str) -> bool:
         print(f"[ERROR] Error checking video {video_path}: {e}")
         return False
 
+def adjust_hand_positions(keypoints, has_left_hand, has_right_hand, has_left_hand_history, has_right_hand_history, prev_keypoints=None):
+    """
+    Adjust hand keypoints positions based on detection status and pose index movement
+    
+    Args:
+        keypoints: Original keypoints array (75, 2)
+        has_left_hand: Current frame has left hand detection
+        has_right_hand: Current frame has right hand detection  
+        has_left_hand_history: Previously detected left hand
+        has_right_hand_history: Previously detected right hand
+        prev_keypoints: Previous frame keypoints for hand tracking (75, 2)
+        
+    Returns:
+        np.ndarray: Adjusted keypoints array
+    """
+    # Copy original keypoints
+    adjusted = keypoints.copy()
+    
+    # Indices for different parts
+    POSE_START, POSE_END = 0, 33
+    LEFT_START, LEFT_END = 33, 54
+    RIGHT_START, RIGHT_END = 54, 75
+    
+    # Pose index landmarks (MediaPipe pose landmarks)
+    LEFT_INDEX_POSE = 19   # LEFT_INDEX in pose landmarks
+    RIGHT_INDEX_POSE = 20  # RIGHT_INDEX in pose landmarks
+    
+    # Extract parts
+    pose_kpts = keypoints[POSE_START:POSE_END]  # Always keep pose
+    left_kpts = keypoints[LEFT_START:LEFT_END]
+    right_kpts = keypoints[RIGHT_START:RIGHT_END]
+    
+    if not has_right_hand:
+        # Only left hand detected
+        if has_right_hand_history and prev_keypoints is not None:
+            # Right hand was detected before, estimate right hand using pose index movement
+            # Calculate movement vector from RIGHT_INDEX (20) between frames
+            current_right_index = keypoints[RIGHT_INDEX_POSE]  # Current RIGHT_INDEX from pose
+            prev_right_index = prev_keypoints[RIGHT_INDEX_POSE]  # Previous RIGHT_INDEX from pose
+            movement_vector = current_right_index - prev_right_index
+            
+            # Apply movement to previous right hand keypoints
+            prev_right_hand = prev_keypoints[RIGHT_START:RIGHT_END]
+            estimated_right_hand = prev_right_hand + movement_vector
+            adjusted[RIGHT_START:RIGHT_END] = estimated_right_hand
+        else:
+            # No right hand history, zero out right hand
+            adjusted[RIGHT_START:RIGHT_END] = 0
+            
+    if not has_left_hand:
+        # Only right hand detected
+        if has_left_hand_history and prev_keypoints is not None:
+            # Left hand was detected before, estimate left hand using pose index movement
+            # Calculate movement vector from LEFT_INDEX (19) between frames
+            current_left_index = keypoints[LEFT_INDEX_POSE]  # Current LEFT_INDEX from pose
+            prev_left_index = prev_keypoints[LEFT_INDEX_POSE]  # Previous LEFT_INDEX from pose
+            movement_vector = current_left_index - prev_left_index
+            
+            # Apply movement to previous left hand keypoints
+            prev_left_hand = prev_keypoints[LEFT_START:LEFT_END]
+            estimated_left_hand = prev_left_hand + movement_vector
+            adjusted[LEFT_START:LEFT_END] = estimated_left_hand
+        else:
+            adjusted[LEFT_START:LEFT_END] = 0
+    
+    return adjusted
+
 def extract_keypoints_from_video(video_path: str, config: Config, model: MediaPipeProcessor) -> np.ndarray:
     """
     Extract keypoints from a single video file
@@ -92,25 +159,60 @@ def extract_keypoints_from_video(video_path: str, config: Config, model: MediaPi
         
         keypoints_list = []
         
+        # Track hand detection status
+        has_left_hand_history = False
+        has_right_hand_history = False
+        
         # Process each interpolated frame
         for i, frame in enumerate(processed_frames):
             image_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             _, res = model.process_frame(image_rgb)
             
             if res.pose_landmarks:
+                # Extract all 75 keypoints (33 pose + 21 left + 21 right)
                 keypoints = model.extract_keypoints(res)
-                keypoints_list.append(keypoints)
+                
+                # Check current hand detection status
+                has_left_hand = res.left_hand_landmarks is not None
+                has_right_hand = res.right_hand_landmarks is not None
+                
+                # Update hand history
+                if has_left_hand:
+                    has_left_hand_history = True
+                if has_right_hand:
+                    has_right_hand_history = True
+                
+                # Adjust keypoints based on hand detection and history
+                prev_kpts = keypoints_list[-1] if len(keypoints_list) > 0 else None
+                adjusted_keypoints = adjust_hand_positions(
+                    keypoints, 
+                    has_left_hand, 
+                    has_right_hand, 
+                    has_left_hand_history, 
+                    has_right_hand_history,
+                    prev_kpts
+                )
+                
+                keypoints_list.append(adjusted_keypoints)
+                
+                # Debug info
+                print(f"[FRAME {i+1:3d}] Pose: ✓ | Left: {'✓' if has_left_hand else '✗'} | Right: {'✓' if has_right_hand else '✗'} | "
+                      f"L_hist: {has_left_hand_history} | R_hist: {has_right_hand_history}")
+                
             else:
-                # If no keypoints detected, use zeros or previous frame keypoints
+                # If no pose detected, use zeros or previous frame keypoints
                 if len(keypoints_list) > 0:
                     keypoints_list.append(keypoints_list[-1])
+                    print(f"[FRAME {i+1:3d}] No pose detected, using previous frame")
                 else:
                     # Initialize with zeros if first frame has no detection
                     zeros_kpts = np.zeros((config.hgc_lstm.num_vertices, config.hgc_lstm.in_channels))
                     keypoints_list.append(zeros_kpts)
+                    print(f"[FRAME {i+1:3d}] No pose detected, using zeros")
         
         keypoints_array = np.array(keypoints_list)
         print(f"[SUCCESS] Extracted {keypoints_array.shape[0]} frames with {keypoints_array.shape[1]} keypoints")
+        print(f"[SUMMARY] Hand detection history - Left: {has_left_hand_history} | Right: {has_right_hand_history}")
         
         return keypoints_array
     

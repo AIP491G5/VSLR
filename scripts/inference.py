@@ -75,6 +75,40 @@ def predict_from_video(model, processor, id_to_label_mapping, config, device, vi
     
     return label, prediction_result
 
+def extract_embedding_from_video(model, processor, video_path, config, device):
+    """Extract embeddings from a video file."""
+    cap = cv2.VideoCapture(video_path)
+    keypoints_sequence = []
+    
+    if not cap.isOpened():
+        print(f"❌ Error: Could not open video file {video_path}")
+        return None
+    
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret:
+            break
+        
+        _, res = processor.process_frame(frame)
+        keypoints = processor.extract_keypoints(res)
+        if keypoints is not None:
+            keypoints_sequence.append(keypoints)
+    
+    cap.release()
+    
+    if len(keypoints_sequence) < 2:
+        print(f"❌ Error: Video quá ngắn hoặc không thể phát hiện đủ keypoints. Tìm thấy: {len(keypoints_sequence)} frames.")
+        return None
+    
+    # Interpolate to target sequence length
+    input_data = interpolate_frames(keypoints_sequence, config.hgc_lstm.sequence_length)
+    input_data = torch.tensor(input_data, dtype=torch.float32).unsqueeze(0).to(device)
+    
+    with torch.no_grad():
+        embedding = model(input_data)
+    
+    return embedding.cpu().numpy()
+
 # def predict_from_camera():
 #     """Perform inference using a webcam."""
 #     cap = cv2.VideoCapture(0)
@@ -122,7 +156,7 @@ if __name__ == "__main__":
     # Create model with updated constructor
     model = create_model(config, A, num_classes=num_classes, device=device)
 
-    model_path = 'outputs/models/best_hgc_lstm_13.pth'
+    model_path = 'outputs/models/best_hgc_lstm.pth'
     model.load_state_dict(torch.load(model_path, map_location=device))
     model.eval()
 

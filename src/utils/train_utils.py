@@ -140,3 +140,117 @@ def train_model(model, train_loader, val_loader, config, device):
     
     print(f"Training completed. Best validation accuracy: {best_val_acc:.2f}% (Train: {best_train_acc:.2f}%)")
     return history
+
+def train_model_triplet(model, train_loader, val_loader, config, device):
+    """Train model using Triplet Loss"""
+    criterion = nn.TripletMarginLoss(margin=config.training.triplet_margin)
+    
+    # Optimizer
+    if config.training.optimizer == "adam":
+        optimizer = torch.optim.Adam(
+            model.parameters(), 
+            lr=config.training.learning_rate, 
+            weight_decay=config.training.weight_decay
+        )
+    else:
+        optimizer = torch.optim.SGD(
+            model.parameters(), 
+            lr=config.training.learning_rate, 
+            weight_decay=config.training.weight_decay,
+            momentum=config.training.momentum
+        )
+    
+    # Scheduler
+    if config.training.scheduler == "step":
+        scheduler = torch.optim.lr_scheduler.StepLR(
+            optimizer, 
+            step_size=config.training.scheduler_step_size, 
+            gamma=config.training.scheduler_gamma
+        )
+    elif config.training.scheduler == "cosine":
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+            optimizer, 
+            T_max=config.training.num_epochs
+        )
+    else:
+        scheduler = None
+
+    history = {'train_loss': [], 'val_loss': []}
+    best_val_loss = float('inf')
+    patience_counter = 0
+
+    os.makedirs(config.training.save_dir, exist_ok=True)
+
+    for epoch in range(config.training.num_epochs):
+        # Training
+        model.train()
+        train_loss = 0.0
+
+        for anchor, positive, negative in train_loader:
+            anchor = anchor.to(device)
+            positive = positive.to(device)
+            negative = negative.to(device)
+
+            emb_a, emb_p, emb_n = model(anchor, positive, negative)
+            loss = criterion(emb_a, emb_p, emb_n)
+
+            optimizer.zero_grad()
+            loss.backward()
+
+            # Gradient clipping
+            if config.training.gradient_clip_norm > 0:
+                torch.nn.utils.clip_grad_norm_(model.parameters(), config.training.gradient_clip_norm)
+
+            optimizer.step()
+            train_loss += loss.item()
+
+        train_loss /= len(train_loader)
+
+        # Validation
+        model.eval()
+        val_loss = 0.0
+
+        with torch.no_grad():
+            for anchor, positive, negative in val_loader:
+                anchor = anchor.to(device)
+                positive = positive.to(device)
+                negative = negative.to(device)
+
+                emb_a, emb_p, emb_n = model(anchor, positive, negative)
+                loss = criterion(emb_a, emb_p, emb_n)
+                val_loss += loss.item()
+
+        val_loss /= len(val_loader)
+
+        # Save best model
+        save_model = False
+        if val_loss < best_val_loss:
+            best_val_loss = val_loss
+            patience_counter = 0
+            save_model = True
+        else:
+            patience_counter += 1
+
+        if save_model:
+            model_path = os.path.join(config.training.save_dir, config.training.model_triplet_save_name)
+            torch.save(model.encoder.state_dict(), model_path)
+
+        # Store history
+        history['train_loss'].append(train_loss)
+        history['val_loss'].append(val_loss)
+
+        # Update LR
+        if scheduler is not None:
+            scheduler.step()
+
+        current_lr = optimizer.param_groups[0]['lr']
+        print(f"Epoch {epoch+1:03d}/{config.training.num_epochs} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f} | LR: {current_lr:.8f}")
+
+        if patience_counter >= config.training.early_stopping_patience:
+            print(f"Early stopping triggered after {epoch+1} epochs")
+            break
+
+    print(f"Training completed. Best validation loss: {best_val_loss:.4f}")
+    return history
+
+

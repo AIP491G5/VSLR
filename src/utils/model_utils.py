@@ -2,11 +2,12 @@
 Model utilities for VSLR project
 Contains GCN layers, HGC-LSTM model, and adjacency matrix creation
 """
-
+import os
 import numpy as np
 import torch
 from ..models.model import HGC_LSTM
 from .data_utils import load_labels_from_csv
+from ..models.triplet import TripletNet
 
 def create_adjacency_matrix(config, num_vertices=None):
     """Create adjacency matrix for skeleton graph"""
@@ -56,16 +57,16 @@ def create_adjacency_matrix(config, num_vertices=None):
     
     return torch.tensor(A_norm, dtype=torch.float32)
 
-def create_model(config, A, num_classes, device):
+def create_model(config, A, num_classes=None, device='cuda', is_encoder=False):
     """Create and initialize the HGC-LSTM model"""
-    model = HGC_LSTM(config, A, num_classes)
+    model = HGC_LSTM(config, A, num_classes, is_encoder=is_encoder)
     model.to(device)
     
     print(f"Model created with {sum(p.numel() for p in model.parameters())} parameters")
     
     return model
 
-def load_model(model_path='outputs/models/best_hgc_lstm_13.pth', config=None):
+def create_triplet_model(config=None):
     """
     Load a pre-trained HGC-LSTM model from checkpoint
     
@@ -94,7 +95,42 @@ def load_model(model_path='outputs/models/best_hgc_lstm_13.pth', config=None):
     num_classes = len(unique_labels)
     
     # Create model
-    model = HGC_LSTM(config, A, num_classes)
+    encoder = HGC_LSTM(config, A, num_classes, is_encoder=True)
+    model = TripletNet(encoder)
+    model.to(device)
+    
+    return model
+
+def load_model(model_path='outputs/models/best_hgc_lstm_13.pth', config=None, is_encoder=False):
+    """
+    Load a pre-trained HGC-LSTM model from checkpoint
+    
+    Args:
+        model_path: Path to the model checkpoint
+        config: Configuration object (optional, will create new if None)
+    
+    Returns:
+        model: Loaded HGC-LSTM model
+    """
+    # Import here to avoid circular imports
+    from configs.config import Config
+    
+    # Initialize config if not provided
+    if config is None:
+        config = Config()
+    
+    # Initialize device
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    
+    # Create adjacency matrix
+    A = create_adjacency_matrix(config)
+    
+    # Load labels
+    video_to_label_mapping, label_to_idx, unique_labels, id_to_label_mapping = load_labels_from_csv(None, config)
+    num_classes = len(unique_labels)
+    
+    # Create model
+    model = HGC_LSTM(config, A, num_classes, is_encoder=is_encoder)
     model.to(device)
     
     if model_path:
@@ -109,3 +145,47 @@ def load_model(model_path='outputs/models/best_hgc_lstm_13.pth', config=None):
     print(f"Model created with {sum(p.numel() for p in model.parameters())} parameters")
     
     return model
+
+def load_model_triplet(model_path='outputs/models/best_hgc_lstm_triplet.pth', config=None):
+    """
+    Load a pre-trained TripletNet model from checkpoint
+    
+    Args:
+        model_path: Path to the model checkpoint
+        config: Configuration object (optional, will create new if None)
+    
+    Returns:
+        model: Loaded TripletNet model
+    """
+    # Import here to avoid circular imports
+    from configs.config import Config
+    
+    # Initialize config if not provided
+    if config is None:
+        config = Config()
+    
+    # Initialize device
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    
+    # Create adjacency matrix
+    A = create_adjacency_matrix(config)
+    model_path = os.path.join(config.training.save_triplet_dir, config.training.model_triplet_save_name)
+    # Load labels
+    video_to_label_mapping, label_to_idx, unique_labels, id_to_label_mapping = load_labels_from_csv(None, config)
+    num_classes = len(unique_labels)
+    
+    # Create model
+    encoder = HGC_LSTM(config, A, num_classes, is_encoder=True)
+    encoder.to(device)
+    
+    if model_path:
+        checkpoint = torch.load(model_path, map_location=device)
+        encoder.load_state_dict(checkpoint)
+        print(f"Model loaded from {model_path}")
+    else:
+        print("No checkpoint path provided")
+        return None
+    
+    encoder.eval()
+    
+    return encoder

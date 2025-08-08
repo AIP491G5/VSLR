@@ -75,6 +75,56 @@ def visualize_training_process(history, config, save_plots=True):
     
     return fig
 
+def visualize_training_triplet_process(history, config, save_plots=True):
+    """
+    Visualize the training process for the triplet model
+    """
+    # Create plots directory
+    plots_dir = Path("training_plots")
+    plots_dir.mkdir(exist_ok=True)
+
+    # Extract data
+    epochs = range(1, len(history['train_loss']) + 1)
+    train_losses = history['train_loss']
+    val_losses = history['val_loss']
+    # train_accs = history['train_acc']
+    # val_accs = history['val_acc']
+
+    # Create simple figure with 1 plots
+    fig, ax1 = plt.subplots(1, 1, figsize=(10, 6))
+
+    # 1. Loss curves
+    ax1.plot(epochs, train_losses, 'b-', label='Training Loss', linewidth=2)
+    ax1.plot(epochs, val_losses, 'r-', label='Validation Loss', linewidth=2)
+    ax1.set_title('Training and Validation Loss', fontsize=14, fontweight='bold')
+    ax1.set_xlabel('Epoch')
+    ax1.set_ylabel('Loss')
+    ax1.legend()
+    ax1.grid(True, alpha=0.3)
+
+    # 2. Accuracy curves
+    # ax2.plot(epochs, train_accs, 'b-', label='Training Accuracy', linewidth=2)
+    # ax2.plot(epochs, val_accs, 'r-', label='Validation Accuracy', linewidth=2)
+    # ax2.set_title('Training and Validation Accuracy', fontsize=14, fontweight='bold')
+    # ax2.set_xlabel('Epoch')
+    # ax2.set_ylabel('Accuracy (%)')
+    # ax2.legend()
+    # ax2.grid(True, alpha=0.3)
+
+    plt.suptitle('HGC-LSTM Training Process', fontsize=16, fontweight='bold')
+    plt.tight_layout()
+
+    # Save plot
+    if save_plots:
+        plot_path = plots_dir / "training_curves.png"
+        plt.savefig(plot_path, dpi=300, bbox_inches='tight', facecolor='white')
+        print(f"Training curves saved to: {plot_path}")
+
+    plt.show()
+
+    # Print summary
+
+    return fig
 
 def analyze_model_performance(model, val_loader, device, config, unique_labels, id_to_label_mapping):
     """

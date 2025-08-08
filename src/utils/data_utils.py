@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 import torch
 from torch.utils.data import Dataset, DataLoader
+from itertools import combinations
 
 
 def load_labels_from_csv(csv_file, config):
@@ -36,6 +37,22 @@ def load_labels_from_csv(csv_file, config):
     
     return video_to_label_mapping, label_to_idx, unique_labels, id_to_label_mapping
 
+def load_triplet_csv(csv_file, config):
+    """Load triplet data from CSV file"""
+    if csv_file is None:
+        csv_file = config.data.triplet_csv_file
+    
+    df = pd.read_csv(csv_file)
+    triplets = []
+
+    for _, row in df.iterrows():
+        id = row['id']
+        anchor = row['anchor'].split('.')[0]  # Remove file extension
+        positive = row['positive'].split('.')[0]  # Remove file extension
+        negative = row['negative'].split('.')[0]  # Remove file extension
+        triplets.append((id, anchor, positive, negative))
+    
+    return triplets
 
 def flip_keypoints(keypoints):
     """
@@ -285,8 +302,6 @@ class SignLanguageDataset(Dataset):
 
     def _get_augmentation_combinations(self):
         """Generate all possible augmentation combinations"""
-        from itertools import combinations, chain
-        
         combinations_list = []
         
         # Always include original (no augmentation)
@@ -382,4 +397,121 @@ def create_data_loaders(train_dataset, val_dataset, config, batch_size=None):
     sample_kp, sample_lbl = next(iter(train_loader))
     print(f" Sample keypoints shape: {sample_kp.shape}")  # (B, T, V, C)
     print(f" Sample labels shape: {sample_lbl.shape}")    # (B,)
+    return train_loader, val_loader
+
+class TripletSignLanguageDataset(Dataset):
+    """
+    Triplet Dataset with optional augmentation, stratified split, and label check.
+    """
+
+    def __init__(self, keypoints_dir, data, config, split_type='train', augmentations=None, use_strategy=True):
+
+        self.config = config
+        self.split_type = split_type
+        self.use_strategy = use_strategy
+        self.keypoints_dir = keypoints_dir
+
+        # Augmentation setup
+        if augmentations is not None:
+            self.augmentations = augmentations
+        else:
+            self.augmentations = getattr(config.data, 'augmentations', [])
+
+        # Individual augmentation flags (for compatibility)
+        self.use_flip_augmentation = 'flip' in self.augmentations
+        self.use_translation_augmentation = 'translation' in self.augmentations
+        self.use_scaling_augmentation = 'scaling' in self.augmentations
+        self.use_combined_augmentation = len(self.augmentations) > 1
+
+        # Augmentation parameters
+        self.translation_range = config.data.translation_range
+        self.scale_range = config.data.scale_range
+
+        train_split = config.training.train_split if hasattr(config.training, 'train_split') else 0.8
+        # Load triplet data
+        np.random.shuffle(data)  # Shuffle triplet data for randomness
+        train = data[:int(len(data) * train_split)]
+        val = data[int(len(data) * train_split):]
+
+        # Select files for current split
+        if split_type == 'train':
+            self.files = train
+        else:
+            self.files = val
+
+        self.original_samples = len(self.files)
+
+        # Augmentation combinations
+        self.augmentation_combinations = self._get_augmentation_combinations()
+        print(f" Augmentations: {self.augmentations} → {len(self.augmentation_combinations)} combinations")
+
+        self.augmented_samples = self.original_samples * len(self.augmentation_combinations)
+
+    def _get_augmentation_combinations(self):
+        combinations_list = [[]]  # include original
+        for aug in self.augmentations:
+            combinations_list.append([aug])
+        for r in range(2, len(self.augmentations) + 1):
+            for combo in combinations(self.augmentations, r):
+                combinations_list.append(list(combo))
+        return combinations_list
+
+    def _load_and_augment(self, base_filename, combo):
+        path = os.path.join(self.keypoints_dir, f"{base_filename}{self.config.data.keypoints_ext}")
+        kp_sequence = np.load(path)
+        if len(kp_sequence.shape) == 2:
+            T, features = kp_sequence.shape
+            expected_features = self.config.hgc_lstm.num_vertices * self.config.hgc_lstm.in_channels
+            if features == expected_features:
+                kp_sequence = kp_sequence.reshape(T, self.config.hgc_lstm.num_vertices, self.config.hgc_lstm.in_channels)
+        for aug_type in combo:
+            if aug_type == 'flip':
+                kp_sequence = flip_keypoints(kp_sequence)
+            elif aug_type == 'translation':
+                kp_sequence = translate_keypoints(kp_sequence, self.translation_range)
+            elif aug_type == 'scaling':
+                kp_sequence = scale_keypoints(kp_sequence, self.scale_range)
+        return torch.from_numpy(kp_sequence).float()
+
+    def __len__(self):
+        return self.original_samples * len(self.augmentation_combinations)
+
+    def __getitem__(self, idx):
+        aug_idx = idx // self.original_samples
+        triplet_idx = idx % self.original_samples
+        combo = self.augmentation_combinations[aug_idx]
+        id, anchor_name, positive_name, negative_name = self.files[triplet_idx]
+        anchor = self._load_and_augment(anchor_name, combo)
+        positive = self._load_and_augment(positive_name, combo)
+        negative = self._load_and_augment(negative_name, combo)
+        return anchor, positive, negative
+
+    
+def create_triplet_data_loaders(train_dataset, val_dataset, config, batch_size=None):
+    """Create data loaders for Triplet Network"""
+    batch_size = batch_size or config.training.batch_size
+    
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+    
+    print(f" Triplet Train batches: {len(train_loader)}")
+    print(f" Triplet Valid batches: {len(val_loader)}")
+    print(f" Batch size: {batch_size}")
+    
+    # Show detailed augmentation info
+    if hasattr(train_dataset, 'augmentations') and train_dataset.augmentations:
+        original_samples = train_dataset.original_samples
+        total_samples = len(train_dataset)
+        
+        aug_str = " + ".join(train_dataset.augmentations)
+        print(f" Data Augmentation ({aug_str}): {original_samples} original → {total_samples} total samples")
+        print(f" Augmentation combinations: {['+'.join(combo) if combo else 'original' for combo in train_dataset.augmentation_combinations]}")
+    else:
+        print(f" No augmentation: {len(train_dataset)} samples")
+    
+    sample_anchor, sample_positive, sample_negative = next(iter(train_loader))
+    print(f" Sample anchor shape:   {sample_anchor.shape}")   # (B, T, V, C)
+    print(f" Sample positive shape: {sample_positive.shape}") # (B, T, V, C)
+    print(f" Sample negative shape: {sample_negative.shape}") # (B, T, V, C)
+    
     return train_loader, val_loader
