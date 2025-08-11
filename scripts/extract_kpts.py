@@ -195,20 +195,14 @@ def extract_keypoints_from_video(video_path: str, config: Config, model: MediaPi
                 
                 keypoints_list.append(adjusted_keypoints)
                 
-                # Debug info
-                print(f"[FRAME {i+1:3d}] Pose: ✓ | Left: {'✓' if has_left_hand else '✗'} | Right: {'✓' if has_right_hand else '✗'} | "
-                      f"L_hist: {has_left_hand_history} | R_hist: {has_right_hand_history}")
-                
             else:
                 # If no pose detected, use zeros or previous frame keypoints
                 if len(keypoints_list) > 0:
                     keypoints_list.append(keypoints_list[-1])
-                    print(f"[FRAME {i+1:3d}] No pose detected, using previous frame")
                 else:
                     # Initialize with zeros if first frame has no detection
                     zeros_kpts = np.zeros((config.hgc_lstm.num_vertices, config.hgc_lstm.in_channels))
                     keypoints_list.append(zeros_kpts)
-                    print(f"[FRAME {i+1:3d}] No pose detected, using zeros")
         
         keypoints_array = np.array(keypoints_list)
         print(f"[SUCCESS] Extracted {keypoints_array.shape[0]} frames with {keypoints_array.shape[1]} keypoints")

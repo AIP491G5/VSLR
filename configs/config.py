@@ -79,10 +79,10 @@ class TrainingConfig:
     """Configuration for training process."""
     # Training parameters
     num_epochs: int = 300
-    batch_size: int = 64
+    batch_size: int = 128
     learning_rate: float = 1e-3
     weight_decay: float = 1e-4
-    triplet_margin: float = 5.0  # Margin for triplet loss
+    triplet_margin: float = 2.0  # Margin for triplet loss
     # Optimizer settings
     optimizer: str = "adam"  # "adam" or "sgd"
     momentum: float = 0.9  # For SGD

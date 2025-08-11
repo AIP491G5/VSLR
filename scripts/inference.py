@@ -19,28 +19,15 @@ from src.utils.detector import MediaPipeProcessor
 from src.utils.model_utils import create_model, create_adjacency_matrix
 from src.utils.data_utils import load_labels_from_csv
 from src.utils.interpolate import interpolate_frames
+from .extract_kpts import extract_keypoints_from_video
 
 def predict_from_video(model, processor, id_to_label_mapping, config, device, video_path, thresh_hold=0.8):
     """Perform inference on a video file."""
-    cap = cv2.VideoCapture(video_path)
     keypoints_sequence = []
     
     print(f"🎬 Processing video: {video_path}")
-    if not cap.isOpened():
-        print(f"❌ Error: Could not open video file {video_path}")
-        return None, None # Sửa đổi: trả về 2 giá trị None
     
-    while cap.isOpened():
-        ret, frame = cap.read()
-        if not ret:
-            break
-        
-        _, res = processor.process_frame(frame)
-        keypoints = processor.extract_keypoints(res)
-        if keypoints is not None:
-            keypoints_sequence.append(keypoints)
-    
-    cap.release()
+    keypoints_sequence = extract_keypoints_from_video(video_path, config, processor)
     
     # --- BẮT ĐẦU PHẦN SỬA LỖI ---
     # Kiểm tra nếu chuỗi quá ngắn để thực hiện nội suy
@@ -77,28 +64,9 @@ def predict_from_video(model, processor, id_to_label_mapping, config, device, vi
 
 def extract_embedding_from_video(model, processor, video_path, config, device):
     """Extract embeddings from a video file."""
-    cap = cv2.VideoCapture(video_path)
     keypoints_sequence = []
     
-    if not cap.isOpened():
-        print(f"❌ Error: Could not open video file {video_path}")
-        return None
-    
-    while cap.isOpened():
-        ret, frame = cap.read()
-        if not ret:
-            break
-        
-        _, res = processor.process_frame(frame)
-        keypoints = processor.extract_keypoints(res)
-        if keypoints is not None:
-            keypoints_sequence.append(keypoints)
-    
-    cap.release()
-    
-    if len(keypoints_sequence) < 2:
-        print(f"❌ Error: Video quá ngắn hoặc không thể phát hiện đủ keypoints. Tìm thấy: {len(keypoints_sequence)} frames.")
-        return None
+    keypoints_sequence = extract_keypoints_from_video(video_path, config, processor)
     
     # Interpolate to target sequence length
     input_data = interpolate_frames(keypoints_sequence, config.hgc_lstm.sequence_length)
@@ -108,39 +76,6 @@ def extract_embedding_from_video(model, processor, video_path, config, device):
         embedding = model(input_data)
     
     return embedding.cpu().numpy()
-
-# def predict_from_camera():
-#     """Perform inference using a webcam."""
-#     cap = cv2.VideoCapture(0)
-#     keypoints_sequence = []
-
-#     while True:
-#         ret, frame = cap.read()
-#         if not ret:
-#             break
-
-#         # Display the frame
-#         cv2.imshow('Webcam', frame)
-
-#         # Process frame to extract keypoints
-#         keypoints = processor.process_frame(frame)
-#         if keypoints is not None:
-#             keypoints_sequence.append(keypoints)
-
-#         # Make prediction if enough frames are collected
-#         if len(keypoints_sequence) >= config.hgc_lstm.sequence_length:
-#             with torch.no_grad():
-#                 output = model(input_data)
-#                 prediction = torch.argmax(output, dim=1).item()
-#                 print(f"Prediction: {prediction}")
-
-#             keypoints_sequence = []  # Reset sequence
-
-#         if cv2.waitKey(1) & 0xFF == ord('q'):
-#             break
-
-#     cap.release()
-#     cv2.destroyAllWindows()
 
 # Example usage
 if __name__ == "__main__":
