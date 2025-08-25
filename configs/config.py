@@ -39,7 +39,8 @@ class DataConfig:
     movement_threshold: float = 0.36
     video_fps: int = 30
     label_frames_needed: int = 0
-    
+    width: int = 640
+    height: int = 480
     # Dataset splitting and augmentation
     use_strategy: bool = True  # True for stratified split, False for random split
     
@@ -48,7 +49,7 @@ class DataConfig:
     # Example: ['flip', 'translation'] will use flip and translation augmentations
     # Example: ['scaling'] will use only scaling augmentation
     # Example: [] will use no augmentation
-    augmentations: list = field(default_factory=lambda: ['translation', 'scaling'])
+    augmentations: list = field(default_factory=lambda: ['flip', 'translation', 'scaling'])
     
     # Augmentation parameters
     translation_range: float = 0.1  # Random translation range (-0.1 to +0.1)
@@ -79,10 +80,10 @@ class TrainingConfig:
     """Configuration for training process."""
     # Training parameters
     num_epochs: int = 300
-    batch_size: int = 128
+    batch_size: int = 64
     learning_rate: float = 1e-3
     weight_decay: float = 1e-4
-    triplet_margin: float = 2.0  # Margin for triplet loss
+    triplet_margin: float = 0.5  # Margin for triplet loss
     # Optimizer settings
     optimizer: str = "adam"  # "adam" or "sgd"
     momentum: float = 0.9  # For SGD
@@ -97,8 +98,8 @@ class TrainingConfig:
     gradient_clip_norm: float = 1.0
     
     # Data split
-    train_split: float = 0.9
-    val_split: float = 0.1
+    train_split: float = 0.8
+    val_split: float = 0.2
     
     # Saving and logging
     save_dir: str = "outputs/models"
@@ -107,7 +108,7 @@ class TrainingConfig:
     log_interval: int = 1
     model_save_name: str = "best_hgc_lstm.pth"
     model_triplet_save_name: str = "best_hgc_lstm_embedding.pth"
-    
+    model_test_name: str = "best_hgc_lstm_321415.pth"
     # Device settings
     device: str = "auto"  # "auto", "cpu", "cuda"
     mixed_precision: bool = False

@@ -205,8 +205,6 @@ def extract_keypoints_from_video(video_path: str, config: Config, model: MediaPi
                     keypoints_list.append(zeros_kpts)
         
         keypoints_array = np.array(keypoints_list)
-        print(f"[SUCCESS] Extracted {keypoints_array.shape[0]} frames with {keypoints_array.shape[1]} keypoints")
-        print(f"[SUMMARY] Hand detection history - Left: {has_left_hand_history} | Right: {has_right_hand_history}")
         
         return keypoints_array
     

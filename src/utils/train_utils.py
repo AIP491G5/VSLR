@@ -6,6 +6,7 @@ Contains training functions and optimization utilities
 import os
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 
 def train_model(model, train_loader, val_loader, config, device):
@@ -192,6 +193,9 @@ def train_model_triplet(model, train_loader, val_loader, config, device):
             negative = negative.to(device)
 
             emb_a, emb_p, emb_n = model(anchor, positive, negative)
+            emb_a = F.normalize(emb_a, p=2, dim=1)
+            emb_p = F.normalize(emb_p, p=2, dim=1)
+            emb_n = F.normalize(emb_n, p=2, dim=1)
             loss = criterion(emb_a, emb_p, emb_n)
 
             optimizer.zero_grad()
@@ -217,6 +221,9 @@ def train_model_triplet(model, train_loader, val_loader, config, device):
                 negative = negative.to(device)
 
                 emb_a, emb_p, emb_n = model(anchor, positive, negative)
+                emb_a = F.normalize(emb_a, p=2, dim=1)
+                emb_p = F.normalize(emb_p, p=2, dim=1)
+                emb_n = F.normalize(emb_n, p=2, dim=1)
                 loss = criterion(emb_a, emb_p, emb_n)
                 val_loss += loss.item()
 

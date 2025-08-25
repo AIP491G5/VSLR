@@ -1,0 +1,295 @@
+2025-08-15 09:29:28,236 - INFO - ================================================================================
+2025-08-15 09:29:28,236 - INFO - 🚀 VSLR Training Started
+2025-08-15 09:29:28,236 - INFO - ================================================================================
+2025-08-15 09:29:28,236 - INFO - 📝 Log file: /home/na/VSLR/outputs/logs/training_20250815_092928.log
+2025-08-15 09:29:28,236 - INFO - 📅 Start time: 2025-08-15 09:29:28
+2025-08-15 09:29:28,294 - INFO - Using device: cuda
+2025-08-15 09:29:28,294 - INFO - Configuration loaded
+2025-08-15 09:29:28,294 - INFO - Loading labels...
+2025-08-15 09:29:28,297 - INFO - 
+2025-08-15 09:29:28,297 - INFO -  Creating datasets...
+2025-08-15 09:29:28,297 - INFO - Configuration:
+2025-08-15 09:29:28,297 - INFO -    Split strategy: Stratified
+2025-08-15 09:29:28,297 - INFO -    Train augmentations: ['translation', 'scaling']
+2025-08-15 09:29:28,297 - INFO -    Val augmentations: None
+2025-08-15 09:29:28,297 - INFO -    Translation range: ±0.1
+2025-08-15 09:29:28,297 - INFO -    Scale range: ±0.1
+2025-08-15 09:29:28,297 - INFO -  Using stratified split strategy
+2025-08-15 09:29:28,298 - INFO -  TRAIN dataset: 240 original files
+2025-08-15 09:29:28,298 - INFO -  Augmentation enabled: 960 total samples (x4)
+2025-08-15 09:29:28,298 - INFO -   - Augmentations: ['translation', 'scaling']
+2025-08-15 09:29:28,298 - INFO -   - Total combinations: 8
+2025-08-15 09:29:28,298 - INFO -   - Combinations: ['original', 'translation', 'scaling', 'translation+scaling']
+2025-08-15 09:29:28,298 - INFO -  TRAIN class distribution:
+2025-08-15 09:29:28,298 - INFO -   Class 1: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 2: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 3: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 4: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 5: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 6: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 7: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 8: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 9: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 10: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 11: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 12: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 13: 16 samples
+2025-08-15 09:29:28,298 - INFO -   Class 14: 16 samples
+2025-08-15 09:29:28,299 - INFO -   Class 15: 16 samples
+2025-08-15 09:29:28,299 - INFO -  ✓ Balanced: 16 samples per class
+2025-08-15 09:29:28,299 - INFO -  Using stratified split strategy
+2025-08-15 09:29:28,299 - INFO -  VAL dataset: 60 original files
+2025-08-15 09:29:28,299 - INFO -  No augmentation enabled: 60 total samples
+2025-08-15 09:29:28,299 - INFO -  VAL class distribution:
+2025-08-15 09:29:28,299 - INFO -   Class 1: 4 samples
+2025-08-15 09:29:28,299 - INFO -   Class 2: 4 samples
+2025-08-15 09:29:28,299 - INFO -   Class 3: 4 samples
+2025-08-15 09:29:28,299 - INFO -   Class 4: 4 samples
+2025-08-15 09:29:28,299 - INFO -   Class 5: 4 samples
+2025-08-15 09:29:28,299 - INFO -   Class 6: 4 samples
+2025-08-15 09:29:28,300 - INFO -   Class 7: 4 samples
+2025-08-15 09:29:28,300 - INFO -   Class 8: 4 samples
+2025-08-15 09:29:28,300 - INFO -   Class 9: 4 samples
+2025-08-15 09:29:28,300 - INFO -   Class 10: 4 samples
+2025-08-15 09:29:28,300 - INFO -   Class 11: 4 samples
+2025-08-15 09:29:28,300 - INFO -   Class 12: 4 samples
+2025-08-15 09:29:28,300 - INFO -   Class 13: 4 samples
+2025-08-15 09:29:28,300 - INFO -   Class 14: 4 samples
+2025-08-15 09:29:28,300 - INFO -   Class 15: 4 samples
+2025-08-15 09:29:28,300 - INFO -  ✓ Balanced: 4 samples per class
+2025-08-15 09:29:28,300 - INFO - 
+2025-08-15 09:29:28,300 - INFO - Dataset summary:
+2025-08-15 09:29:28,300 - INFO -   Total classes: 15
+2025-08-15 09:29:28,300 - INFO -   Train samples: 960
+2025-08-15 09:29:28,300 - INFO -   Val samples: 60
+2025-08-15 09:29:28,300 - INFO -   Strategy: Stratified split
+2025-08-15 09:29:28,300 - INFO - 
+2025-08-15 09:29:28,300 - INFO - Creating data loaders...
+2025-08-15 09:29:28,301 - INFO -  Train batches: 15
+2025-08-15 09:29:28,301 - INFO -  Valid batches: 1
+2025-08-15 09:29:28,301 - INFO -  Batch size: 128
+2025-08-15 09:29:28,301 - INFO -  Data Augmentation (flip + translation + scaling): 240 original → 960 total samples
+2025-08-15 09:29:28,301 - INFO -  Augmentation combinations: ['original', 'translation', 'scaling', 'translation+scaling']
+2025-08-15 09:29:28,332 - INFO -  Sample keypoints shape: torch.Size([128, 60, 75, 2])
+2025-08-15 09:29:28,332 - INFO -  Sample labels shape: torch.Size([128])
+2025-08-15 09:29:28,332 - INFO - 
+2025-08-15 09:29:28,332 - INFO - Creating adjacency matrix...
+2025-08-15 09:29:28,332 - INFO -  Adjacency matrix shape: torch.Size([75, 75])
+2025-08-15 09:29:28,332 - INFO -  Number of vertices: 75
+2025-08-15 09:29:28,332 - INFO - 
+2025-08-15 09:29:28,333 - INFO - Creating model...
+2025-08-15 09:29:28,523 - INFO - Model created with 676945 parameters
+2025-08-15 09:29:28,523 - INFO - 
+2025-08-15 09:29:28,523 - INFO - Starting training...
+2025-08-15 09:29:28,523 - INFO -  Training configuration:
+2025-08-15 09:29:28,523 - INFO -   - Epochs: 300
+2025-08-15 09:29:28,523 - INFO -   - Batch size: 128
+2025-08-15 09:29:28,523 - INFO -   - Learning rate: 0.001
+2025-08-15 09:29:28,523 - INFO -   - Optimizer: adam
+2025-08-15 09:29:28,523 - INFO -   - Scheduler: step
+2025-08-15 09:29:28,523 - INFO -   - Early stopping patience: 20
+2025-08-15 09:29:30,727 - INFO - Epoch 001/300 | Train Loss: 2.5123 Acc: 17.86% | Val Loss: 2.7526 Acc: 05.00% | LR: 0.00100000
+2025-08-15 09:29:31,871 - INFO - Epoch 002/300 | Train Loss: 1.9588 Acc: 27.40% | Val Loss: 2.1627 Acc: 15.00% | LR: 0.00100000
+2025-08-15 09:29:33,008 - INFO - Epoch 003/300 | Train Loss: 1.5274 Acc: 42.45% | Val Loss: 1.2983 Acc: 55.00% | LR: 0.00100000
+2025-08-15 09:29:34,137 - INFO - Epoch 004/300 | Train Loss: 1.3148 Acc: 51.88% | Val Loss: 0.9889 Acc: 65.00% | LR: 0.00100000
+2025-08-15 09:29:35,253 - INFO - Epoch 005/300 | Train Loss: 1.1414 Acc: 57.66% | Val Loss: 0.8692 Acc: 63.33% | LR: 0.00100000
+2025-08-15 09:29:36,367 - INFO - Epoch 006/300 | Train Loss: 1.0590 Acc: 59.84% | Val Loss: 0.9724 Acc: 61.67% | LR: 0.00100000
+2025-08-15 09:29:37,488 - INFO - Epoch 007/300 | Train Loss: 0.9440 Acc: 64.53% | Val Loss: 0.7336 Acc: 71.67% | LR: 0.00100000
+2025-08-15 09:29:38,601 - INFO - Epoch 008/300 | Train Loss: 0.8754 Acc: 68.59% | Val Loss: 0.6695 Acc: 70.00% | LR: 0.00100000
+2025-08-15 09:29:39,715 - INFO - Epoch 009/300 | Train Loss: 0.8218 Acc: 67.97% | Val Loss: 0.6637 Acc: 75.00% | LR: 0.00100000
+2025-08-15 09:29:40,819 - INFO - Epoch 010/300 | Train Loss: 0.8593 Acc: 67.71% | Val Loss: 0.7096 Acc: 73.33% | LR: 0.00100000
+2025-08-15 09:29:41,938 - INFO - Epoch 011/300 | Train Loss: 0.7860 Acc: 70.89% | Val Loss: 0.5068 Acc: 83.33% | LR: 0.00100000
+2025-08-15 09:29:43,061 - INFO - Epoch 012/300 | Train Loss: 0.6782 Acc: 74.79% | Val Loss: 0.7347 Acc: 76.67% | LR: 0.00100000
+2025-08-15 09:29:44,171 - INFO - Epoch 013/300 | Train Loss: 0.6889 Acc: 75.05% | Val Loss: 0.5646 Acc: 78.33% | LR: 0.00100000
+2025-08-15 09:29:45,285 - INFO - Epoch 014/300 | Train Loss: 0.6706 Acc: 74.69% | Val Loss: 0.5343 Acc: 88.33% | LR: 0.00100000
+2025-08-15 09:29:46,399 - INFO - Epoch 015/300 | Train Loss: 0.5900 Acc: 79.32% | Val Loss: 0.4694 Acc: 88.33% | LR: 0.00100000
+2025-08-15 09:29:47,520 - INFO - Epoch 016/300 | Train Loss: 0.5770 Acc: 79.58% | Val Loss: 0.4108 Acc: 90.00% | LR: 0.00100000
+2025-08-15 09:29:48,637 - INFO - Epoch 017/300 | Train Loss: 0.5335 Acc: 81.51% | Val Loss: 0.4622 Acc: 86.67% | LR: 0.00100000
+2025-08-15 09:29:49,748 - INFO - Epoch 018/300 | Train Loss: 0.5041 Acc: 82.92% | Val Loss: 0.4103 Acc: 88.33% | LR: 0.00100000
+2025-08-15 09:29:50,870 - INFO - Epoch 019/300 | Train Loss: 0.4328 Acc: 85.73% | Val Loss: 0.3211 Acc: 90.00% | LR: 0.00100000
+2025-08-15 09:29:51,983 - INFO - Epoch 020/300 | Train Loss: 0.4630 Acc: 83.23% | Val Loss: 0.4608 Acc: 88.33% | LR: 0.00050000
+2025-08-15 09:29:53,094 - INFO - Epoch 021/300 | Train Loss: 0.4214 Acc: 84.64% | Val Loss: 0.3427 Acc: 90.00% | LR: 0.00050000
+2025-08-15 09:29:54,211 - INFO - Epoch 022/300 | Train Loss: 0.3544 Acc: 87.92% | Val Loss: 0.3405 Acc: 91.67% | LR: 0.00050000
+2025-08-15 09:29:55,324 - INFO - Epoch 023/300 | Train Loss: 0.3367 Acc: 88.18% | Val Loss: 0.2680 Acc: 91.67% | LR: 0.00050000
+2025-08-15 09:29:56,437 - INFO - Epoch 024/300 | Train Loss: 0.3189 Acc: 88.85% | Val Loss: 0.3109 Acc: 93.33% | LR: 0.00050000
+2025-08-15 09:29:57,550 - INFO - Epoch 025/300 | Train Loss: 0.2921 Acc: 90.89% | Val Loss: 0.3577 Acc: 91.67% | LR: 0.00050000
+2025-08-15 09:29:58,666 - INFO - Epoch 026/300 | Train Loss: 0.2979 Acc: 89.84% | Val Loss: 0.3035 Acc: 91.67% | LR: 0.00050000
+2025-08-15 09:29:59,783 - INFO - Epoch 027/300 | Train Loss: 0.2766 Acc: 90.47% | Val Loss: 0.3306 Acc: 91.67% | LR: 0.00050000
+2025-08-15 09:30:00,902 - INFO - Epoch 028/300 | Train Loss: 0.2898 Acc: 89.95% | Val Loss: 0.3295 Acc: 91.67% | LR: 0.00050000
+2025-08-15 09:30:02,021 - INFO - Epoch 029/300 | Train Loss: 0.2698 Acc: 90.47% | Val Loss: 0.2888 Acc: 93.33% | LR: 0.00050000
+2025-08-15 09:30:03,135 - INFO - Epoch 030/300 | Train Loss: 0.2482 Acc: 91.51% | Val Loss: 0.2698 Acc: 93.33% | LR: 0.00050000
+2025-08-15 09:30:04,240 - INFO - Epoch 031/300 | Train Loss: 0.2300 Acc: 92.08% | Val Loss: 0.2779 Acc: 91.67% | LR: 0.00050000
+2025-08-15 09:30:05,348 - INFO - Epoch 032/300 | Train Loss: 0.2104 Acc: 92.71% | Val Loss: 0.3439 Acc: 93.33% | LR: 0.00050000
+2025-08-15 09:30:06,469 - INFO - Epoch 033/300 | Train Loss: 0.2357 Acc: 91.72% | Val Loss: 0.3362 Acc: 93.33% | LR: 0.00050000
+2025-08-15 09:30:07,586 - INFO - Epoch 034/300 | Train Loss: 0.2140 Acc: 93.28% | Val Loss: 0.2499 Acc: 93.33% | LR: 0.00050000
+2025-08-15 09:30:08,698 - INFO - Epoch 035/300 | Train Loss: 0.2074 Acc: 93.39% | Val Loss: 0.3686 Acc: 93.33% | LR: 0.00050000
+2025-08-15 09:30:09,810 - INFO - Epoch 036/300 | Train Loss: 0.2138 Acc: 93.18% | Val Loss: 0.3412 Acc: 91.67% | LR: 0.00050000
+2025-08-15 09:30:10,921 - INFO - Epoch 037/300 | Train Loss: 0.1916 Acc: 94.43% | Val Loss: 0.3306 Acc: 93.33% | LR: 0.00050000
+2025-08-15 09:30:12,039 - INFO - Epoch 038/300 | Train Loss: 0.1977 Acc: 93.59% | Val Loss: 0.3118 Acc: 93.33% | LR: 0.00050000
+2025-08-15 09:30:13,147 - INFO - Epoch 039/300 | Train Loss: 0.2016 Acc: 93.28% | Val Loss: 0.2411 Acc: 91.67% | LR: 0.00050000
+2025-08-15 09:30:14,263 - INFO - Epoch 040/300 | Train Loss: 0.1793 Acc: 94.27% | Val Loss: 0.3161 Acc: 93.33% | LR: 0.00025000
+2025-08-15 09:30:15,384 - INFO - Epoch 041/300 | Train Loss: 0.1640 Acc: 95.21% | Val Loss: 0.2137 Acc: 93.33% | LR: 0.00025000
+2025-08-15 09:30:16,562 - INFO - Epoch 042/300 | Train Loss: 0.1318 Acc: 96.04% | Val Loss: 0.2162 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:17,678 - INFO - Epoch 043/300 | Train Loss: 0.1299 Acc: 95.89% | Val Loss: 0.3033 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:18,797 - INFO - Epoch 044/300 | Train Loss: 0.1273 Acc: 95.73% | Val Loss: 0.2571 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:19,918 - INFO - Epoch 045/300 | Train Loss: 0.1462 Acc: 95.42% | Val Loss: 0.2335 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:21,033 - INFO - Epoch 046/300 | Train Loss: 0.1056 Acc: 96.72% | Val Loss: 0.3686 Acc: 93.33% | LR: 0.00025000
+2025-08-15 09:30:22,148 - INFO - Epoch 047/300 | Train Loss: 0.1240 Acc: 96.20% | Val Loss: 0.3095 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:23,267 - INFO - Epoch 048/300 | Train Loss: 0.1224 Acc: 96.25% | Val Loss: 0.3356 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:24,386 - INFO - Epoch 049/300 | Train Loss: 0.1216 Acc: 96.15% | Val Loss: 0.3099 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:25,503 - INFO - Epoch 050/300 | Train Loss: 0.1126 Acc: 96.61% | Val Loss: 0.3330 Acc: 93.33% | LR: 0.00025000
+2025-08-15 09:30:26,624 - INFO - Epoch 051/300 | Train Loss: 0.0931 Acc: 97.55% | Val Loss: 0.3253 Acc: 93.33% | LR: 0.00025000
+2025-08-15 09:30:27,740 - INFO - Epoch 052/300 | Train Loss: 0.0912 Acc: 97.34% | Val Loss: 0.3653 Acc: 93.33% | LR: 0.00025000
+2025-08-15 09:30:28,856 - INFO - Epoch 053/300 | Train Loss: 0.0972 Acc: 97.19% | Val Loss: 0.3164 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:29,970 - INFO - Epoch 054/300 | Train Loss: 0.0963 Acc: 96.88% | Val Loss: 0.3325 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:31,093 - INFO - Epoch 055/300 | Train Loss: 0.0851 Acc: 97.97% | Val Loss: 0.3395 Acc: 93.33% | LR: 0.00025000
+2025-08-15 09:30:32,210 - INFO - Epoch 056/300 | Train Loss: 0.0882 Acc: 97.76% | Val Loss: 0.3070 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:33,326 - INFO - Epoch 057/300 | Train Loss: 0.1028 Acc: 96.82% | Val Loss: 0.3043 Acc: 91.67% | LR: 0.00025000
+2025-08-15 09:30:34,452 - INFO - Epoch 058/300 | Train Loss: 0.0831 Acc: 97.97% | Val Loss: 0.3046 Acc: 93.33% | LR: 0.00025000
+2025-08-15 09:30:35,567 - INFO - Epoch 059/300 | Train Loss: 0.0837 Acc: 97.45% | Val Loss: 0.3201 Acc: 93.33% | LR: 0.00025000
+2025-08-15 09:30:36,692 - INFO - Epoch 060/300 | Train Loss: 0.0837 Acc: 98.07% | Val Loss: 0.2891 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:37,808 - INFO - Epoch 061/300 | Train Loss: 0.0707 Acc: 97.86% | Val Loss: 0.3537 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:38,925 - INFO - Epoch 062/300 | Train Loss: 0.0510 Acc: 98.44% | Val Loss: 0.3411 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:40,040 - INFO - Epoch 063/300 | Train Loss: 0.0630 Acc: 98.28% | Val Loss: 0.3444 Acc: 91.67% | LR: 0.00012500
+2025-08-15 09:30:41,153 - INFO - Epoch 064/300 | Train Loss: 0.0598 Acc: 98.39% | Val Loss: 0.3396 Acc: 91.67% | LR: 0.00012500
+2025-08-15 09:30:42,265 - INFO - Epoch 065/300 | Train Loss: 0.0644 Acc: 98.12% | Val Loss: 0.3123 Acc: 91.67% | LR: 0.00012500
+2025-08-15 09:30:43,384 - INFO - Epoch 066/300 | Train Loss: 0.0498 Acc: 98.91% | Val Loss: 0.3168 Acc: 91.67% | LR: 0.00012500
+2025-08-15 09:30:44,499 - INFO - Epoch 067/300 | Train Loss: 0.0550 Acc: 98.70% | Val Loss: 0.3695 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:45,612 - INFO - Epoch 068/300 | Train Loss: 0.0520 Acc: 98.59% | Val Loss: 0.3727 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:46,723 - INFO - Epoch 069/300 | Train Loss: 0.0439 Acc: 99.01% | Val Loss: 0.3261 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:47,829 - INFO - Epoch 070/300 | Train Loss: 0.0478 Acc: 98.96% | Val Loss: 0.3484 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:48,936 - INFO - Epoch 071/300 | Train Loss: 0.0471 Acc: 98.70% | Val Loss: 0.3600 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:50,049 - INFO - Epoch 072/300 | Train Loss: 0.0538 Acc: 98.49% | Val Loss: 0.4165 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:51,154 - INFO - Epoch 073/300 | Train Loss: 0.0516 Acc: 98.39% | Val Loss: 0.3675 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:52,262 - INFO - Epoch 074/300 | Train Loss: 0.0456 Acc: 98.70% | Val Loss: 0.3369 Acc: 91.67% | LR: 0.00012500
+2025-08-15 09:30:53,376 - INFO - Epoch 075/300 | Train Loss: 0.0347 Acc: 99.38% | Val Loss: 0.3406 Acc: 91.67% | LR: 0.00012500
+2025-08-15 09:30:54,486 - INFO - Epoch 076/300 | Train Loss: 0.0505 Acc: 99.11% | Val Loss: 0.3922 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:55,598 - INFO - Epoch 077/300 | Train Loss: 0.0515 Acc: 98.85% | Val Loss: 0.3588 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:56,712 - INFO - Epoch 078/300 | Train Loss: 0.0519 Acc: 98.49% | Val Loss: 0.3744 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:57,821 - INFO - Epoch 079/300 | Train Loss: 0.0470 Acc: 99.11% | Val Loss: 0.3924 Acc: 93.33% | LR: 0.00012500
+2025-08-15 09:30:58,929 - INFO - Epoch 080/300 | Train Loss: 0.0508 Acc: 98.59% | Val Loss: 0.4123 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:00,046 - INFO - Epoch 081/300 | Train Loss: 0.0355 Acc: 99.11% | Val Loss: 0.3408 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:01,163 - INFO - Epoch 082/300 | Train Loss: 0.0297 Acc: 99.48% | Val Loss: 0.4053 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:02,272 - INFO - Epoch 083/300 | Train Loss: 0.0357 Acc: 99.38% | Val Loss: 0.3916 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:03,384 - INFO - Epoch 084/300 | Train Loss: 0.0300 Acc: 99.38% | Val Loss: 0.3613 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:04,497 - INFO - Epoch 085/300 | Train Loss: 0.0269 Acc: 99.64% | Val Loss: 0.4196 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:05,616 - INFO - Epoch 086/300 | Train Loss: 0.0325 Acc: 99.11% | Val Loss: 0.4191 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:06,722 - INFO - Epoch 087/300 | Train Loss: 0.0279 Acc: 99.48% | Val Loss: 0.4015 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:07,829 - INFO - Epoch 088/300 | Train Loss: 0.0346 Acc: 99.79% | Val Loss: 0.4130 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:08,944 - INFO - Epoch 089/300 | Train Loss: 0.0256 Acc: 99.53% | Val Loss: 0.3515 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:10,061 - INFO - Epoch 090/300 | Train Loss: 0.0306 Acc: 99.11% | Val Loss: 0.3715 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:11,174 - INFO - Epoch 091/300 | Train Loss: 0.0299 Acc: 99.38% | Val Loss: 0.3629 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:12,288 - INFO - Epoch 092/300 | Train Loss: 0.0212 Acc: 99.79% | Val Loss: 0.3342 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:13,393 - INFO - Epoch 093/300 | Train Loss: 0.0246 Acc: 99.48% | Val Loss: 0.3934 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:14,515 - INFO - Epoch 094/300 | Train Loss: 0.0306 Acc: 99.43% | Val Loss: 0.4185 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:15,626 - INFO - Epoch 095/300 | Train Loss: 0.0290 Acc: 99.43% | Val Loss: 0.3726 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:16,748 - INFO - Epoch 096/300 | Train Loss: 0.0189 Acc: 99.58% | Val Loss: 0.4081 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:17,988 - INFO - Epoch 097/300 | Train Loss: 0.0251 Acc: 99.69% | Val Loss: 0.4232 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:19,104 - INFO - Epoch 098/300 | Train Loss: 0.0305 Acc: 99.32% | Val Loss: 0.3813 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:20,243 - INFO - Epoch 099/300 | Train Loss: 0.0261 Acc: 99.58% | Val Loss: 0.3661 Acc: 93.33% | LR: 0.00006250
+2025-08-15 09:31:21,350 - INFO - Epoch 100/300 | Train Loss: 0.0210 Acc: 99.69% | Val Loss: 0.3948 Acc: 93.33% | LR: 0.00003125
+2025-08-15 09:31:22,461 - INFO - Epoch 101/300 | Train Loss: 0.0231 Acc: 99.53% | Val Loss: 0.3849 Acc: 93.33% | LR: 0.00003125
+2025-08-15 09:31:23,572 - INFO - Epoch 102/300 | Train Loss: 0.0191 Acc: 99.74% | Val Loss: 0.3651 Acc: 93.33% | LR: 0.00003125
+2025-08-15 09:31:24,685 - INFO - Epoch 103/300 | Train Loss: 0.0192 Acc: 99.74% | Val Loss: 0.4141 Acc: 93.33% | LR: 0.00003125
+2025-08-15 09:31:25,790 - INFO - Epoch 104/300 | Train Loss: 0.0189 Acc: 99.64% | Val Loss: 0.4208 Acc: 93.33% | LR: 0.00003125
+2025-08-15 09:31:26,898 - INFO - Epoch 105/300 | Train Loss: 0.0193 Acc: 99.79% | Val Loss: 0.4233 Acc: 93.33% | LR: 0.00003125
+2025-08-15 09:31:28,014 - INFO - Epoch 106/300 | Train Loss: 0.0187 Acc: 99.69% | Val Loss: 0.4127 Acc: 93.33% | LR: 0.00003125
+2025-08-15 09:31:29,122 - INFO - Epoch 107/300 | Train Loss: 0.0207 Acc: 99.58% | Val Loss: 0.4004 Acc: 93.33% | LR: 0.00003125
+2025-08-15 09:31:30,238 - INFO - Epoch 108/300 | Train Loss: 0.0280 Acc: 99.32% | Val Loss: 0.4327 Acc: 93.33% | LR: 0.00003125
+2025-08-15 09:31:30,238 - INFO - Early stopping triggered after 108 epochs
+2025-08-15 09:31:30,238 - INFO - Training completed. Best validation accuracy: 93.33% (Train: 99.79%)
+2025-08-15 09:31:30,238 - INFO - 
+2025-08-15 09:31:30,238 - INFO - Generating training visualizations...
+2025-08-15 09:31:30,238 - INFO - Loading best model from: outputs/models/best_hgc_lstm.pth
+2025-08-15 09:31:30,668 - INFO - Training curves saved to: training_plots/training_curves.png
+2025-08-15 09:31:35,713 - INFO - 
+2025-08-15 09:31:35,713 - INFO - 📊 TRAINING SUMMARY:
+2025-08-15 09:31:35,713 - INFO -    Best Validation Accuracy: 93.33% (Epoch 88)
+2025-08-15 09:31:35,713 - INFO -    Final Training Accuracy: 99.32%
+2025-08-15 09:31:35,713 - INFO -  Analyzing model performance on validation set...
+2025-08-15 09:31:36,269 - INFO - Confusion matrix saved to: training_plots/confusion_matrix.png
+2025-08-15 09:31:46,735 - INFO - 
+2025-08-15 09:31:46,735 - INFO - ============================================================
+2025-08-15 09:31:46,735 - INFO - CLASSIFICATION REPORT
+2025-08-15 09:31:46,735 - INFO - ============================================================
+2025-08-15 09:31:46,739 - INFO -               precision    recall  f1-score   support
+2025-08-15 09:31:46,739 - INFO - 
+2025-08-15 09:31:46,739 - INFO -      Class_1       0.75      0.75      0.75         4
+2025-08-15 09:31:46,739 - INFO -      Class_2       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -      Class_3       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -      Class_4       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -      Class_5       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -      Class_6       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -      Class_7       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -      Class_8       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -      Class_9       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -     Class_10       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -     Class_11       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -     Class_12       0.75      0.75      0.75         4
+2025-08-15 09:31:46,740 - INFO -     Class_13       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO -     Class_14       0.50      0.50      0.50         4
+2025-08-15 09:31:46,740 - INFO -     Class_15       1.00      1.00      1.00         4
+2025-08-15 09:31:46,740 - INFO - 
+2025-08-15 09:31:46,740 - INFO -     accuracy                           0.93        60
+2025-08-15 09:31:46,740 - INFO -    macro avg       0.93      0.93      0.93        60
+2025-08-15 09:31:46,740 - INFO - weighted avg       0.93      0.93      0.93        60
+2025-08-15 09:31:46,740 - INFO - 
+2025-08-15 09:31:46,740 - INFO - ============================================================
+2025-08-15 09:31:46,740 - INFO - ============================================================
+2025-08-15 09:31:48,527 - INFO - 🎬 Processing video: data/datatest/test_014.mp4
+2025-08-15 09:31:50,858 - INFO - Predicted class: 5, label: conga, confidence: 0.4004408717155457
+2025-08-15 09:31:50,858 - INFO -   Video  1/15: test_014.mp4 | Expected: 14 | Predicted: 5 | ❌
+2025-08-15 09:31:50,858 - INFO - 🎬 Processing video: data/datatest/test_004.mp4
+2025-08-15 09:31:52,996 - INFO - Predicted class: 4, label: concua, confidence: 0.9975110292434692
+2025-08-15 09:31:52,996 - INFO -   Video  2/15: test_004.mp4 | Expected: 4 | Predicted: 4 | ✅
+2025-08-15 09:31:52,996 - INFO - 🎬 Processing video: data/datatest/test_009.mp4
+2025-08-15 09:31:55,150 - INFO - Predicted class: 9, label: conmuc, confidence: 0.6070960760116577
+2025-08-15 09:31:55,150 - INFO -   Video  3/15: test_009.mp4 | Expected: 9 | Predicted: 9 | ✅
+2025-08-15 09:31:55,151 - INFO - 🎬 Processing video: data/datatest/test_013.mp4
+2025-08-15 09:31:57,272 - INFO - Predicted class: 13, label: consutu, confidence: 0.7071906924247742
+2025-08-15 09:31:57,272 - INFO -   Video  4/15: test_013.mp4 | Expected: 13 | Predicted: 13 | ✅
+2025-08-15 09:31:57,272 - INFO - 🎬 Processing video: data/datatest/test_010.mp4
+2025-08-15 09:31:59,387 - INFO - Predicted class: 9, label: conmuc, confidence: 0.6967139959335327
+2025-08-15 09:31:59,388 - INFO -   Video  5/15: test_010.mp4 | Expected: 10 | Predicted: 9 | ❌
+2025-08-15 09:31:59,388 - INFO - 🎬 Processing video: data/datatest/test_001.mp4
+2025-08-15 09:32:01,488 - INFO - Predicted class: 1, label: conca, confidence: 0.993523359298706
+2025-08-15 09:32:01,488 - INFO -   Video  6/15: test_001.mp4 | Expected: 1 | Predicted: 1 | ✅
+2025-08-15 09:32:01,489 - INFO - 🎬 Processing video: data/datatest/test_011.mp4
+2025-08-15 09:32:03,563 - INFO - Predicted class: 11, label: conruoi, confidence: 0.9537739753723145
+2025-08-15 09:32:03,563 - INFO -   Video  7/15: test_011.mp4 | Expected: 11 | Predicted: 11 | ✅
+2025-08-15 09:32:03,563 - INFO - 🎬 Processing video: data/datatest/test_006.mp4
+2025-08-15 09:32:05,698 - INFO - Predicted class: 6, label: congau, confidence: 0.9123017191886902
+2025-08-15 09:32:05,698 - INFO -   Video  8/15: test_006.mp4 | Expected: 6 | Predicted:6 | ✅
+2025-08-15 09:32:05,699 - INFO - 🎬 Processing video: data/datatest/test_002.mp4
+2025-08-15 09:32:07,808 - INFO - Predicted class: 2, label: concho, confidence: 0.9868724346160889
+2025-08-15 09:32:07,809 - INFO -   Video  9/15: test_002.mp4 | Expected: 2 | Predicted: 2 | ✅
+2025-08-15 09:32:07,809 - INFO - 🎬 Processing video: data/datatest/test_007.mp4
+2025-08-15 09:32:09,903 - INFO - Predicted class: 7, label: congian, confidence: 0.8532859206199646
+2025-08-15 09:32:09,903 - INFO -   Video 10/15: test_007.mp4 | Expected: 7 | Predicted: 7 | ✅
+2025-08-15 09:32:09,903 - INFO - 🎬 Processing video: data/datatest/test_003.mp4
+2025-08-15 09:32:11,982 - INFO - Predicted class: 14, label: contrai, confidence: 0.7348919153213501
+2025-08-15 09:32:11,982 - INFO -   Video 11/15: test_003.mp4 | Expected: 3 | Predicted: 14 | ❌
+2025-08-15 09:32:11,982 - INFO - 🎬 Processing video: data/datatest/test_005.mp4
+2025-08-15 09:32:14,101 - INFO - Predicted class: 5, label: conga, confidence: 0.9278382658958435
+2025-08-15 09:32:14,101 - INFO -   Video 12/15: test_005.mp4 | Expected: 5 | Predicted: 5 | ✅
+2025-08-15 09:32:14,101 - INFO - 🎬 Processing video: data/datatest/test_008.mp4
+2025-08-15 09:32:16,234 - INFO - Predicted class: 8, label: conmeo, confidence: 0.9736604690551758
+2025-08-15 09:32:16,234 - INFO -   Video 13/15: test_008.mp4 | Expected: 8 | Predicted: 8 | ✅
+2025-08-15 09:32:16,234 - INFO - 🎬 Processing video: data/datatest/test_012.mp4
+2025-08-15 09:32:18,461 - INFO - Predicted class: 5, label: conga, confidence: 0.48748923182487488
+2025-08-15 09:32:18,461 - INFO -   Video 14/15: test_012.mp4 | Expected: 12 | Predicted: 5 | ❌
+2025-08-15 09:32:18,461 - INFO - 🎬 Processing video: data/datatest/test_015.mp4
+2025-08-15 09:32:20,587 - INFO - Predicted class: 15, label: contran, confidence: 0.9968695044517517
+2025-08-15 09:32:20,587 - INFO -   Video 15/15: test_015.mp4 | Expected: 15 | Predicted: 15 | ✅
+2025-08-15 09:32:20,587 - INFO - 📊 Test Results:
+2025-08-15 09:32:20,587 - INFO -   Correct predictions: 11/15
+2025-08-15 09:32:20,587 - INFO - ============================================================
+2025-08-15 09:32:20,587 - INFO - 
+2025-08-15 09:32:20,587 - INFO - ================================================================================
+2025-08-15 09:32:20,587 - INFO - ================================================================================
+2025-08-15 09:32:20,587 - INFO - 🏆 Best validation accuracy: 93.33%
+2025-08-15 09:32:20,587 - INFO - 💾 Model saved to: outputs/models/best_hgc_lstm.pth
+2025-08-15 09:32:20,587 - INFO - 📊 Plots saved to: outputs/plots
+2025-08-15 09:32:20,587 - INFO - 📝 Training log saved to: /home/na/VSLR/outputs/logs/training_20250815_092928.log
+2025-08-15 09:32:20,587 - INFO - 📅 End time: 2025-08-15 09:32:20
+2025-08-15 09:32:20,587 - INFO - ================================================================================

@@ -174,8 +174,43 @@ def main():
     visualize_training_process(history, config)
     analyze_model_performance(model, val_loader, device, config, unique_labels, id_to_label_mapping)
     
+    # Test model on held-out videos
+    print("\n" + "="*60)
+    print("="*60)
+    
+    from scripts.inference import predict_from_video
+    import glob
+    from src.utils.detector import MediaPipeProcessor
+    
+    test_dir = "data/datatest"  # Replace with your video path
+    videos = glob.glob(os.path.join(test_dir, "*.mp4"))
+    count = 0
+    processor = MediaPipeProcessor(config)
+    
+    if len(videos) > 0:
+        
+        for i, video_path in enumerate(videos, 1):
+            filename = os.path.basename(video_path)
+            number = int(filename.split('_')[1].split('.')[0])
+            
+            try:
+                label, res = predict_from_video(
+                    model, processor, id_to_label_mapping, config, device, 
+                    os.path.join(test_dir, filename), thresh_hold=0.2
+                )
+                print(f"  Video {i:2d}/{len(videos)}: {filename} | Expected: {number} | Predicted: {res} | {'✅' if number == res else '❌'}")
+                if number == res:
+                    count += 1
+            except Exception as e:
+                print(f"  Video {i:2d}/{len(videos)}: {filename} | Error: {e}")
+        
+        accuracy = count / len(videos) * 100
+        print(f"\n📊 Test Results:")
+        print(f"  Correct predictions: {count}/{len(videos)}")
+        print(f"  Test accuracy: {accuracy:.1f}%")
+    print("="*60)
+    
     print("\n" + "="*80)
-    print("🎉 TRAINING COMPLETED SUCCESSFULLY!")
     print("="*80)
     print(f"🏆 Best validation accuracy: {max(history.get('val_acc', history.get('val_acc', [0]))):.2f}%")
     print(f"💾 Model saved to: {config.training.save_dir}/{config.training.model_save_name}")
@@ -187,3 +222,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+ 
