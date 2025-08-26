@@ -140,20 +140,6 @@ The GCN component models the spatial relationships between human joints using an
 - **Multi-layer Processing**: Multiple GCN layers for hierarchical feature extraction
 - **Batch Normalization**: Stabilizes training and improves convergence
 
-**Mathematical Formulation:**
-
-```
-H^(l+1) = σ(D^(-1/2) A D^(-1/2) H^(l) W^(l))
-```
-
-Where:
-
-- `A` is the adjacency matrix with added self-connections
-- `D` is the degree matrix
-- `H^(l)` is the feature matrix at layer l
-- `W^(l)` is the learnable weight matrix
-- `σ` is the activation function
-
 #### 2. Joint Attention Mechanism
 
 The joint attention mechanism focuses on the most discriminative joints for each gesture:
@@ -238,12 +224,6 @@ history = train_model(model, train_loader, val_loader, config, device)
 ## Model Performance
 
 The HGC-LSTM model achieves state-of-the-art performance on Vietnamese Sign Language recognition tasks through its innovative architecture combining spatial and temporal modeling.
-
-### Performance Metrics
-
-| Metric   | Training | Validation | Test  |
-| -------- | -------- | ---------- | ----- |
-| Accuracy | 88.06%   | 86.67%     | 68.4% |
 
 ### Key Achievements
 
