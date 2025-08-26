@@ -26,7 +26,7 @@ class DataConfig:
     input_csv_file: str = "labels.csv"
     triplet_csv_file: str = "triplet_dataset.csv"
     input_kp_path: str = "dataset/Keypoints"
-    raw_video_input_dir: str = "data/dataset"  # Raw video input directory for processing
+    raw_video_input_dir: str = "data/dataset"  
     video_input_dir: str = "data/videos"
     
     # Output data paths
@@ -39,9 +39,6 @@ class DataConfig:
     movement_threshold: float = 0.36
     video_fps: int = 30
     label_frames_needed: int = 0
-    width: int = 640
-    height: int = 480
-    # Dataset splitting and augmentation
     use_strategy: bool = True  # True for stratified split, False for random split
     
     # New flexible augmentation system
@@ -85,7 +82,7 @@ class TrainingConfig:
     weight_decay: float = 1e-4
     triplet_margin: float = 0.5  # Margin for triplet loss
     # Optimizer settings
-    optimizer: str = "adam"  # "adam" or "sgd"
+    optimizer: str = "adam" 
     momentum: float = 0.9  # For SGD
     
     # Learning rate scheduler

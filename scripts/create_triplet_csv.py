@@ -107,17 +107,15 @@ def generate_triplet_dataset(input_csv: str, output_csv: str = "triplet_dataset.
     if invalid_count == 0 and same_class_negative == 0:
         print(f"   ✅ All triplets are valid!")
     
-    # Ghi ra file CSV
     triplet_df = pd.DataFrame(triplets, columns=["id", "anchor", "positive", "negative"])
     triplet_df.to_csv(output_csv, index=False)
     print(f"\n✅ Đã tạo file triplet dataset: {output_csv}")
     print(f"📈 Distribution: {dict(triplet_counts)}")
 
 if __name__ == "__main__":
-    # Tạo triplet dataset với validation
     generate_triplet_dataset(
         input_csv="labels.csv", 
         output_csv="triplet_dataset.csv",
-        max_triplets_per_class=200,  # Giới hạn để tránh class imbalance
+        max_triplets_per_class=200,  
         random_seed=42
     )

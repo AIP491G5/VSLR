@@ -29,17 +29,9 @@ def predict_from_video(model, processor, id_to_label_mapping, config, device, vi
     
     keypoints_sequence = extract_keypoints_from_video(video_path, config, processor)
     
-    # --- BẮT ĐẦU PHẦN SỬA LỖI ---
-    # Kiểm tra nếu chuỗi quá ngắn để thực hiện nội suy
-    if len(keypoints_sequence) < 2:
-        print(f"❌ Error: Video quá ngắn hoặc không thể phát hiện đủ keypoints. Tìm thấy: {len(keypoints_sequence)} frames.")
-        return None, None # Trả về không có nhãn, không có dự đoán
-    # --- KẾT THÚC PHẦN SỬA LỖI ---
-    
     label = None
     prediction = None # Khởi tạo prediction là None
 
-    # Interpolate to target sequence length
     input_data = interpolate_frames(keypoints_sequence, config.hgc_lstm.sequence_length)
     input_data = torch.tensor(input_data, dtype=torch.float32).unsqueeze(0).to(device)
     
@@ -77,7 +69,6 @@ def extract_embedding_from_video(model, processor, video_path, config, device):
     
     return embedding.cpu().numpy()
 
-# Example usage
 if __name__ == "__main__":
     # Load configuration
     config = Config()
@@ -109,6 +100,3 @@ if __name__ == "__main__":
         if res == number:
             count += 1
     print(f"{count}/{len(videos)} videos matched the expected labels.")
-
-    # Predict from camera
-    # predict_from_camera()
