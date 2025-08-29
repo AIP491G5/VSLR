@@ -46,7 +46,7 @@ class DataConfig:
     # Example: ['flip', 'translation'] will use flip and translation augmentations
     # Example: ['scaling'] will use only scaling augmentation
     # Example: [] will use no augmentation
-    augmentations: list = field(default_factory=lambda: ['translation', 'scaling'])
+    augmentations: list = field(default_factory=lambda: ['flip', 'translation', 'scaling'])
     
     # Augmentation parameters
     translation_range: float = 0.1  # Random translation range (-0.1 to +0.1)
@@ -77,7 +77,7 @@ class TrainingConfig:
     """Configuration for training process."""
     # Training parameters
     num_epochs: int = 300
-    batch_size: int = 64
+    batch_size: int = 128
     learning_rate: float = 1e-3
     weight_decay: float = 1e-4
     triplet_margin: float = 0.5  # Margin for triplet loss
@@ -95,8 +95,8 @@ class TrainingConfig:
     gradient_clip_norm: float = 1.0
     
     # Data split
-    train_split: float = 0.8
-    val_split: float = 0.2
+    train_split: float = 0.9
+    val_split: float = 0.1
     
     # Saving and logging
     save_dir: str = "outputs/models"
