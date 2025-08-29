@@ -85,36 +85,36 @@ class TemporalAttentionPooling(nn.Module):
 
 class HGC_LSTM(nn.Module):
     """Hierarchical Graph Convolution + LSTM with Dual Attention"""
-    def __init__(self, config, A, num_classes, in_channels=2, hidden_gcn=64, hidden_lstm=128, dropout=0.1, is_encoder=False):
+    def __init__(self, config, A, num_classes, is_encoder=False):
         super(HGC_LSTM, self).__init__()
 
         # Fixed architecture: n GCN layers
         self.gcn_layers = nn.ModuleList([
-            GCNLayer(in_channels, hidden_gcn, A, use_batch_norm=True),
-            GCNLayer(hidden_gcn, hidden_gcn, A, use_batch_norm=True),
-            GCNLayer(hidden_gcn, hidden_gcn, A, use_batch_norm=True),
+            GCNLayer(config.hgc_lstm.in_channels, config.hgc_lstm.hidden_gcn, A, use_batch_norm=True),
+            GCNLayer(config.hgc_lstm.hidden_gcn,config.hgc_lstm.hidden_gcn, A, use_batch_norm=True),
+            GCNLayer(config.hgc_lstm.hidden_gcn, config.hgc_lstm.hidden_gcn, A, use_batch_norm=True),
         ])
         
         # First attention pooling (after GCN, over joints dimension)
-        self.joint_attention = JointsAttentionPooling(hidden_gcn, dropout)
+        self.joint_attention = JointsAttentionPooling(config.hgc_lstm.hidden_gcn, config.hgc_lstm.dropout)
         
         # LSTM layer
         self.lstm = nn.LSTM(
-            hidden_gcn, 
-            hidden_lstm, 
+            config.hgc_lstm.hidden_gcn, 
+            config.hgc_lstm.hidden_lstm, 
             num_layers=2,
             batch_first=True, 
             bidirectional=True,
-            dropout=dropout
+            dropout=config.hgc_lstm.dropout
         )
         
         # Adjust output size for bidirectional LSTM
-        lstm_output_size = hidden_lstm * 2
+        lstm_output_size = config.hgc_lstm.hidden_lstm * 2
         
         # Second attention pooling (after LSTM, over temporal dimension)
-        self.temporal_attention = TemporalAttentionPooling(lstm_output_size, dropout)
+        self.temporal_attention = TemporalAttentionPooling(lstm_output_size, config.hgc_lstm.dropout)
         
-        self.dropout = nn.Dropout(dropout)
+        self.dropout = nn.Dropout(config.hgc_lstm.dropout)
         if not is_encoder:
             self.fc = nn.Linear(lstm_output_size, num_classes)
         self.is_encoder = is_encoder

@@ -130,12 +130,9 @@ def load_model(model_path='outputs/models/best_hgc_lstm_13.pth', config=None, is
     num_classes = len(unique_labels)
     
     # Create model
-    model = HGC_LSTM(config, A, num_classes, is_encoder=is_encoder)
-    model.to(device)
-    
     if model_path:
-        checkpoint = torch.load(model_path, map_location=device)
-        model.load_state_dict(checkpoint)
+        model = torch.load(model_path, map_location=device, weights_only=False)
+        model.to(device)
         print(f"Model loaded from {model_path}")
     else:
         print("No checkpoint path provided")
@@ -175,12 +172,10 @@ def load_model_triplet(model_path='outputs/models/best_hgc_lstm_triplet.pth', co
     num_classes = len(unique_labels)
     
     # Create model
-    encoder = HGC_LSTM(config, A, num_classes, is_encoder=True)
-    encoder.to(device)
     
     if model_path:
-        checkpoint = torch.load(model_path, map_location=device)
-        encoder.load_state_dict(checkpoint)
+        encoder = torch.load(model_path, map_location=device, weights_only=False)
+        encoder.to(device)
         print(f"Model loaded from {model_path}")
     else:
         print("No checkpoint path provided")

@@ -46,7 +46,7 @@ class DataConfig:
     # Example: ['flip', 'translation'] will use flip and translation augmentations
     # Example: ['scaling'] will use only scaling augmentation
     # Example: [] will use no augmentation
-    augmentations: list = field(default_factory=lambda: ['flip', 'translation', 'scaling'])
+    augmentations: list = field(default_factory=lambda: ['translation', 'scaling'])
     
     # Augmentation parameters
     translation_range: float = 0.1  # Random translation range (-0.1 to +0.1)

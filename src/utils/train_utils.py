@@ -118,7 +118,7 @@ def train_model(model, train_loader, val_loader, config, device):
         
         if save_model:
             model_path = os.path.join(config.training.save_dir, config.training.model_save_name)
-            torch.save(model.state_dict(), model_path)
+            torch.save(model, model_path)
         
         # Store metrics
         history['train_loss'].append(train_loss)
@@ -240,7 +240,7 @@ def train_model_triplet(model, train_loader, val_loader, config, device):
 
         if save_model:
             model_path = os.path.join(config.training.save_dir, config.training.model_triplet_save_name)
-            torch.save(model.encoder.state_dict(), model_path)
+            torch.save(model, model_path)
 
         # Store history
         history['train_loss'].append(train_loss)
